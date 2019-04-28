@@ -74,43 +74,78 @@ public class WebhookEndpoint extends ApiResource implements HasId {
   @SerializedName("url")
   String url;
 
-  /** Returns a list of your webhook endpoints. */
+  /**
+   * Returns a list of your webhook endpoints.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#list} instead.
+   */
   public static WebhookEndpointCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your webhook endpoints. */
+  /**
+   * Returns a list of your webhook endpoints.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#list} instead.
+   */
   public static WebhookEndpointCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/webhook_endpoints");
     return requestCollection(url, params, WebhookEndpointCollection.class, options);
   }
 
-  /** Returns a list of your webhook endpoints. */
+  /**
+   * Returns a list of your webhook endpoints.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#list} instead.
+   */
   public static WebhookEndpointCollection list(WebhookEndpointListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your webhook endpoints. */
+  /**
+   * Returns a list of your webhook endpoints.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#list} instead.
+   */
   public static WebhookEndpointCollection list(
       WebhookEndpointListParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/webhook_endpoints");
     return requestCollection(url, params, WebhookEndpointCollection.class, options);
   }
 
-  /** Retrieves the webhook endpoint with the given ID. */
+  /**
+   * Retrieves the webhook endpoint with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#retrieve} instead.
+   */
   public static WebhookEndpoint retrieve(String webhookEndpoint) throws StripeException {
     return retrieve(webhookEndpoint, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the webhook endpoint with the given ID. */
+  /**
+   * Retrieves the webhook endpoint with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#retrieve} instead.
+   */
   public static WebhookEndpoint retrieve(String webhookEndpoint, RequestOptions options)
       throws StripeException {
     return retrieve(webhookEndpoint, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the webhook endpoint with the given ID. */
+  /**
+   * Retrieves the webhook endpoint with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#retrieve} instead.
+   */
   public static WebhookEndpoint retrieve(
       String webhookEndpoint, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -122,7 +157,12 @@ public class WebhookEndpoint extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, WebhookEndpoint.class, options);
   }
 
-  /** Retrieves the webhook endpoint with the given ID. */
+  /**
+   * Retrieves the webhook endpoint with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#retrieve} instead.
+   */
   public static WebhookEndpoint retrieve(
       String webhookEndpoint, WebhookEndpointRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -142,6 +182,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
    * specified <code>url</code> only about events from your account is created. You can also create
    * webhook endpoints in the <a href="https://dashboard.stripe.com/account/webhooks">webhooks
    * settings</a> section of the Dashboard.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#create} instead.
    */
   public static WebhookEndpoint create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -155,6 +198,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
    * specified <code>url</code> only about events from your account is created. You can also create
    * webhook endpoints in the <a href="https://dashboard.stripe.com/account/webhooks">webhooks
    * settings</a> section of the Dashboard.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#create} instead.
    */
   public static WebhookEndpoint create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -170,6 +216,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
    * specified <code>url</code> only about events from your account is created. You can also create
    * webhook endpoints in the <a href="https://dashboard.stripe.com/account/webhooks">webhooks
    * settings</a> section of the Dashboard.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#create} instead.
    */
   public static WebhookEndpoint create(WebhookEndpointCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -183,6 +232,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
    * specified <code>url</code> only about events from your account is created. You can also create
    * webhook endpoints in the <a href="https://dashboard.stripe.com/account/webhooks">webhooks
    * settings</a> section of the Dashboard.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#create} instead.
    */
   public static WebhookEndpoint create(WebhookEndpointCreateParams params, RequestOptions options)
       throws StripeException {
@@ -193,6 +245,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
   /**
    * Updates the webhook endpoint. You may edit the <code>url</code>, the list of <code>
    * enabled_events</code>, and the status of your endpoint.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#update} instead.
    */
   public WebhookEndpoint update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -201,6 +256,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
   /**
    * Updates the webhook endpoint. You may edit the <code>url</code>, the list of <code>
    * enabled_events</code>, and the status of your endpoint.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#update} instead.
    */
   public WebhookEndpoint update(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -215,6 +273,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
   /**
    * Updates the webhook endpoint. You may edit the <code>url</code>, the list of <code>
    * enabled_events</code>, and the status of your endpoint.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#update} instead.
    */
   public WebhookEndpoint update(WebhookEndpointUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -223,6 +284,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
   /**
    * Updates the webhook endpoint. You may edit the <code>url</code>, the list of <code>
    * enabled_events</code>, and the status of your endpoint.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#update} instead.
    */
   public WebhookEndpoint update(WebhookEndpointUpdateParams params, RequestOptions options)
       throws StripeException {
@@ -238,6 +302,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
    * You can also delete webhook endpoints via the <a
    * href="https://dashboard.stripe.com/account/webhooks">webhook endpoint management</a> page of
    * the Stripe dashboard.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#delete} instead.
    */
   public WebhookEndpoint delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -247,6 +314,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
    * You can also delete webhook endpoints via the <a
    * href="https://dashboard.stripe.com/account/webhooks">webhook endpoint management</a> page of
    * the Stripe dashboard.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#delete} instead.
    */
   public WebhookEndpoint delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -256,6 +326,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
    * You can also delete webhook endpoints via the <a
    * href="https://dashboard.stripe.com/account/webhooks">webhook endpoint management</a> page of
    * the Stripe dashboard.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#delete} instead.
    */
   public WebhookEndpoint delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -265,6 +338,9 @@ public class WebhookEndpoint extends ApiResource implements HasId {
    * You can also delete webhook endpoints via the <a
    * href="https://dashboard.stripe.com/account/webhooks">webhook endpoint management</a> page of
    * the Stripe dashboard.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.WebhookEndpointService#delete} instead.
    */
   public WebhookEndpoint delete(Map<String, Object> params, RequestOptions options)
       throws StripeException {

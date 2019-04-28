@@ -22,6 +22,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * <p>Once entirely refunded, an application fee can’t be refunded again. This method will raise
    * an error when called on an already-refunded application fee, or when trying to refund more
    * money than is left on an application fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#create} instead.
    */
   public FeeRefund create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -37,6 +40,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * <p>Once entirely refunded, an application fee can’t be refunded again. This method will raise
    * an error when called on an already-refunded application fee, or when trying to refund more
    * money than is left on an application fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#create} instead.
    */
   public FeeRefund create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -55,6 +61,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * <p>Once entirely refunded, an application fee can’t be refunded again. This method will raise
    * an error when called on an already-refunded application fee, or when trying to refund more
    * money than is left on an application fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#create} instead.
    */
   public FeeRefund create(FeeRefundCollectionCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -70,6 +79,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * <p>Once entirely refunded, an application fee can’t be refunded again. This method will raise
    * an error when called on an already-refunded application fee, or when trying to refund more
    * money than is left on an application fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#create} instead.
    */
   public FeeRefund create(FeeRefundCollectionCreateParams params, RequestOptions options)
       throws StripeException {
@@ -83,6 +95,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * most recent refunds are always available by default on the application fee object. If you need
    * more than those 10, you can use this API method and the <code>limit</code> and <code>
    * starting_after</code> parameters to page through additional refunds.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#list} instead.
    */
   public FeeRefundCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -93,6 +108,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * most recent refunds are always available by default on the application fee object. If you need
    * more than those 10, you can use this API method and the <code>limit</code> and <code>
    * starting_after</code> parameters to page through additional refunds.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#list} instead.
    */
   public FeeRefundCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -105,6 +123,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * most recent refunds are always available by default on the application fee object. If you need
    * more than those 10, you can use this API method and the <code>limit</code> and <code>
    * starting_after</code> parameters to page through additional refunds.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#list} instead.
    */
   public FeeRefundCollection list(FeeRefundCollectionListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -115,6 +136,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * most recent refunds are always available by default on the application fee object. If you need
    * more than those 10, you can use this API method and the <code>limit</code> and <code>
    * starting_after</code> parameters to page through additional refunds.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#list} instead.
    */
   public FeeRefundCollection list(FeeRefundCollectionListParams params, RequestOptions options)
       throws StripeException {
@@ -126,6 +150,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * By default, you can see the 10 most recent refunds stored directly on the application fee
    * object, but you can also retrieve details about a specific refund stored on the application
    * fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#retrieve} instead.
    */
   public FeeRefund retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
@@ -135,6 +162,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * By default, you can see the 10 most recent refunds stored directly on the application fee
    * object, but you can also retrieve details about a specific refund stored on the application
    * fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#retrieve} instead.
    */
   public FeeRefund retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
@@ -144,6 +174,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * By default, you can see the 10 most recent refunds stored directly on the application fee
    * object, but you can also retrieve details about a specific refund stored on the application
    * fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#retrieve} instead.
    */
   public FeeRefund retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -160,6 +193,9 @@ public class FeeRefundCollection extends StripeCollection<FeeRefund> {
    * By default, you can see the 10 most recent refunds stored directly on the application fee
    * object, but you can also retrieve details about a specific refund stored on the application
    * fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#retrieve} instead.
    */
   public FeeRefund retrieve(
       String id, FeeRefundCollectionRetrieveParams params, RequestOptions options)

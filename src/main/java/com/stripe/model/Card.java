@@ -265,6 +265,9 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#update} instead.
    */
   @Override
   public Card update(Map<String, Object> params) throws StripeException {
@@ -279,6 +282,9 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#update} instead.
    */
   @Override
   public Card update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -321,6 +327,9 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#update} instead.
    */
   public Card update(CardUpdateOnAccountParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -334,6 +343,9 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#update} instead.
    */
   public Card update(CardUpdateOnAccountParams params, RequestOptions options)
       throws StripeException {
@@ -367,6 +379,9 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#update} instead.
    */
   public Card update(CardUpdateOnCustomerParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -380,6 +395,9 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#update} instead.
    */
   public Card update(CardUpdateOnCustomerParams params, RequestOptions options)
       throws StripeException {
@@ -409,6 +427,9 @@ public class Card extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#delete} instead.
    */
   @Override
   public Card delete() throws StripeException {
@@ -419,6 +440,9 @@ public class Card extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#delete} instead.
    */
   @Override
   public Card delete(RequestOptions options) throws StripeException {
@@ -429,6 +453,9 @@ public class Card extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#delete} instead.
    */
   @Override
   public Card delete(Map<String, Object> params) throws StripeException {
@@ -439,6 +466,9 @@ public class Card extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CardService#delete} instead.
    */
   @Override
   public Card delete(Map<String, Object> params, RequestOptions options) throws StripeException {

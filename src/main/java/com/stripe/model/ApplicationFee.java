@@ -198,6 +198,9 @@ public class ApplicationFee extends ApiResource implements BalanceTransactionSou
   /**
    * Returns a list of application fees you’ve previously collected. The application fees are
    * returned in sorted order, with the most recent fees appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplicationFeeService#list} instead.
    */
   public static ApplicationFeeCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -206,6 +209,9 @@ public class ApplicationFee extends ApiResource implements BalanceTransactionSou
   /**
    * Returns a list of application fees you’ve previously collected. The application fees are
    * returned in sorted order, with the most recent fees appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplicationFeeService#list} instead.
    */
   public static ApplicationFeeCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -216,6 +222,9 @@ public class ApplicationFee extends ApiResource implements BalanceTransactionSou
   /**
    * Returns a list of application fees you’ve previously collected. The application fees are
    * returned in sorted order, with the most recent fees appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplicationFeeService#list} instead.
    */
   public static ApplicationFeeCollection list(ApplicationFeeListParams params)
       throws StripeException {
@@ -225,6 +234,9 @@ public class ApplicationFee extends ApiResource implements BalanceTransactionSou
   /**
    * Returns a list of application fees you’ve previously collected. The application fees are
    * returned in sorted order, with the most recent fees appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplicationFeeService#list} instead.
    */
   public static ApplicationFeeCollection list(
       ApplicationFeeListParams params, RequestOptions options) throws StripeException {
@@ -235,6 +247,9 @@ public class ApplicationFee extends ApiResource implements BalanceTransactionSou
   /**
    * Retrieves the details of an application fee that your account has collected. The same
    * information is returned when refunding the application fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplicationFeeService#retrieve} instead.
    */
   public static ApplicationFee retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
@@ -243,6 +258,9 @@ public class ApplicationFee extends ApiResource implements BalanceTransactionSou
   /**
    * Retrieves the details of an application fee that your account has collected. The same
    * information is returned when refunding the application fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplicationFeeService#retrieve} instead.
    */
   public static ApplicationFee retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
@@ -251,6 +269,9 @@ public class ApplicationFee extends ApiResource implements BalanceTransactionSou
   /**
    * Retrieves the details of an application fee that your account has collected. The same
    * information is returned when refunding the application fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplicationFeeService#retrieve} instead.
    */
   public static ApplicationFee retrieve(
       String id, Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -265,6 +286,9 @@ public class ApplicationFee extends ApiResource implements BalanceTransactionSou
   /**
    * Retrieves the details of an application fee that your account has collected. The same
    * information is returned when refunding the application fee.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplicationFeeService#retrieve} instead.
    */
   public static ApplicationFee retrieve(
       String id, ApplicationFeeRetrieveParams params, RequestOptions options)

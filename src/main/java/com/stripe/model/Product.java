@@ -146,6 +146,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
   /**
    * Creates a new product object. To create a product for use with subscriptions, see <a
    * href="#create_service_product">Subscriptions Products</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#create} instead.
    */
   public static Product create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -154,6 +157,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
   /**
    * Creates a new product object. To create a product for use with subscriptions, see <a
    * href="#create_service_product">Subscriptions Products</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#create} instead.
    */
   public static Product create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -164,6 +170,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
   /**
    * Creates a new product object. To create a product for use with subscriptions, see <a
    * href="#create_service_product">Subscriptions Products</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#create} instead.
    */
   public static Product create(ProductCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -172,6 +181,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
   /**
    * Creates a new product object. To create a product for use with subscriptions, see <a
    * href="#create_service_product">Subscriptions Products</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#create} instead.
    */
   public static Product create(ProductCreateParams params, RequestOptions options)
       throws StripeException {
@@ -183,6 +195,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    * Retrieves the details of an existing product. Supply the unique product ID from either a
    * product creation request or the product list, and Stripe will return the corresponding product
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#retrieve} instead.
    */
   public static Product retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
@@ -192,6 +207,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    * Retrieves the details of an existing product. Supply the unique product ID from either a
    * product creation request or the product list, and Stripe will return the corresponding product
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#retrieve} instead.
    */
   public static Product retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
@@ -201,6 +219,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    * Retrieves the details of an existing product. Supply the unique product ID from either a
    * product creation request or the product list, and Stripe will return the corresponding product
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#retrieve} instead.
    */
   public static Product retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -215,6 +236,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    * Retrieves the details of an existing product. Supply the unique product ID from either a
    * product creation request or the product list, and Stripe will return the corresponding product
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#retrieve} instead.
    */
   public static Product retrieve(String id, ProductRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -231,6 +255,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    *
    * <p>Note that a product’s <code>attributes</code> are not editable. Instead, you would need to
    * deactivate the existing product and create a new one with the new attribute values.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#update} instead.
    */
   @Override
   public Product update(Map<String, Object> params) throws StripeException {
@@ -243,6 +270,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    *
    * <p>Note that a product’s <code>attributes</code> are not editable. Instead, you would need to
    * deactivate the existing product and create a new one with the new attribute values.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#update} instead.
    */
   @Override
   public Product update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -260,6 +290,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    *
    * <p>Note that a product’s <code>attributes</code> are not editable. Instead, you would need to
    * deactivate the existing product and create a new one with the new attribute values.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#update} instead.
    */
   public Product update(ProductUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -271,6 +304,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    *
    * <p>Note that a product’s <code>attributes</code> are not editable. Instead, you would need to
    * deactivate the existing product and create a new one with the new attribute values.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#update} instead.
    */
   public Product update(ProductUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -284,6 +320,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
   /**
    * Returns a list of your products. The products are returned sorted by creation date, with the
    * most recently created products appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#list} instead.
    */
   public static ProductCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -292,6 +331,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
   /**
    * Returns a list of your products. The products are returned sorted by creation date, with the
    * most recently created products appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#list} instead.
    */
   public static ProductCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -302,6 +344,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
   /**
    * Returns a list of your products. The products are returned sorted by creation date, with the
    * most recently created products appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#list} instead.
    */
   public static ProductCollection list(ProductListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -310,6 +355,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
   /**
    * Returns a list of your products. The products are returned sorted by creation date, with the
    * most recently created products appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#list} instead.
    */
   public static ProductCollection list(ProductListParams params, RequestOptions options)
       throws StripeException {
@@ -321,6 +369,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    * Delete a product. Deleting a product with type=<code>good</code> is only possible if it has no
    * SKUs associated with it. Deleting a product with type=<code>service</code> is only possible if
    * it has no plans associated with it.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#delete} instead.
    */
   public Product delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -330,6 +381,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    * Delete a product. Deleting a product with type=<code>good</code> is only possible if it has no
    * SKUs associated with it. Deleting a product with type=<code>service</code> is only possible if
    * it has no plans associated with it.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#delete} instead.
    */
   public Product delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -339,6 +393,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    * Delete a product. Deleting a product with type=<code>good</code> is only possible if it has no
    * SKUs associated with it. Deleting a product with type=<code>service</code> is only possible if
    * it has no plans associated with it.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#delete} instead.
    */
   public Product delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -348,6 +405,9 @@ public class Product extends ApiResource implements HasId, MetadataStore<Product
    * Delete a product. Deleting a product with type=<code>good</code> is only possible if it has no
    * SKUs associated with it. Deleting a product with type=<code>service</code> is only possible if
    * it has no plans associated with it.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ProductService#delete} instead.
    */
   public Product delete(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =

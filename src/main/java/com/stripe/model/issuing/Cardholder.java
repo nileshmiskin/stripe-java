@@ -86,6 +86,9 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
   /**
    * Returns a list of Issuing <code>Cardholder</code> objects. The objects are sorted in descending
    * order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#list} instead.
    */
   public static CardholderCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -94,6 +97,9 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
   /**
    * Returns a list of Issuing <code>Cardholder</code> objects. The objects are sorted in descending
    * order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#list} instead.
    */
   public static CardholderCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -104,6 +110,9 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
   /**
    * Returns a list of Issuing <code>Cardholder</code> objects. The objects are sorted in descending
    * order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#list} instead.
    */
   public static CardholderCollection list(CardholderListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -112,6 +121,9 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
   /**
    * Returns a list of Issuing <code>Cardholder</code> objects. The objects are sorted in descending
    * order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#list} instead.
    */
   public static CardholderCollection list(CardholderListParams params, RequestOptions options)
       throws StripeException {
@@ -119,42 +131,77 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
     return requestCollection(url, params, CardholderCollection.class, options);
   }
 
-  /** Creates a new Issuing <code>Cardholder</code> object that can be issued cards. */
+  /**
+   * Creates a new Issuing <code>Cardholder</code> object that can be issued cards.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#create} instead.
+   */
   public static Cardholder create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new Issuing <code>Cardholder</code> object that can be issued cards. */
+  /**
+   * Creates a new Issuing <code>Cardholder</code> object that can be issued cards.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#create} instead.
+   */
   public static Cardholder create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/issuing/cardholders");
     return request(ApiResource.RequestMethod.POST, url, params, Cardholder.class, options);
   }
 
-  /** Creates a new Issuing <code>Cardholder</code> object that can be issued cards. */
+  /**
+   * Creates a new Issuing <code>Cardholder</code> object that can be issued cards.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#create} instead.
+   */
   public static Cardholder create(CardholderCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new Issuing <code>Cardholder</code> object that can be issued cards. */
+  /**
+   * Creates a new Issuing <code>Cardholder</code> object that can be issued cards.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#create} instead.
+   */
   public static Cardholder create(CardholderCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/issuing/cardholders");
     return request(ApiResource.RequestMethod.POST, url, params, Cardholder.class, options);
   }
 
-  /** Retrieves an Issuing <code>Cardholder</code> object. */
+  /**
+   * Retrieves an Issuing <code>Cardholder</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#retrieve} instead.
+   */
   public static Cardholder retrieve(String cardholder) throws StripeException {
     return retrieve(cardholder, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves an Issuing <code>Cardholder</code> object. */
+  /**
+   * Retrieves an Issuing <code>Cardholder</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#retrieve} instead.
+   */
   public static Cardholder retrieve(String cardholder, RequestOptions options)
       throws StripeException {
     return retrieve(cardholder, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves an Issuing <code>Cardholder</code> object. */
+  /**
+   * Retrieves an Issuing <code>Cardholder</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#retrieve} instead.
+   */
   public static Cardholder retrieve(
       String cardholder, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -166,7 +213,12 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
     return request(ApiResource.RequestMethod.GET, url, params, Cardholder.class, options);
   }
 
-  /** Retrieves an Issuing <code>Cardholder</code> object. */
+  /**
+   * Retrieves an Issuing <code>Cardholder</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#retrieve} instead.
+   */
   public static Cardholder retrieve(
       String cardholder, CardholderRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -181,6 +233,9 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
   /**
    * Updates the specified Issuing <code>Cardholder</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#update} instead.
    */
   @Override
   public Cardholder update(Map<String, Object> params) throws StripeException {
@@ -190,6 +245,9 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
   /**
    * Updates the specified Issuing <code>Cardholder</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#update} instead.
    */
   @Override
   public Cardholder update(Map<String, Object> params, RequestOptions options)
@@ -205,6 +263,9 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
   /**
    * Updates the specified Issuing <code>Cardholder</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#update} instead.
    */
   public Cardholder update(CardholderUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -213,6 +274,9 @@ public class Cardholder extends ApiResource implements HasId, MetadataStore<Card
   /**
    * Updates the specified Issuing <code>Cardholder</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardholderService#update} instead.
    */
   public Cardholder update(CardholderUpdateParams params, RequestOptions options)
       throws StripeException {

@@ -130,48 +130,88 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
         new ExpandableField<BalanceTransaction>(expandableObject.getId(), expandableObject);
   }
 
-  /** Top up the balance of an account. */
+  /**
+   * Top up the balance of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#create} instead.
+   */
   public static Topup create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Top up the balance of an account. */
+  /**
+   * Top up the balance of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#create} instead.
+   */
   public static Topup create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/topups");
     return request(ApiResource.RequestMethod.POST, url, params, Topup.class, options);
   }
 
-  /** Top up the balance of an account. */
+  /**
+   * Top up the balance of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#create} instead.
+   */
   public static Topup create(TopupCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Top up the balance of an account. */
+  /**
+   * Top up the balance of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#create} instead.
+   */
   public static Topup create(TopupCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/topups");
     return request(ApiResource.RequestMethod.POST, url, params, Topup.class, options);
   }
 
-  /** Returns a list of top-ups. */
+  /**
+   * Returns a list of top-ups.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#list} instead.
+   */
   public static TopupCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of top-ups. */
+  /**
+   * Returns a list of top-ups.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#list} instead.
+   */
   public static TopupCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/topups");
     return requestCollection(url, params, TopupCollection.class, options);
   }
 
-  /** Returns a list of top-ups. */
+  /**
+   * Returns a list of top-ups.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#list} instead.
+   */
   public static TopupCollection list(TopupListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of top-ups. */
+  /**
+   * Returns a list of top-ups.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#list} instead.
+   */
   public static TopupCollection list(TopupListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/topups");
@@ -182,6 +222,9 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
    * Retrieves the details of a top-up that has previously been created. Supply the unique top-up ID
    * that was returned from your previous request, and Stripe will return the corresponding top-up
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#retrieve} instead.
    */
   public static Topup retrieve(String topup) throws StripeException {
     return retrieve(topup, (Map<String, Object>) null, (RequestOptions) null);
@@ -191,6 +234,9 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
    * Retrieves the details of a top-up that has previously been created. Supply the unique top-up ID
    * that was returned from your previous request, and Stripe will return the corresponding top-up
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#retrieve} instead.
    */
   public static Topup retrieve(String topup, RequestOptions options) throws StripeException {
     return retrieve(topup, (Map<String, Object>) null, options);
@@ -200,6 +246,9 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
    * Retrieves the details of a top-up that has previously been created. Supply the unique top-up ID
    * that was returned from your previous request, and Stripe will return the corresponding top-up
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#retrieve} instead.
    */
   public static Topup retrieve(String topup, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -214,6 +263,9 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
    * Retrieves the details of a top-up that has previously been created. Supply the unique top-up ID
    * that was returned from your previous request, and Stripe will return the corresponding top-up
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#retrieve} instead.
    */
   public static Topup retrieve(String topup, TopupRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -224,13 +276,23 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
     return request(ApiResource.RequestMethod.GET, url, params, Topup.class, options);
   }
 
-  /** Updates the metadata of a top-up. Other top-up details are not editable by design. */
+  /**
+   * Updates the metadata of a top-up. Other top-up details are not editable by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#update} instead.
+   */
   @Override
   public Topup update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates the metadata of a top-up. Other top-up details are not editable by design. */
+  /**
+   * Updates the metadata of a top-up. Other top-up details are not editable by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#update} instead.
+   */
   @Override
   public Topup update(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -241,12 +303,22 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
     return request(ApiResource.RequestMethod.POST, url, params, Topup.class, options);
   }
 
-  /** Updates the metadata of a top-up. Other top-up details are not editable by design. */
+  /**
+   * Updates the metadata of a top-up. Other top-up details are not editable by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#update} instead.
+   */
   public Topup update(TopupUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates the metadata of a top-up. Other top-up details are not editable by design. */
+  /**
+   * Updates the metadata of a top-up. Other top-up details are not editable by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#update} instead.
+   */
   public Topup update(TopupUpdateParams params, RequestOptions options) throws StripeException {
     String url =
         String.format(
@@ -256,22 +328,42 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
     return request(ApiResource.RequestMethod.POST, url, params, Topup.class, options);
   }
 
-  /** Cancels a top-up. Only pending top-ups can be canceled. */
+  /**
+   * Cancels a top-up. Only pending top-ups can be canceled.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#cancel} instead.
+   */
   public Topup cancel() throws StripeException {
     return cancel((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Cancels a top-up. Only pending top-ups can be canceled. */
+  /**
+   * Cancels a top-up. Only pending top-ups can be canceled.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#cancel} instead.
+   */
   public Topup cancel(RequestOptions options) throws StripeException {
     return cancel((Map<String, Object>) null, options);
   }
 
-  /** Cancels a top-up. Only pending top-ups can be canceled. */
+  /**
+   * Cancels a top-up. Only pending top-ups can be canceled.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#cancel} instead.
+   */
   public Topup cancel(Map<String, Object> params) throws StripeException {
     return cancel(params, (RequestOptions) null);
   }
 
-  /** Cancels a top-up. Only pending top-ups can be canceled. */
+  /**
+   * Cancels a top-up. Only pending top-ups can be canceled.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#cancel} instead.
+   */
   public Topup cancel(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
         String.format(
@@ -281,12 +373,22 @@ public class Topup extends ApiResource implements BalanceTransactionSource, Meta
     return request(ApiResource.RequestMethod.POST, url, params, Topup.class, options);
   }
 
-  /** Cancels a top-up. Only pending top-ups can be canceled. */
+  /**
+   * Cancels a top-up. Only pending top-ups can be canceled.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#cancel} instead.
+   */
   public Topup cancel(TopupCancelParams params) throws StripeException {
     return cancel(params, (RequestOptions) null);
   }
 
-  /** Cancels a top-up. Only pending top-ups can be canceled. */
+  /**
+   * Cancels a top-up. Only pending top-ups can be canceled.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TopupService#cancel} instead.
+   */
   public Topup cancel(TopupCancelParams params, RequestOptions options) throws StripeException {
     String url =
         String.format(

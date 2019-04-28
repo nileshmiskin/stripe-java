@@ -12,42 +12,77 @@ import com.stripe.param.ExternalAccountCollectionRetrieveParams;
 import java.util.Map;
 
 public class ExternalAccountCollection extends StripeCollection<ExternalAccount> {
-  /** List external accounts for an account. */
+  /**
+   * List external accounts for an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#list} instead.
+   */
   public ExternalAccountCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** List external accounts for an account. */
+  /**
+   * List external accounts for an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#list} instead.
+   */
   public ExternalAccountCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());
     return ApiResource.requestCollection(url, params, ExternalAccountCollection.class, options);
   }
 
-  /** List external accounts for an account. */
+  /**
+   * List external accounts for an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#list} instead.
+   */
   public ExternalAccountCollection list(ExternalAccountCollectionListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** List external accounts for an account. */
+  /**
+   * List external accounts for an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#list} instead.
+   */
   public ExternalAccountCollection list(
       ExternalAccountCollectionListParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());
     return ApiResource.requestCollection(url, params, ExternalAccountCollection.class, options);
   }
 
-  /** Retrieve a specified external account for a given account. */
+  /**
+   * Retrieve a specified external account for a given account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#retrieve} instead.
+   */
   public ExternalAccount retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieve a specified external account for a given account. */
+  /**
+   * Retrieve a specified external account for a given account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#retrieve} instead.
+   */
   public ExternalAccount retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
   }
 
-  /** Retrieve a specified external account for a given account. */
+  /**
+   * Retrieve a specified external account for a given account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#retrieve} instead.
+   */
   public ExternalAccount retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -59,7 +94,12 @@ public class ExternalAccountCollection extends StripeCollection<ExternalAccount>
         ApiResource.RequestMethod.GET, url, params, ExternalAccount.class, options);
   }
 
-  /** Retrieve a specified external account for a given account. */
+  /**
+   * Retrieve a specified external account for a given account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#retrieve} instead.
+   */
   public ExternalAccount retrieve(
       String id, ExternalAccountCollectionRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -72,12 +112,22 @@ public class ExternalAccountCollection extends StripeCollection<ExternalAccount>
         ApiResource.RequestMethod.GET, url, params, ExternalAccount.class, options);
   }
 
-  /** Create an external account for a given account. */
+  /**
+   * Create an external account for a given account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#create} instead.
+   */
   public ExternalAccount create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Create an external account for a given account. */
+  /**
+   * Create an external account for a given account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#create} instead.
+   */
   public ExternalAccount create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());
@@ -85,13 +135,23 @@ public class ExternalAccountCollection extends StripeCollection<ExternalAccount>
         ApiResource.RequestMethod.POST, url, params, ExternalAccount.class, options);
   }
 
-  /** Create an external account for a given account. */
+  /**
+   * Create an external account for a given account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#create} instead.
+   */
   public ExternalAccount create(ExternalAccountCollectionCreateParams params)
       throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Create an external account for a given account. */
+  /**
+   * Create an external account for a given account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#create} instead.
+   */
   public ExternalAccount create(
       ExternalAccountCollectionCreateParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());

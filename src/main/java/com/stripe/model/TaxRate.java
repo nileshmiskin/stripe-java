@@ -85,6 +85,9 @@ public class TaxRate extends ApiResource implements HasId, MetadataStore<TaxRate
   /**
    * Returns a list of your tax rates. Tax rates are returned sorted by creation date, with the most
    * recently created tax rates appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#list} instead.
    */
   public static TaxRateCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -93,6 +96,9 @@ public class TaxRate extends ApiResource implements HasId, MetadataStore<TaxRate
   /**
    * Returns a list of your tax rates. Tax rates are returned sorted by creation date, with the most
    * recently created tax rates appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#list} instead.
    */
   public static TaxRateCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -103,6 +109,9 @@ public class TaxRate extends ApiResource implements HasId, MetadataStore<TaxRate
   /**
    * Returns a list of your tax rates. Tax rates are returned sorted by creation date, with the most
    * recently created tax rates appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#list} instead.
    */
   public static TaxRateCollection list(TaxRateListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -111,6 +120,9 @@ public class TaxRate extends ApiResource implements HasId, MetadataStore<TaxRate
   /**
    * Returns a list of your tax rates. Tax rates are returned sorted by creation date, with the most
    * recently created tax rates appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#list} instead.
    */
   public static TaxRateCollection list(TaxRateListParams params, RequestOptions options)
       throws StripeException {
@@ -118,17 +130,32 @@ public class TaxRate extends ApiResource implements HasId, MetadataStore<TaxRate
     return requestCollection(url, params, TaxRateCollection.class, options);
   }
 
-  /** Retrieves a tax rate with the given ID. */
+  /**
+   * Retrieves a tax rate with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#retrieve} instead.
+   */
   public static TaxRate retrieve(String taxRate) throws StripeException {
     return retrieve(taxRate, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves a tax rate with the given ID. */
+  /**
+   * Retrieves a tax rate with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#retrieve} instead.
+   */
   public static TaxRate retrieve(String taxRate, RequestOptions options) throws StripeException {
     return retrieve(taxRate, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves a tax rate with the given ID. */
+  /**
+   * Retrieves a tax rate with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#retrieve} instead.
+   */
   public static TaxRate retrieve(String taxRate, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -139,7 +166,12 @@ public class TaxRate extends ApiResource implements HasId, MetadataStore<TaxRate
     return request(ApiResource.RequestMethod.GET, url, params, TaxRate.class, options);
   }
 
-  /** Retrieves a tax rate with the given ID. */
+  /**
+   * Retrieves a tax rate with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#retrieve} instead.
+   */
   public static TaxRate retrieve(
       String taxRate, TaxRateRetrieveParams params, RequestOptions options) throws StripeException {
     String url =
@@ -150,37 +182,67 @@ public class TaxRate extends ApiResource implements HasId, MetadataStore<TaxRate
     return request(ApiResource.RequestMethod.GET, url, params, TaxRate.class, options);
   }
 
-  /** Creates a new tax rate. */
+  /**
+   * Creates a new tax rate.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#create} instead.
+   */
   public static TaxRate create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new tax rate. */
+  /**
+   * Creates a new tax rate.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#create} instead.
+   */
   public static TaxRate create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/tax_rates");
     return request(ApiResource.RequestMethod.POST, url, params, TaxRate.class, options);
   }
 
-  /** Creates a new tax rate. */
+  /**
+   * Creates a new tax rate.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#create} instead.
+   */
   public static TaxRate create(TaxRateCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new tax rate. */
+  /**
+   * Creates a new tax rate.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#create} instead.
+   */
   public static TaxRate create(TaxRateCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/tax_rates");
     return request(ApiResource.RequestMethod.POST, url, params, TaxRate.class, options);
   }
 
-  /** Updates an existing tax rate. */
+  /**
+   * Updates an existing tax rate.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#update} instead.
+   */
   @Override
   public TaxRate update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing tax rate. */
+  /**
+   * Updates an existing tax rate.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#update} instead.
+   */
   @Override
   public TaxRate update(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -191,12 +253,22 @@ public class TaxRate extends ApiResource implements HasId, MetadataStore<TaxRate
     return request(ApiResource.RequestMethod.POST, url, params, TaxRate.class, options);
   }
 
-  /** Updates an existing tax rate. */
+  /**
+   * Updates an existing tax rate.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#update} instead.
+   */
   public TaxRate update(TaxRateUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing tax rate. */
+  /**
+   * Updates an existing tax rate.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxRateService#update} instead.
+   */
   public TaxRate update(TaxRateUpdateParams params, RequestOptions options) throws StripeException {
     String url =
         String.format(

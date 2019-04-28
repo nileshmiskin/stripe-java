@@ -109,6 +109,9 @@ public class OrderReturn extends ApiResource implements HasId {
   /**
    * Returns a list of your order returns. The returns are returned sorted by creation date, with
    * the most recently created return appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderReturnService#list} instead.
    */
   public static OrderReturnCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -117,6 +120,9 @@ public class OrderReturn extends ApiResource implements HasId {
   /**
    * Returns a list of your order returns. The returns are returned sorted by creation date, with
    * the most recently created return appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderReturnService#list} instead.
    */
   public static OrderReturnCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -127,6 +133,9 @@ public class OrderReturn extends ApiResource implements HasId {
   /**
    * Returns a list of your order returns. The returns are returned sorted by creation date, with
    * the most recently created return appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderReturnService#list} instead.
    */
   public static OrderReturnCollection list(OrderReturnListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -135,6 +144,9 @@ public class OrderReturn extends ApiResource implements HasId {
   /**
    * Returns a list of your order returns. The returns are returned sorted by creation date, with
    * the most recently created return appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderReturnService#list} instead.
    */
   public static OrderReturnCollection list(OrderReturnListParams params, RequestOptions options)
       throws StripeException {
@@ -146,6 +158,9 @@ public class OrderReturn extends ApiResource implements HasId {
    * Retrieves the details of an existing order return. Supply the unique order ID from either an
    * order return creation request or the order return list, and Stripe will return the
    * corresponding order information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderReturnService#retrieve} instead.
    */
   public static OrderReturn retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
@@ -155,6 +170,9 @@ public class OrderReturn extends ApiResource implements HasId {
    * Retrieves the details of an existing order return. Supply the unique order ID from either an
    * order return creation request or the order return list, and Stripe will return the
    * corresponding order information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderReturnService#retrieve} instead.
    */
   public static OrderReturn retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
@@ -164,6 +182,9 @@ public class OrderReturn extends ApiResource implements HasId {
    * Retrieves the details of an existing order return. Supply the unique order ID from either an
    * order return creation request or the order return list, and Stripe will return the
    * corresponding order information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderReturnService#retrieve} instead.
    */
   public static OrderReturn retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -179,6 +200,9 @@ public class OrderReturn extends ApiResource implements HasId {
    * Retrieves the details of an existing order return. Supply the unique order ID from either an
    * order return creation request or the order return list, and Stripe will return the
    * corresponding order information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderReturnService#retrieve} instead.
    */
   public static OrderReturn retrieve(
       String id, OrderReturnRetrieveParams params, RequestOptions options) throws StripeException {

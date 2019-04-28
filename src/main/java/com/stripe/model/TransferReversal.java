@@ -157,6 +157,9 @@ public class TransferReversal extends ApiResource
    * not provided will be left unchanged.
    *
    * <p>This request only accepts metadata and description as arguments.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferReversalService#update} instead.
    */
   @Override
   public TransferReversal update(Map<String, Object> params) throws StripeException {
@@ -168,6 +171,9 @@ public class TransferReversal extends ApiResource
    * not provided will be left unchanged.
    *
    * <p>This request only accepts metadata and description as arguments.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferReversalService#update} instead.
    */
   @Override
   public TransferReversal update(Map<String, Object> params, RequestOptions options)
@@ -199,6 +205,9 @@ public class TransferReversal extends ApiResource
    * not provided will be left unchanged.
    *
    * <p>This request only accepts metadata and description as arguments.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferReversalService#update} instead.
    */
   public TransferReversal update(TransferReversalUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -209,6 +218,9 @@ public class TransferReversal extends ApiResource
    * not provided will be left unchanged.
    *
    * <p>This request only accepts metadata and description as arguments.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferReversalService#update} instead.
    */
   public TransferReversal update(TransferReversalUpdateParams params, RequestOptions options)
       throws StripeException {

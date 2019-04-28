@@ -124,13 +124,23 @@ public class Person extends ApiResource implements HasId, MetadataStore<Person> 
   @SerializedName("verification")
   Verification verification;
 
-  /** Updates an existing person. */
+  /**
+   * Updates an existing person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#update} instead.
+   */
   @Override
   public Person update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing person. */
+  /**
+   * Updates an existing person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#update} instead.
+   */
   @Override
   public Person update(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url;
@@ -155,12 +165,22 @@ public class Person extends ApiResource implements HasId, MetadataStore<Person> 
     return request(ApiResource.RequestMethod.POST, url, params, Person.class, options);
   }
 
-  /** Updates an existing person. */
+  /**
+   * Updates an existing person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#update} instead.
+   */
   public Person update(PersonUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing person. */
+  /**
+   * Updates an existing person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#update} instead.
+   */
   public Person update(PersonUpdateParams params, RequestOptions options) throws StripeException {
     String url;
     if (this.getAccount() != null) {
@@ -184,22 +204,42 @@ public class Person extends ApiResource implements HasId, MetadataStore<Person> 
     return request(ApiResource.RequestMethod.POST, url, params, Person.class, options);
   }
 
-  /** Deletes an existing person’s relationship to the account’s legal entity. */
+  /**
+   * Deletes an existing person’s relationship to the account’s legal entity.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#delete} instead.
+   */
   public Person delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Deletes an existing person’s relationship to the account’s legal entity. */
+  /**
+   * Deletes an existing person’s relationship to the account’s legal entity.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#delete} instead.
+   */
   public Person delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
   }
 
-  /** Deletes an existing person’s relationship to the account’s legal entity. */
+  /**
+   * Deletes an existing person’s relationship to the account’s legal entity.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#delete} instead.
+   */
   public Person delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
   }
 
-  /** Deletes an existing person’s relationship to the account’s legal entity. */
+  /**
+   * Deletes an existing person’s relationship to the account’s legal entity.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#delete} instead.
+   */
   public Person delete(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url;
     if (this.getAccount() != null) {

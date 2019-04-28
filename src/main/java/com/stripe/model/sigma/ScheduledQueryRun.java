@@ -71,44 +71,79 @@ public class ScheduledQueryRun extends ApiResource implements HasId {
   @SerializedName("title")
   String title;
 
-  /** Returns a list of scheduled query runs. */
+  /**
+   * Returns a list of scheduled query runs.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.sigma.ScheduledQueryRunService#list} instead.
+   */
   public static ScheduledQueryRunCollection list(Map<String, Object> params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of scheduled query runs. */
+  /**
+   * Returns a list of scheduled query runs.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.sigma.ScheduledQueryRunService#list} instead.
+   */
   public static ScheduledQueryRunCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/sigma/scheduled_query_runs");
     return requestCollection(url, params, ScheduledQueryRunCollection.class, options);
   }
 
-  /** Returns a list of scheduled query runs. */
+  /**
+   * Returns a list of scheduled query runs.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.sigma.ScheduledQueryRunService#list} instead.
+   */
   public static ScheduledQueryRunCollection list(ScheduledQueryRunListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of scheduled query runs. */
+  /**
+   * Returns a list of scheduled query runs.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.sigma.ScheduledQueryRunService#list} instead.
+   */
   public static ScheduledQueryRunCollection list(
       ScheduledQueryRunListParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/sigma/scheduled_query_runs");
     return requestCollection(url, params, ScheduledQueryRunCollection.class, options);
   }
 
-  /** Retrieves the details of an scheduled query run. */
+  /**
+   * Retrieves the details of an scheduled query run.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.sigma.ScheduledQueryRunService#retrieve} instead.
+   */
   public static ScheduledQueryRun retrieve(String scheduledQueryRun) throws StripeException {
     return retrieve(scheduledQueryRun, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the details of an scheduled query run. */
+  /**
+   * Retrieves the details of an scheduled query run.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.sigma.ScheduledQueryRunService#retrieve} instead.
+   */
   public static ScheduledQueryRun retrieve(String scheduledQueryRun, RequestOptions options)
       throws StripeException {
     return retrieve(scheduledQueryRun, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the details of an scheduled query run. */
+  /**
+   * Retrieves the details of an scheduled query run.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.sigma.ScheduledQueryRunService#retrieve} instead.
+   */
   public static ScheduledQueryRun retrieve(
       String scheduledQueryRun, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -121,7 +156,12 @@ public class ScheduledQueryRun extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, ScheduledQueryRun.class, options);
   }
 
-  /** Retrieves the details of an scheduled query run. */
+  /**
+   * Retrieves the details of an scheduled query run.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.sigma.ScheduledQueryRunService#retrieve} instead.
+   */
   public static ScheduledQueryRun retrieve(
       String scheduledQueryRun, ScheduledQueryRunRetrieveParams params, RequestOptions options)
       throws StripeException {

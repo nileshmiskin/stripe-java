@@ -46,67 +46,122 @@ public class ApplePayDomain extends ApiResource implements HasId {
   @SerializedName("object")
   String object;
 
-  /** List apple pay domains. */
+  /**
+   * List apple pay domains.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#list} instead.
+   */
   public static ApplePayDomainCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** List apple pay domains. */
+  /**
+   * List apple pay domains.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#list} instead.
+   */
   public static ApplePayDomainCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/apple_pay/domains");
     return requestCollection(url, params, ApplePayDomainCollection.class, options);
   }
 
-  /** List apple pay domains. */
+  /**
+   * List apple pay domains.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#list} instead.
+   */
   public static ApplePayDomainCollection list(ApplePayDomainListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** List apple pay domains. */
+  /**
+   * List apple pay domains.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#list} instead.
+   */
   public static ApplePayDomainCollection list(
       ApplePayDomainListParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/apple_pay/domains");
     return requestCollection(url, params, ApplePayDomainCollection.class, options);
   }
 
-  /** Create an apple pay domain. */
+  /**
+   * Create an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#create} instead.
+   */
   public static ApplePayDomain create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Create an apple pay domain. */
+  /**
+   * Create an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#create} instead.
+   */
   public static ApplePayDomain create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/apple_pay/domains");
     return request(ApiResource.RequestMethod.POST, url, params, ApplePayDomain.class, options);
   }
 
-  /** Create an apple pay domain. */
+  /**
+   * Create an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#create} instead.
+   */
   public static ApplePayDomain create(ApplePayDomainCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Create an apple pay domain. */
+  /**
+   * Create an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#create} instead.
+   */
   public static ApplePayDomain create(ApplePayDomainCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/apple_pay/domains");
     return request(ApiResource.RequestMethod.POST, url, params, ApplePayDomain.class, options);
   }
 
-  /** Retrieve an apple pay domain. */
+  /**
+   * Retrieve an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#retrieve} instead.
+   */
   public static ApplePayDomain retrieve(String domain) throws StripeException {
     return retrieve(domain, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieve an apple pay domain. */
+  /**
+   * Retrieve an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#retrieve} instead.
+   */
   public static ApplePayDomain retrieve(String domain, RequestOptions options)
       throws StripeException {
     return retrieve(domain, (Map<String, Object>) null, options);
   }
 
-  /** Retrieve an apple pay domain. */
+  /**
+   * Retrieve an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#retrieve} instead.
+   */
   public static ApplePayDomain retrieve(
       String domain, Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -117,7 +172,12 @@ public class ApplePayDomain extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, ApplePayDomain.class, options);
   }
 
-  /** Retrieve an apple pay domain. */
+  /**
+   * Retrieve an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#retrieve} instead.
+   */
   public static ApplePayDomain retrieve(
       String domain, ApplePayDomainRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -129,22 +189,42 @@ public class ApplePayDomain extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, ApplePayDomain.class, options);
   }
 
-  /** Delete an apple pay domain. */
+  /**
+   * Delete an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#delete} instead.
+   */
   public ApplePayDomain delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Delete an apple pay domain. */
+  /**
+   * Delete an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#delete} instead.
+   */
   public ApplePayDomain delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
   }
 
-  /** Delete an apple pay domain. */
+  /**
+   * Delete an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#delete} instead.
+   */
   public ApplePayDomain delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
   }
 
-  /** Delete an apple pay domain. */
+  /**
+   * Delete an apple pay domain.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ApplePayDomainService#delete} instead.
+   */
   public ApplePayDomain delete(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =

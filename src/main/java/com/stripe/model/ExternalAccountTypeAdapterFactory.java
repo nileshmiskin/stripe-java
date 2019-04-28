@@ -85,7 +85,11 @@ public class ExternalAccountTypeAdapterFactory implements TypeAdapterFactory {
       return this.id;
     }
 
-    /** Unsupported operation for unknown subtype. */
+    /**
+     * API call on resource will be marked as deprecated in the next major version. Please use a
+     * method on service {@link com.stripe.service.ExternalAccountService#update}
+     * instead.Unsupported operation for unknown subtype.
+     */
     @Override
     public ExternalAccount update(Map<String, Object> params) throws StripeException {
       throw new UnsupportedOperationException(
@@ -96,7 +100,11 @@ public class ExternalAccountTypeAdapterFactory implements TypeAdapterFactory {
               this.id, this.object));
     }
 
-    /** Unsupported operation for unknown subtype. */
+    /**
+     * API call on resource will be marked as deprecated in the next major version. Please use a
+     * method on service {@link com.stripe.service.ExternalAccountService#update}
+     * instead.Unsupported operation for unknown subtype.
+     */
     @Override
     public ExternalAccount update(Map<String, Object> params, RequestOptions options)
         throws StripeException {
@@ -108,7 +116,11 @@ public class ExternalAccountTypeAdapterFactory implements TypeAdapterFactory {
               this.id, this.object));
     }
 
-    /** Unsupported operation for unknown subtype. */
+    /**
+     * API call on resource will be marked as deprecated in the next major version. Please use a
+     * method on service {@link com.stripe.service.ExternalAccountService#delete}
+     * instead.Unsupported operation for unknown subtype.
+     */
     @Override
     public ExternalAccount delete() throws StripeException {
       throw new UnsupportedOperationException(
@@ -119,7 +131,11 @@ public class ExternalAccountTypeAdapterFactory implements TypeAdapterFactory {
               this.id, this.object));
     }
 
-    /** Unsupported operation for unknown subtype. */
+    /**
+     * API call on resource will be marked as deprecated in the next major version. Please use a
+     * method on service {@link com.stripe.service.ExternalAccountService#delete}
+     * instead.Unsupported operation for unknown subtype.
+     */
     @Override
     public ExternalAccount delete(RequestOptions options) throws StripeException {
       throw new UnsupportedOperationException(
@@ -130,7 +146,11 @@ public class ExternalAccountTypeAdapterFactory implements TypeAdapterFactory {
               this.id, this.object));
     }
 
-    /** Unsupported operation for unknown subtype. */
+    /**
+     * API call on resource will be marked as deprecated in the next major version. Please use a
+     * method on service {@link com.stripe.service.ExternalAccountService#delete}
+     * instead.Unsupported operation for unknown subtype.
+     */
     @Override
     public ExternalAccount delete(Map<String, Object> params) throws StripeException {
       throw new UnsupportedOperationException(
@@ -141,7 +161,11 @@ public class ExternalAccountTypeAdapterFactory implements TypeAdapterFactory {
               this.id, this.object));
     }
 
-    /** Unsupported operation for unknown subtype. */
+    /**
+     * API call on resource will be marked as deprecated in the next major version. Please use a
+     * method on service {@link com.stripe.service.ExternalAccountService#delete}
+     * instead.Unsupported operation for unknown subtype.
+     */
     @Override
     public ExternalAccount delete(Map<String, Object> params, RequestOptions options)
         throws StripeException {

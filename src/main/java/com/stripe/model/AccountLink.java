@@ -36,6 +36,9 @@ public class AccountLink extends ApiResource {
   /**
    * Creates an AccountLink object that returns a Stripe URL that the user can redirect their user
    * to in order to take them through the Hosted Verification flow.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountLinkService#create} instead.
    */
   public static AccountLink create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -44,6 +47,9 @@ public class AccountLink extends ApiResource {
   /**
    * Creates an AccountLink object that returns a Stripe URL that the user can redirect their user
    * to in order to take them through the Hosted Verification flow.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountLinkService#create} instead.
    */
   public static AccountLink create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -54,6 +60,9 @@ public class AccountLink extends ApiResource {
   /**
    * Creates an AccountLink object that returns a Stripe URL that the user can redirect their user
    * to in order to take them through the Hosted Verification flow.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountLinkService#create} instead.
    */
   public static AccountLink create(AccountLinkCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -62,6 +71,9 @@ public class AccountLink extends ApiResource {
   /**
    * Creates an AccountLink object that returns a Stripe URL that the user can redirect their user
    * to in order to take them through the Hosted Verification flow.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountLinkService#create} instead.
    */
   public static AccountLink create(AccountLinkCreateParams params, RequestOptions options)
       throws StripeException {

@@ -14,6 +14,9 @@ public class InvoiceLineItemCollection extends StripeCollection<InvoiceLineItem>
    * When retrieving an invoice, you’ll get a <strong>lines</strong> property containing the total
    * count of line items and the first handful of those items. There is also a URL where you can
    * retrieve the full (paginated) list of line items.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceLineItemService#list} instead.
    */
   public InvoiceLineItemCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -23,6 +26,9 @@ public class InvoiceLineItemCollection extends StripeCollection<InvoiceLineItem>
    * When retrieving an invoice, you’ll get a <strong>lines</strong> property containing the total
    * count of line items and the first handful of those items. There is also a URL where you can
    * retrieve the full (paginated) list of line items.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceLineItemService#list} instead.
    */
   public InvoiceLineItemCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -34,6 +40,9 @@ public class InvoiceLineItemCollection extends StripeCollection<InvoiceLineItem>
    * When retrieving an invoice, you’ll get a <strong>lines</strong> property containing the total
    * count of line items and the first handful of those items. There is also a URL where you can
    * retrieve the full (paginated) list of line items.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceLineItemService#list} instead.
    */
   public InvoiceLineItemCollection list(InvoiceLineItemCollectionListParams params)
       throws StripeException {
@@ -44,6 +53,9 @@ public class InvoiceLineItemCollection extends StripeCollection<InvoiceLineItem>
    * When retrieving an invoice, you’ll get a <strong>lines</strong> property containing the total
    * count of line items and the first handful of those items. There is also a URL where you can
    * retrieve the full (paginated) list of line items.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceLineItemService#list} instead.
    */
   public InvoiceLineItemCollection list(
       InvoiceLineItemCollectionListParams params, RequestOptions options) throws StripeException {

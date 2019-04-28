@@ -72,6 +72,9 @@ public class ReportType extends ApiResource implements HasId {
   /**
    * Retrieves the details of a Report Type. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportTypeService#retrieve} instead.
    */
   public static ReportType retrieve(String reportType) throws StripeException {
     return retrieve(reportType, (Map<String, Object>) null, (RequestOptions) null);
@@ -80,6 +83,9 @@ public class ReportType extends ApiResource implements HasId {
   /**
    * Retrieves the details of a Report Type. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportTypeService#retrieve} instead.
    */
   public static ReportType retrieve(String reportType, RequestOptions options)
       throws StripeException {
@@ -89,6 +95,9 @@ public class ReportType extends ApiResource implements HasId {
   /**
    * Retrieves the details of a Report Type. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportTypeService#retrieve} instead.
    */
   public static ReportType retrieve(
       String reportType, Map<String, Object> params, RequestOptions options)
@@ -104,6 +113,9 @@ public class ReportType extends ApiResource implements HasId {
   /**
    * Retrieves the details of a Report Type. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportTypeService#retrieve} instead.
    */
   public static ReportType retrieve(
       String reportType, ReportTypeRetrieveParams params, RequestOptions options)
@@ -119,6 +131,9 @@ public class ReportType extends ApiResource implements HasId {
   /**
    * Returns a full list of Report Types. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportTypeService#list} instead.
    */
   public static ReportTypeCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -127,6 +142,9 @@ public class ReportType extends ApiResource implements HasId {
   /**
    * Returns a full list of Report Types. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportTypeService#list} instead.
    */
   public static ReportTypeCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -137,6 +155,9 @@ public class ReportType extends ApiResource implements HasId {
   /**
    * Returns a full list of Report Types. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportTypeService#list} instead.
    */
   public static ReportTypeCollection list(ReportTypeListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -145,6 +166,9 @@ public class ReportType extends ApiResource implements HasId {
   /**
    * Returns a full list of Report Types. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportTypeService#list} instead.
    */
   public static ReportTypeCollection list(ReportTypeListParams params, RequestOptions options)
       throws StripeException {

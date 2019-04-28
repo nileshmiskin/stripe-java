@@ -119,6 +119,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
   /**
    * Retrieves the details of an existing SKU. Supply the unique SKU identifier from either a SKU
    * creation request or from the product, and Stripe will return the corresponding SKU information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#retrieve} instead.
    */
   public static Sku retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
@@ -127,6 +130,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
   /**
    * Retrieves the details of an existing SKU. Supply the unique SKU identifier from either a SKU
    * creation request or from the product, and Stripe will return the corresponding SKU information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#retrieve} instead.
    */
   public static Sku retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
@@ -135,6 +141,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
   /**
    * Retrieves the details of an existing SKU. Supply the unique SKU identifier from either a SKU
    * creation request or from the product, and Stripe will return the corresponding SKU information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#retrieve} instead.
    */
   public static Sku retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -147,6 +156,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
   /**
    * Retrieves the details of an existing SKU. Supply the unique SKU identifier from either a SKU
    * creation request or from the product, and Stripe will return the corresponding SKU information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#retrieve} instead.
    */
   public static Sku retrieve(String id, SkuRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -159,6 +171,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
   /**
    * Returns a list of your SKUs. The SKUs are returned sorted by creation date, with the most
    * recently created SKUs appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#list} instead.
    */
   public static SkuCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -167,6 +182,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
   /**
    * Returns a list of your SKUs. The SKUs are returned sorted by creation date, with the most
    * recently created SKUs appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#list} instead.
    */
   public static SkuCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -177,6 +195,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
   /**
    * Returns a list of your SKUs. The SKUs are returned sorted by creation date, with the most
    * recently created SKUs appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#list} instead.
    */
   public static SkuCollection list(SkuListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -185,6 +206,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
   /**
    * Returns a list of your SKUs. The SKUs are returned sorted by creation date, with the most
    * recently created SKUs appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#list} instead.
    */
   public static SkuCollection list(SkuListParams params, RequestOptions options)
       throws StripeException {
@@ -198,6 +222,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
    *
    * <p>Note that a SKU’s <code>attributes</code> are not editable. Instead, you would need to
    * deactivate the existing SKU and create a new one with the new attribute values.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#update} instead.
    */
   @Override
   public Sku update(Map<String, Object> params) throws StripeException {
@@ -210,6 +237,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
    *
    * <p>Note that a SKU’s <code>attributes</code> are not editable. Instead, you would need to
    * deactivate the existing SKU and create a new one with the new attribute values.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#update} instead.
    */
   @Override
   public Sku update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -227,6 +257,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
    *
    * <p>Note that a SKU’s <code>attributes</code> are not editable. Instead, you would need to
    * deactivate the existing SKU and create a new one with the new attribute values.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#update} instead.
    */
   public Sku update(SkuUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -238,6 +271,9 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
    *
    * <p>Note that a SKU’s <code>attributes</code> are not editable. Instead, you would need to
    * deactivate the existing SKU and create a new one with the new attribute values.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#update} instead.
    */
   public Sku update(SkuUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -248,45 +284,85 @@ public class Sku extends ApiResource implements HasId, MetadataStore<Sku> {
     return request(ApiResource.RequestMethod.POST, url, params, Sku.class, options);
   }
 
-  /** Creates a new SKU associated with a product. */
+  /**
+   * Creates a new SKU associated with a product.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#create} instead.
+   */
   public static Sku create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new SKU associated with a product. */
+  /**
+   * Creates a new SKU associated with a product.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#create} instead.
+   */
   public static Sku create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/skus");
     return request(ApiResource.RequestMethod.POST, url, params, Sku.class, options);
   }
 
-  /** Creates a new SKU associated with a product. */
+  /**
+   * Creates a new SKU associated with a product.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#create} instead.
+   */
   public static Sku create(SkuCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new SKU associated with a product. */
+  /**
+   * Creates a new SKU associated with a product.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#create} instead.
+   */
   public static Sku create(SkuCreateParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/skus");
     return request(ApiResource.RequestMethod.POST, url, params, Sku.class, options);
   }
 
-  /** Delete a SKU. Deleting a SKU is only possible until it has been used in an order. */
+  /**
+   * Delete a SKU. Deleting a SKU is only possible until it has been used in an order.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#delete} instead.
+   */
   public Sku delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Delete a SKU. Deleting a SKU is only possible until it has been used in an order. */
+  /**
+   * Delete a SKU. Deleting a SKU is only possible until it has been used in an order.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#delete} instead.
+   */
   public Sku delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
   }
 
-  /** Delete a SKU. Deleting a SKU is only possible until it has been used in an order. */
+  /**
+   * Delete a SKU. Deleting a SKU is only possible until it has been used in an order.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#delete} instead.
+   */
   public Sku delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
   }
 
-  /** Delete a SKU. Deleting a SKU is only possible until it has been used in an order. */
+  /**
+   * Delete a SKU. Deleting a SKU is only possible until it has been used in an order.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SkuService#delete} instead.
+   */
   public Sku delete(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
         String.format(

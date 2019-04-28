@@ -7,15 +7,39 @@ import com.stripe.net.RequestOptions;
 import java.util.Map;
 
 public interface ExternalAccount extends HasId {
+  /**
+   * API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#update} instead.
+   */
   ExternalAccount update(Map<String, Object> params) throws StripeException;
 
+  /**
+   * API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#update} instead.
+   */
   ExternalAccount update(Map<String, Object> params, RequestOptions options) throws StripeException;
 
+  /**
+   * API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#delete} instead.
+   */
   ExternalAccount delete() throws StripeException;
 
+  /**
+   * API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#delete} instead.
+   */
   ExternalAccount delete(RequestOptions options) throws StripeException;
 
+  /**
+   * API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#delete} instead.
+   */
   ExternalAccount delete(Map<String, Object> params) throws StripeException;
 
+  /**
+   * API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExternalAccountService#delete} instead.
+   */
   ExternalAccount delete(Map<String, Object> params, RequestOptions options) throws StripeException;
 }

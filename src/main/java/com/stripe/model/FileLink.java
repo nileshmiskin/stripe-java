@@ -84,17 +84,32 @@ public class FileLink extends ApiResource implements HasId, MetadataStore<FileLi
     this.file = new ExpandableField<File>(expandableObject.getId(), expandableObject);
   }
 
-  /** Retrieves the file link with the given ID. */
+  /**
+   * Retrieves the file link with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#retrieve} instead.
+   */
   public static FileLink retrieve(String link) throws StripeException {
     return retrieve(link, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the file link with the given ID. */
+  /**
+   * Retrieves the file link with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#retrieve} instead.
+   */
   public static FileLink retrieve(String link, RequestOptions options) throws StripeException {
     return retrieve(link, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the file link with the given ID. */
+  /**
+   * Retrieves the file link with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#retrieve} instead.
+   */
   public static FileLink retrieve(String link, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -104,7 +119,12 @@ public class FileLink extends ApiResource implements HasId, MetadataStore<FileLi
     return request(ApiResource.RequestMethod.GET, url, params, FileLink.class, options);
   }
 
-  /** Retrieves the file link with the given ID. */
+  /**
+   * Retrieves the file link with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#retrieve} instead.
+   */
   public static FileLink retrieve(
       String link, FileLinkRetrieveParams params, RequestOptions options) throws StripeException {
     String url =
@@ -114,37 +134,67 @@ public class FileLink extends ApiResource implements HasId, MetadataStore<FileLi
     return request(ApiResource.RequestMethod.GET, url, params, FileLink.class, options);
   }
 
-  /** Creates a new file link object. */
+  /**
+   * Creates a new file link object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#create} instead.
+   */
   public static FileLink create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new file link object. */
+  /**
+   * Creates a new file link object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#create} instead.
+   */
   public static FileLink create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/file_links");
     return request(ApiResource.RequestMethod.POST, url, params, FileLink.class, options);
   }
 
-  /** Creates a new file link object. */
+  /**
+   * Creates a new file link object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#create} instead.
+   */
   public static FileLink create(FileLinkCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new file link object. */
+  /**
+   * Creates a new file link object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#create} instead.
+   */
   public static FileLink create(FileLinkCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/file_links");
     return request(ApiResource.RequestMethod.POST, url, params, FileLink.class, options);
   }
 
-  /** Updates an existing file link object. Expired links can no longer be updated. */
+  /**
+   * Updates an existing file link object. Expired links can no longer be updated.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#update} instead.
+   */
   @Override
   public FileLink update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing file link object. Expired links can no longer be updated. */
+  /**
+   * Updates an existing file link object. Expired links can no longer be updated.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#update} instead.
+   */
   @Override
   public FileLink update(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -156,12 +206,22 @@ public class FileLink extends ApiResource implements HasId, MetadataStore<FileLi
     return request(ApiResource.RequestMethod.POST, url, params, FileLink.class, options);
   }
 
-  /** Updates an existing file link object. Expired links can no longer be updated. */
+  /**
+   * Updates an existing file link object. Expired links can no longer be updated.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#update} instead.
+   */
   public FileLink update(FileLinkUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing file link object. Expired links can no longer be updated. */
+  /**
+   * Updates an existing file link object. Expired links can no longer be updated.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#update} instead.
+   */
   public FileLink update(FileLinkUpdateParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -172,24 +232,44 @@ public class FileLink extends ApiResource implements HasId, MetadataStore<FileLi
     return request(ApiResource.RequestMethod.POST, url, params, FileLink.class, options);
   }
 
-  /** Returns a list of file links. */
+  /**
+   * Returns a list of file links.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#list} instead.
+   */
   public static FileLinkCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of file links. */
+  /**
+   * Returns a list of file links.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#list} instead.
+   */
   public static FileLinkCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/file_links");
     return requestCollection(url, params, FileLinkCollection.class, options);
   }
 
-  /** Returns a list of file links. */
+  /**
+   * Returns a list of file links.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#list} instead.
+   */
   public static FileLinkCollection list(FileLinkListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of file links. */
+  /**
+   * Returns a list of file links.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FileLinkService#list} instead.
+   */
   public static FileLinkCollection list(FileLinkListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/file_links");

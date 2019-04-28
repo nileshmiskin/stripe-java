@@ -534,6 +534,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * You can list all invoices, or list the invoices for a specific customer. The invoices are
    * returned sorted by creation date, with the most recently created invoices appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#list} instead.
    */
   public static InvoiceCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -542,6 +545,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * You can list all invoices, or list the invoices for a specific customer. The invoices are
    * returned sorted by creation date, with the most recently created invoices appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#list} instead.
    */
   public static InvoiceCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -552,6 +558,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * You can list all invoices, or list the invoices for a specific customer. The invoices are
    * returned sorted by creation date, with the most recently created invoices appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#list} instead.
    */
   public static InvoiceCollection list(InvoiceListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -560,6 +569,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * You can list all invoices, or list the invoices for a specific customer. The invoices are
    * returned sorted by creation date, with the most recently created invoices appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#list} instead.
    */
   public static InvoiceCollection list(InvoiceListParams params, RequestOptions options)
       throws StripeException {
@@ -586,6 +598,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * way to get only the prorations being previewed is to consider only proration line items where
    * <code>period[start]</code> is equal to the <code>subscription_proration_date</code> on the
    * upcoming invoice resource.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#upcoming} instead.
    */
   public static Invoice upcoming() throws StripeException {
     return upcoming((Map<String, Object>) null, (RequestOptions) null);
@@ -610,6 +625,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * way to get only the prorations being previewed is to consider only proration line items where
    * <code>period[start]</code> is equal to the <code>subscription_proration_date</code> on the
    * upcoming invoice resource.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#upcoming} instead.
    */
   public static Invoice upcoming(Map<String, Object> params) throws StripeException {
     return upcoming(params, (RequestOptions) null);
@@ -634,6 +652,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * way to get only the prorations being previewed is to consider only proration line items where
    * <code>period[start]</code> is equal to the <code>subscription_proration_date</code> on the
    * upcoming invoice resource.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#upcoming} instead.
    */
   public static Invoice upcoming(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -660,6 +681,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * way to get only the prorations being previewed is to consider only proration line items where
    * <code>period[start]</code> is equal to the <code>subscription_proration_date</code> on the
    * upcoming invoice resource.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#upcoming} instead.
    */
   public static Invoice upcoming(InvoiceUpcomingParams params) throws StripeException {
     return upcoming(params, (RequestOptions) null);
@@ -684,6 +708,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * way to get only the prorations being previewed is to consider only proration line items where
    * <code>period[start]</code> is equal to the <code>subscription_proration_date</code> on the
    * upcoming invoice resource.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#upcoming} instead.
    */
   public static Invoice upcoming(InvoiceUpcomingParams params, RequestOptions options)
       throws StripeException {
@@ -694,6 +721,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * This endpoint creates a draft invoice for a given customer. The draft invoice created pulls in
    * all pending invoice items on that customer, including prorations.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#create} instead.
    */
   public static Invoice create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -702,6 +732,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * This endpoint creates a draft invoice for a given customer. The draft invoice created pulls in
    * all pending invoice items on that customer, including prorations.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#create} instead.
    */
   public static Invoice create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -712,6 +745,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * This endpoint creates a draft invoice for a given customer. The draft invoice created pulls in
    * all pending invoice items on that customer, including prorations.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#create} instead.
    */
   public static Invoice create(InvoiceCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -720,6 +756,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * This endpoint creates a draft invoice for a given customer. The draft invoice created pulls in
    * all pending invoice items on that customer, including prorations.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#create} instead.
    */
   public static Invoice create(InvoiceCreateParams params, RequestOptions options)
       throws StripeException {
@@ -727,17 +766,32 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
     return request(ApiResource.RequestMethod.POST, url, params, Invoice.class, options);
   }
 
-  /** Retrieves the invoice with the given ID. */
+  /**
+   * Retrieves the invoice with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#retrieve} instead.
+   */
   public static Invoice retrieve(String invoice) throws StripeException {
     return retrieve(invoice, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the invoice with the given ID. */
+  /**
+   * Retrieves the invoice with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#retrieve} instead.
+   */
   public static Invoice retrieve(String invoice, RequestOptions options) throws StripeException {
     return retrieve(invoice, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the invoice with the given ID. */
+  /**
+   * Retrieves the invoice with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#retrieve} instead.
+   */
   public static Invoice retrieve(String invoice, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -748,7 +802,12 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
     return request(ApiResource.RequestMethod.GET, url, params, Invoice.class, options);
   }
 
-  /** Retrieves the invoice with the given ID. */
+  /**
+   * Retrieves the invoice with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#retrieve} instead.
+   */
   public static Invoice retrieve(
       String invoice, InvoiceRetrieveParams params, RequestOptions options) throws StripeException {
     String url =
@@ -768,6 +827,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * reattempting payments on, sending reminders for, or <a
    * href="/docs/billing/invoices/reconciliation">automatically reconciling</a> invoices, pass
    * <code>auto_advance=false</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#update} instead.
    */
   @Override
   public Invoice update(Map<String, Object> params) throws StripeException {
@@ -783,6 +845,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * reattempting payments on, sending reminders for, or <a
    * href="/docs/billing/invoices/reconciliation">automatically reconciling</a> invoices, pass
    * <code>auto_advance=false</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#update} instead.
    */
   @Override
   public Invoice update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -803,6 +868,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * reattempting payments on, sending reminders for, or <a
    * href="/docs/billing/invoices/reconciliation">automatically reconciling</a> invoices, pass
    * <code>auto_advance=false</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#update} instead.
    */
   public Invoice update(InvoiceUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -817,6 +885,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * reattempting payments on, sending reminders for, or <a
    * href="/docs/billing/invoices/reconciliation">automatically reconciling</a> invoices, pass
    * <code>auto_advance=false</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#update} instead.
    */
   public Invoice update(InvoiceUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -831,6 +902,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Permanently deletes a draft invoice. This cannot be undone. Attempts to delete invoices that
    * are no longer in a draft state will fail; once an invoice has been finalized, it must be <a
    * href="#void_invoice">voided</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#delete} instead.
    */
   public Invoice delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -840,6 +914,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Permanently deletes a draft invoice. This cannot be undone. Attempts to delete invoices that
    * are no longer in a draft state will fail; once an invoice has been finalized, it must be <a
    * href="#void_invoice">voided</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#delete} instead.
    */
   public Invoice delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -849,6 +926,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Permanently deletes a draft invoice. This cannot be undone. Attempts to delete invoices that
    * are no longer in a draft state will fail; once an invoice has been finalized, it must be <a
    * href="#void_invoice">voided</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#delete} instead.
    */
   public Invoice delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -858,6 +938,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Permanently deletes a draft invoice. This cannot be undone. Attempts to delete invoices that
    * are no longer in a draft state will fail; once an invoice has been finalized, it must be <a
    * href="#void_invoice">voided</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#delete} instead.
    */
   public Invoice delete(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -874,6 +957,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * href="https://dashboard.stripe.com/account/billing/automatic">subscriptions settings</a>.
    * However, if you’d like to attempt payment on an invoice out of the normal collection schedule
    * or for some other reason, you can do so.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#pay} instead.
    */
   public Invoice pay() throws StripeException {
     return pay((Map<String, Object>) null, (RequestOptions) null);
@@ -885,6 +971,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * href="https://dashboard.stripe.com/account/billing/automatic">subscriptions settings</a>.
    * However, if you’d like to attempt payment on an invoice out of the normal collection schedule
    * or for some other reason, you can do so.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#pay} instead.
    */
   public Invoice pay(RequestOptions options) throws StripeException {
     return pay((Map<String, Object>) null, options);
@@ -896,6 +985,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * href="https://dashboard.stripe.com/account/billing/automatic">subscriptions settings</a>.
    * However, if you’d like to attempt payment on an invoice out of the normal collection schedule
    * or for some other reason, you can do so.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#pay} instead.
    */
   public Invoice pay(Map<String, Object> params) throws StripeException {
     return pay(params, (RequestOptions) null);
@@ -907,6 +999,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * href="https://dashboard.stripe.com/account/billing/automatic">subscriptions settings</a>.
    * However, if you’d like to attempt payment on an invoice out of the normal collection schedule
    * or for some other reason, you can do so.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#pay} instead.
    */
   public Invoice pay(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -923,6 +1018,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * href="https://dashboard.stripe.com/account/billing/automatic">subscriptions settings</a>.
    * However, if you’d like to attempt payment on an invoice out of the normal collection schedule
    * or for some other reason, you can do so.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#pay} instead.
    */
   public Invoice pay(InvoicePayParams params) throws StripeException {
     return pay(params, (RequestOptions) null);
@@ -934,6 +1032,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * href="https://dashboard.stripe.com/account/billing/automatic">subscriptions settings</a>.
    * However, if you’d like to attempt payment on an invoice out of the normal collection schedule
    * or for some other reason, you can do so.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#pay} instead.
    */
   public Invoice pay(InvoicePayParams params, RequestOptions options) throws StripeException {
     String url =
@@ -947,6 +1048,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Stripe automatically finalizes drafts before sending and attempting payment on invoices.
    * However, if you’d like to finalize a draft invoice manually, you can do so using this method.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#finalizeInvoice} instead.
    */
   public Invoice finalizeInvoice() throws StripeException {
     return finalizeInvoice((Map<String, Object>) null, (RequestOptions) null);
@@ -955,6 +1059,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Stripe automatically finalizes drafts before sending and attempting payment on invoices.
    * However, if you’d like to finalize a draft invoice manually, you can do so using this method.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#finalizeInvoice} instead.
    */
   public Invoice finalizeInvoice(RequestOptions options) throws StripeException {
     return finalizeInvoice((Map<String, Object>) null, options);
@@ -963,6 +1070,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Stripe automatically finalizes drafts before sending and attempting payment on invoices.
    * However, if you’d like to finalize a draft invoice manually, you can do so using this method.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#finalizeInvoice} instead.
    */
   public Invoice finalizeInvoice(Map<String, Object> params) throws StripeException {
     return finalizeInvoice(params, (RequestOptions) null);
@@ -971,6 +1081,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Stripe automatically finalizes drafts before sending and attempting payment on invoices.
    * However, if you’d like to finalize a draft invoice manually, you can do so using this method.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#finalizeInvoice} instead.
    */
   public Invoice finalizeInvoice(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -985,6 +1098,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Stripe automatically finalizes drafts before sending and attempting payment on invoices.
    * However, if you’d like to finalize a draft invoice manually, you can do so using this method.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#finalizeInvoice} instead.
    */
   public Invoice finalizeInvoice(InvoiceFinalizeInvoiceParams params) throws StripeException {
     return finalizeInvoice(params, (RequestOptions) null);
@@ -993,6 +1109,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Stripe automatically finalizes drafts before sending and attempting payment on invoices.
    * However, if you’d like to finalize a draft invoice manually, you can do so using this method.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#finalizeInvoice} instead.
    */
   public Invoice finalizeInvoice(InvoiceFinalizeInvoiceParams params, RequestOptions options)
       throws StripeException {
@@ -1013,6 +1132,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    *
    * <p>Requests made in test-mode result in no emails being sent, despite sending an <code>
    * invoice.sent</code> event.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#sendInvoice} instead.
    */
   public Invoice sendInvoice() throws StripeException {
     return sendInvoice((Map<String, Object>) null, (RequestOptions) null);
@@ -1027,6 +1149,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    *
    * <p>Requests made in test-mode result in no emails being sent, despite sending an <code>
    * invoice.sent</code> event.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#sendInvoice} instead.
    */
   public Invoice sendInvoice(RequestOptions options) throws StripeException {
     return sendInvoice((Map<String, Object>) null, options);
@@ -1041,6 +1166,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    *
    * <p>Requests made in test-mode result in no emails being sent, despite sending an <code>
    * invoice.sent</code> event.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#sendInvoice} instead.
    */
   public Invoice sendInvoice(Map<String, Object> params) throws StripeException {
     return sendInvoice(params, (RequestOptions) null);
@@ -1055,6 +1183,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    *
    * <p>Requests made in test-mode result in no emails being sent, despite sending an <code>
    * invoice.sent</code> event.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#sendInvoice} instead.
    */
   public Invoice sendInvoice(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -1075,6 +1206,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    *
    * <p>Requests made in test-mode result in no emails being sent, despite sending an <code>
    * invoice.sent</code> event.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#sendInvoice} instead.
    */
   public Invoice sendInvoice(InvoiceSendInvoiceParams params) throws StripeException {
     return sendInvoice(params, (RequestOptions) null);
@@ -1089,6 +1223,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    *
    * <p>Requests made in test-mode result in no emails being sent, despite sending an <code>
    * invoice.sent</code> event.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#sendInvoice} instead.
    */
   public Invoice sendInvoice(InvoiceSendInvoiceParams params, RequestOptions options)
       throws StripeException {
@@ -1103,6 +1240,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Marking an invoice as uncollectible is useful for keeping track of bad debts that can be
    * written off for accounting purposes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#markUncollectible} instead.
    */
   public Invoice markUncollectible() throws StripeException {
     return markUncollectible((Map<String, Object>) null, (RequestOptions) null);
@@ -1111,6 +1251,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Marking an invoice as uncollectible is useful for keeping track of bad debts that can be
    * written off for accounting purposes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#markUncollectible} instead.
    */
   public Invoice markUncollectible(RequestOptions options) throws StripeException {
     return markUncollectible((Map<String, Object>) null, options);
@@ -1119,6 +1262,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Marking an invoice as uncollectible is useful for keeping track of bad debts that can be
    * written off for accounting purposes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#markUncollectible} instead.
    */
   public Invoice markUncollectible(Map<String, Object> params) throws StripeException {
     return markUncollectible(params, (RequestOptions) null);
@@ -1127,6 +1273,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Marking an invoice as uncollectible is useful for keeping track of bad debts that can be
    * written off for accounting purposes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#markUncollectible} instead.
    */
   public Invoice markUncollectible(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -1142,6 +1291,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Marking an invoice as uncollectible is useful for keeping track of bad debts that can be
    * written off for accounting purposes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#markUncollectible} instead.
    */
   public Invoice markUncollectible(InvoiceMarkUncollectibleParams params) throws StripeException {
     return markUncollectible(params, (RequestOptions) null);
@@ -1150,6 +1302,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
   /**
    * Marking an invoice as uncollectible is useful for keeping track of bad debts that can be
    * written off for accounting purposes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#markUncollectible} instead.
    */
   public Invoice markUncollectible(InvoiceMarkUncollectibleParams params, RequestOptions options)
       throws StripeException {
@@ -1166,6 +1321,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to <a
    * href="#delete_invoice">deletion</a>, however it only applies to finalized invoices and
    * maintains a papertrail where the invoice can still be found.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#voidInvoice} instead.
    */
   public Invoice voidInvoice() throws StripeException {
     return voidInvoice((Map<String, Object>) null, (RequestOptions) null);
@@ -1175,6 +1333,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to <a
    * href="#delete_invoice">deletion</a>, however it only applies to finalized invoices and
    * maintains a papertrail where the invoice can still be found.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#voidInvoice} instead.
    */
   public Invoice voidInvoice(RequestOptions options) throws StripeException {
     return voidInvoice((Map<String, Object>) null, options);
@@ -1184,6 +1345,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to <a
    * href="#delete_invoice">deletion</a>, however it only applies to finalized invoices and
    * maintains a papertrail where the invoice can still be found.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#voidInvoice} instead.
    */
   public Invoice voidInvoice(Map<String, Object> params) throws StripeException {
     return voidInvoice(params, (RequestOptions) null);
@@ -1193,6 +1357,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to <a
    * href="#delete_invoice">deletion</a>, however it only applies to finalized invoices and
    * maintains a papertrail where the invoice can still be found.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#voidInvoice} instead.
    */
   public Invoice voidInvoice(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -1208,6 +1375,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to <a
    * href="#delete_invoice">deletion</a>, however it only applies to finalized invoices and
    * maintains a papertrail where the invoice can still be found.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#voidInvoice} instead.
    */
   public Invoice voidInvoice(InvoiceVoidInvoiceParams params) throws StripeException {
     return voidInvoice(params, (RequestOptions) null);
@@ -1217,6 +1387,9 @@ public class Invoice extends ApiResource implements HasId, MetadataStore<Invoice
    * Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to <a
    * href="#delete_invoice">deletion</a>, however it only applies to finalized invoices and
    * maintains a papertrail where the invoice can still be found.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceService#voidInvoice} instead.
    */
   public Invoice voidInvoice(InvoiceVoidInvoiceParams params, RequestOptions options)
       throws StripeException {

@@ -207,6 +207,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * Retrieves the details of an existing payout. Supply the unique payout ID from either a payout
    * creation request or the payout list, and Stripe will return the corresponding payout
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#retrieve} instead.
    */
   public static Payout retrieve(String payout) throws StripeException {
     return retrieve(payout, (Map<String, Object>) null, (RequestOptions) null);
@@ -216,6 +219,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * Retrieves the details of an existing payout. Supply the unique payout ID from either a payout
    * creation request or the payout list, and Stripe will return the corresponding payout
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#retrieve} instead.
    */
   public static Payout retrieve(String payout, RequestOptions options) throws StripeException {
     return retrieve(payout, (Map<String, Object>) null, options);
@@ -225,6 +231,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * Retrieves the details of an existing payout. Supply the unique payout ID from either a payout
    * creation request or the payout list, and Stripe will return the corresponding payout
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#retrieve} instead.
    */
   public static Payout retrieve(String payout, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -239,6 +248,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * Retrieves the details of an existing payout. Supply the unique payout ID from either a payout
    * creation request or the payout list, and Stripe will return the corresponding payout
    * information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#retrieve} instead.
    */
   public static Payout retrieve(String payout, PayoutRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -253,6 +265,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * Returns a list of existing payouts sent to third-party bank accounts or that Stripe has sent
    * you. The payouts are returned in sorted order, with the most recently created payouts appearing
    * first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#list} instead.
    */
   public static PayoutCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -262,6 +277,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * Returns a list of existing payouts sent to third-party bank accounts or that Stripe has sent
    * you. The payouts are returned in sorted order, with the most recently created payouts appearing
    * first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#list} instead.
    */
   public static PayoutCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -273,6 +291,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * Returns a list of existing payouts sent to third-party bank accounts or that Stripe has sent
    * you. The payouts are returned in sorted order, with the most recently created payouts appearing
    * first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#list} instead.
    */
   public static PayoutCollection list(PayoutListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -282,6 +303,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * Returns a list of existing payouts sent to third-party bank accounts or that Stripe has sent
    * you. The payouts are returned in sorted order, with the most recently created payouts appearing
    * first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#list} instead.
    */
   public static PayoutCollection list(PayoutListParams params, RequestOptions options)
       throws StripeException {
@@ -300,6 +324,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * <p>If you are creating a manual payout on a Stripe account that uses multiple payment source
    * types, you’ll need to specify the source type balance that the payout should draw from. The <a
    * href="#balance_object">balance object</a> details available and pending amounts by source type.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#create} instead.
    */
   public static Payout create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -316,6 +343,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * <p>If you are creating a manual payout on a Stripe account that uses multiple payment source
    * types, you’ll need to specify the source type balance that the payout should draw from. The <a
    * href="#balance_object">balance object</a> details available and pending amounts by source type.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#create} instead.
    */
   public static Payout create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -334,6 +364,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * <p>If you are creating a manual payout on a Stripe account that uses multiple payment source
    * types, you’ll need to specify the source type balance that the payout should draw from. The <a
    * href="#balance_object">balance object</a> details available and pending amounts by source type.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#create} instead.
    */
   public static Payout create(PayoutCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -350,6 +383,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
    * <p>If you are creating a manual payout on a Stripe account that uses multiple payment source
    * types, you’ll need to specify the source type balance that the payout should draw from. The <a
    * href="#balance_object">balance object</a> details available and pending amounts by source type.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#create} instead.
    */
   public static Payout create(PayoutCreateParams params, RequestOptions options)
       throws StripeException {
@@ -360,6 +396,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Updates the specified payout by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged. This request accepts only the metadata as arguments.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#update} instead.
    */
   @Override
   public Payout update(Map<String, Object> params) throws StripeException {
@@ -369,6 +408,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Updates the specified payout by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged. This request accepts only the metadata as arguments.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#update} instead.
    */
   @Override
   public Payout update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -383,6 +425,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Updates the specified payout by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged. This request accepts only the metadata as arguments.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#update} instead.
    */
   public Payout update(PayoutUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -391,6 +436,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Updates the specified payout by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged. This request accepts only the metadata as arguments.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#update} instead.
    */
   public Payout update(PayoutUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -404,6 +452,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * A previously created payout can be canceled if it has not yet been paid out. Funds will be
    * refunded to your available balance. You may not cancel automatic Stripe payouts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#cancel} instead.
    */
   public Payout cancel() throws StripeException {
     return cancel((Map<String, Object>) null, (RequestOptions) null);
@@ -412,6 +463,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * A previously created payout can be canceled if it has not yet been paid out. Funds will be
    * refunded to your available balance. You may not cancel automatic Stripe payouts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#cancel} instead.
    */
   public Payout cancel(RequestOptions options) throws StripeException {
     return cancel((Map<String, Object>) null, options);
@@ -420,6 +474,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * A previously created payout can be canceled if it has not yet been paid out. Funds will be
    * refunded to your available balance. You may not cancel automatic Stripe payouts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#cancel} instead.
    */
   public Payout cancel(Map<String, Object> params) throws StripeException {
     return cancel(params, (RequestOptions) null);
@@ -428,6 +485,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * A previously created payout can be canceled if it has not yet been paid out. Funds will be
    * refunded to your available balance. You may not cancel automatic Stripe payouts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#cancel} instead.
    */
   public Payout cancel(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -441,6 +501,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * A previously created payout can be canceled if it has not yet been paid out. Funds will be
    * refunded to your available balance. You may not cancel automatic Stripe payouts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#cancel} instead.
    */
   public Payout cancel(PayoutCancelParams params) throws StripeException {
     return cancel(params, (RequestOptions) null);
@@ -449,6 +512,9 @@ public class Payout extends ApiResource implements BalanceTransactionSource, Met
   /**
    * A previously created payout can be canceled if it has not yet been paid out. Funds will be
    * refunded to your available balance. You may not cancel automatic Stripe payouts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PayoutService#cancel} instead.
    */
   public Payout cancel(PayoutCancelParams params, RequestOptions options) throws StripeException {
     String url =

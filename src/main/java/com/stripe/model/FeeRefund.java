@@ -105,6 +105,9 @@ public class FeeRefund extends ApiResource
    * Any parameters not provided will be left unchanged.
    *
    * <p>This request only accepts metadata as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#update} instead.
    */
   @Override
   public FeeRefund update(Map<String, Object> params) throws StripeException {
@@ -116,6 +119,9 @@ public class FeeRefund extends ApiResource
    * Any parameters not provided will be left unchanged.
    *
    * <p>This request only accepts metadata as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#update} instead.
    */
   @Override
   public FeeRefund update(Map<String, Object> params, RequestOptions options)
@@ -141,6 +147,9 @@ public class FeeRefund extends ApiResource
    * Any parameters not provided will be left unchanged.
    *
    * <p>This request only accepts metadata as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#update} instead.
    */
   public FeeRefund update(FeeRefundUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -151,6 +160,9 @@ public class FeeRefund extends ApiResource
    * Any parameters not provided will be left unchanged.
    *
    * <p>This request only accepts metadata as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.FeeRefundService#update} instead.
    */
   public FeeRefund update(FeeRefundUpdateParams params, RequestOptions options)
       throws StripeException {

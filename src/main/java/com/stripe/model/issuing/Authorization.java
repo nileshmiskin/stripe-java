@@ -172,6 +172,9 @@ public class Authorization extends ApiResource
   /**
    * Returns a list of Issuing <code>Authorization</code> objects. The objects are sorted in
    * descending order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#list} instead.
    */
   public static AuthorizationCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -180,6 +183,9 @@ public class Authorization extends ApiResource
   /**
    * Returns a list of Issuing <code>Authorization</code> objects. The objects are sorted in
    * descending order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#list} instead.
    */
   public static AuthorizationCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -190,6 +196,9 @@ public class Authorization extends ApiResource
   /**
    * Returns a list of Issuing <code>Authorization</code> objects. The objects are sorted in
    * descending order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#list} instead.
    */
   public static AuthorizationCollection list(AuthorizationListParams params)
       throws StripeException {
@@ -199,6 +208,9 @@ public class Authorization extends ApiResource
   /**
    * Returns a list of Issuing <code>Authorization</code> objects. The objects are sorted in
    * descending order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#list} instead.
    */
   public static AuthorizationCollection list(AuthorizationListParams params, RequestOptions options)
       throws StripeException {
@@ -206,18 +218,33 @@ public class Authorization extends ApiResource
     return requestCollection(url, params, AuthorizationCollection.class, options);
   }
 
-  /** Retrieves an Issuing <code>Authorization</code> object. */
+  /**
+   * Retrieves an Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#retrieve} instead.
+   */
   public static Authorization retrieve(String authorization) throws StripeException {
     return retrieve(authorization, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves an Issuing <code>Authorization</code> object. */
+  /**
+   * Retrieves an Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#retrieve} instead.
+   */
   public static Authorization retrieve(String authorization, RequestOptions options)
       throws StripeException {
     return retrieve(authorization, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves an Issuing <code>Authorization</code> object. */
+  /**
+   * Retrieves an Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#retrieve} instead.
+   */
   public static Authorization retrieve(
       String authorization, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -229,7 +256,12 @@ public class Authorization extends ApiResource
     return request(ApiResource.RequestMethod.GET, url, params, Authorization.class, options);
   }
 
-  /** Retrieves an Issuing <code>Authorization</code> object. */
+  /**
+   * Retrieves an Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#retrieve} instead.
+   */
   public static Authorization retrieve(
       String authorization, AuthorizationRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -244,6 +276,9 @@ public class Authorization extends ApiResource
   /**
    * Updates the specified Issuing <code>Authorization</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#update} instead.
    */
   @Override
   public Authorization update(Map<String, Object> params) throws StripeException {
@@ -253,6 +288,9 @@ public class Authorization extends ApiResource
   /**
    * Updates the specified Issuing <code>Authorization</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#update} instead.
    */
   @Override
   public Authorization update(Map<String, Object> params, RequestOptions options)
@@ -268,6 +306,9 @@ public class Authorization extends ApiResource
   /**
    * Updates the specified Issuing <code>Authorization</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#update} instead.
    */
   public Authorization update(AuthorizationUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -276,6 +317,9 @@ public class Authorization extends ApiResource
   /**
    * Updates the specified Issuing <code>Authorization</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#update} instead.
    */
   public Authorization update(AuthorizationUpdateParams params, RequestOptions options)
       throws StripeException {
@@ -287,22 +331,42 @@ public class Authorization extends ApiResource
     return request(ApiResource.RequestMethod.POST, url, params, Authorization.class, options);
   }
 
-  /** Approves a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Approves a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#approve} instead.
+   */
   public Authorization approve() throws StripeException {
     return approve((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Approves a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Approves a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#approve} instead.
+   */
   public Authorization approve(RequestOptions options) throws StripeException {
     return approve((Map<String, Object>) null, options);
   }
 
-  /** Approves a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Approves a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#approve} instead.
+   */
   public Authorization approve(Map<String, Object> params) throws StripeException {
     return approve(params, (RequestOptions) null);
   }
 
-  /** Approves a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Approves a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#approve} instead.
+   */
   public Authorization approve(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -314,12 +378,22 @@ public class Authorization extends ApiResource
     return request(ApiResource.RequestMethod.POST, url, params, Authorization.class, options);
   }
 
-  /** Approves a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Approves a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#approve} instead.
+   */
   public Authorization approve(AuthorizationApproveParams params) throws StripeException {
     return approve(params, (RequestOptions) null);
   }
 
-  /** Approves a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Approves a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#approve} instead.
+   */
   public Authorization approve(AuthorizationApproveParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -331,22 +405,42 @@ public class Authorization extends ApiResource
     return request(ApiResource.RequestMethod.POST, url, params, Authorization.class, options);
   }
 
-  /** Declines a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Declines a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#decline} instead.
+   */
   public Authorization decline() throws StripeException {
     return decline((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Declines a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Declines a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#decline} instead.
+   */
   public Authorization decline(RequestOptions options) throws StripeException {
     return decline((Map<String, Object>) null, options);
   }
 
-  /** Declines a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Declines a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#decline} instead.
+   */
   public Authorization decline(Map<String, Object> params) throws StripeException {
     return decline(params, (RequestOptions) null);
   }
 
-  /** Declines a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Declines a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#decline} instead.
+   */
   public Authorization decline(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -358,12 +452,22 @@ public class Authorization extends ApiResource
     return request(ApiResource.RequestMethod.POST, url, params, Authorization.class, options);
   }
 
-  /** Declines a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Declines a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#decline} instead.
+   */
   public Authorization decline(AuthorizationDeclineParams params) throws StripeException {
     return decline(params, (RequestOptions) null);
   }
 
-  /** Declines a pending Issuing <code>Authorization</code> object. */
+  /**
+   * Declines a pending Issuing <code>Authorization</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.AuthorizationService#decline} instead.
+   */
   public Authorization decline(AuthorizationDeclineParams params, RequestOptions options)
       throws StripeException {
     String url =

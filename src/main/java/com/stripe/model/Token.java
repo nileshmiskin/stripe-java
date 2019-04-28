@@ -63,17 +63,32 @@ public class Token extends ApiResource implements HasId {
   @SerializedName("used")
   Boolean used;
 
-  /** Retrieves the token with the given ID. */
+  /**
+   * Retrieves the token with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TokenService#retrieve} instead.
+   */
   public static Token retrieve(String token) throws StripeException {
     return retrieve(token, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the token with the given ID. */
+  /**
+   * Retrieves the token with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TokenService#retrieve} instead.
+   */
   public static Token retrieve(String token, RequestOptions options) throws StripeException {
     return retrieve(token, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the token with the given ID. */
+  /**
+   * Retrieves the token with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TokenService#retrieve} instead.
+   */
   public static Token retrieve(String token, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -83,7 +98,12 @@ public class Token extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, Token.class, options);
   }
 
-  /** Retrieves the token with the given ID. */
+  /**
+   * Retrieves the token with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TokenService#retrieve} instead.
+   */
   public static Token retrieve(String token, TokenRetrieveParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -97,6 +117,9 @@ public class Token extends ApiResource implements HasId {
    * Creates a single-use token that represents a bank account’s details. This token can be used
    * with any API method in place of a bank account dictionary. This token can be used only once, by
    * attaching it to a <a href="#accounts">Custom account</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TokenService#create} instead.
    */
   public static Token create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -106,6 +129,9 @@ public class Token extends ApiResource implements HasId {
    * Creates a single-use token that represents a bank account’s details. This token can be used
    * with any API method in place of a bank account dictionary. This token can be used only once, by
    * attaching it to a <a href="#accounts">Custom account</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TokenService#create} instead.
    */
   public static Token create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -117,6 +143,9 @@ public class Token extends ApiResource implements HasId {
    * Creates a single-use token that represents a bank account’s details. This token can be used
    * with any API method in place of a bank account dictionary. This token can be used only once, by
    * attaching it to a <a href="#accounts">Custom account</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TokenService#create} instead.
    */
   public static Token create(TokenCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -126,6 +155,9 @@ public class Token extends ApiResource implements HasId {
    * Creates a single-use token that represents a bank account’s details. This token can be used
    * with any API method in place of a bank account dictionary. This token can be used only once, by
    * attaching it to a <a href="#accounts">Custom account</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TokenService#create} instead.
    */
   public static Token create(TokenCreateParams params, RequestOptions options)
       throws StripeException {

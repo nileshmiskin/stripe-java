@@ -138,6 +138,9 @@ public class BitcoinReceiver extends ApiResource implements PaymentSource {
   /**
    * Returns a list of your receivers. Receivers are returned sorted by creation date, with the most
    * recently created receivers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BitcoinReceiverService#list} instead.
    */
   public static BitcoinReceiverCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -146,6 +149,9 @@ public class BitcoinReceiver extends ApiResource implements PaymentSource {
   /**
    * Returns a list of your receivers. Receivers are returned sorted by creation date, with the most
    * recently created receivers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BitcoinReceiverService#list} instead.
    */
   public static BitcoinReceiverCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -156,6 +162,9 @@ public class BitcoinReceiver extends ApiResource implements PaymentSource {
   /**
    * Returns a list of your receivers. Receivers are returned sorted by creation date, with the most
    * recently created receivers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BitcoinReceiverService#list} instead.
    */
   public static BitcoinReceiverCollection list(BitcoinReceiverListParams params)
       throws StripeException {
@@ -165,6 +174,9 @@ public class BitcoinReceiver extends ApiResource implements PaymentSource {
   /**
    * Returns a list of your receivers. Receivers are returned sorted by creation date, with the most
    * recently created receivers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BitcoinReceiverService#list} instead.
    */
   public static BitcoinReceiverCollection list(
       BitcoinReceiverListParams params, RequestOptions options) throws StripeException {
@@ -172,17 +184,32 @@ public class BitcoinReceiver extends ApiResource implements PaymentSource {
     return requestCollection(url, params, BitcoinReceiverCollection.class, options);
   }
 
-  /** Retrieves the Bitcoin receiver with the given ID. */
+  /**
+   * Retrieves the Bitcoin receiver with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BitcoinReceiverService#retrieve} instead.
+   */
   public static BitcoinReceiver retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the Bitcoin receiver with the given ID. */
+  /**
+   * Retrieves the Bitcoin receiver with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BitcoinReceiverService#retrieve} instead.
+   */
   public static BitcoinReceiver retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the Bitcoin receiver with the given ID. */
+  /**
+   * Retrieves the Bitcoin receiver with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BitcoinReceiverService#retrieve} instead.
+   */
   public static BitcoinReceiver retrieve(
       String id, Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -193,7 +220,12 @@ public class BitcoinReceiver extends ApiResource implements PaymentSource {
     return request(ApiResource.RequestMethod.GET, url, params, BitcoinReceiver.class, options);
   }
 
-  /** Retrieves the Bitcoin receiver with the given ID. */
+  /**
+   * Retrieves the Bitcoin receiver with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BitcoinReceiverService#retrieve} instead.
+   */
   public static BitcoinReceiver retrieve(
       String id, BitcoinReceiverRetrieveParams params, RequestOptions options)
       throws StripeException {

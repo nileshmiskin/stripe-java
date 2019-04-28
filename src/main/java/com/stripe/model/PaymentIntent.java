@@ -345,49 +345,89 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
     this.source = new ExpandableField<PaymentSource>(expandableObject.getId(), expandableObject);
   }
 
-  /** Creates a PaymentIntent object. */
+  /**
+   * Creates a PaymentIntent object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#create} instead.
+   */
   public static PaymentIntent create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a PaymentIntent object. */
+  /**
+   * Creates a PaymentIntent object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#create} instead.
+   */
   public static PaymentIntent create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/payment_intents");
     return request(ApiResource.RequestMethod.POST, url, params, PaymentIntent.class, options);
   }
 
-  /** Creates a PaymentIntent object. */
+  /**
+   * Creates a PaymentIntent object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#create} instead.
+   */
   public static PaymentIntent create(PaymentIntentCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a PaymentIntent object. */
+  /**
+   * Creates a PaymentIntent object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#create} instead.
+   */
   public static PaymentIntent create(PaymentIntentCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/payment_intents");
     return request(ApiResource.RequestMethod.POST, url, params, PaymentIntent.class, options);
   }
 
-  /** Returns a list of PaymentIntents. */
+  /**
+   * Returns a list of PaymentIntents.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#list} instead.
+   */
   public static PaymentIntentCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of PaymentIntents. */
+  /**
+   * Returns a list of PaymentIntents.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#list} instead.
+   */
   public static PaymentIntentCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/payment_intents");
     return requestCollection(url, params, PaymentIntentCollection.class, options);
   }
 
-  /** Returns a list of PaymentIntents. */
+  /**
+   * Returns a list of PaymentIntents.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#list} instead.
+   */
   public static PaymentIntentCollection list(PaymentIntentListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of PaymentIntents. */
+  /**
+   * Returns a list of PaymentIntents.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#list} instead.
+   */
   public static PaymentIntentCollection list(PaymentIntentListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/payment_intents");
@@ -403,6 +443,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>When retrieved with a publishable key, only a subset of properties will be returned. Please
    * refer to the <a href="#payment_intent_object">payment intent</a> object reference for more
    * details.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#retrieve} instead.
    */
   public static PaymentIntent retrieve(String intent) throws StripeException {
     return retrieve(intent, (Map<String, Object>) null, (RequestOptions) null);
@@ -417,6 +460,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>When retrieved with a publishable key, only a subset of properties will be returned. Please
    * refer to the <a href="#payment_intent_object">payment intent</a> object reference for more
    * details.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#retrieve} instead.
    */
   public static PaymentIntent retrieve(String intent, RequestOptions options)
       throws StripeException {
@@ -432,6 +478,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>When retrieved with a publishable key, only a subset of properties will be returned. Please
    * refer to the <a href="#payment_intent_object">payment intent</a> object reference for more
    * details.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#retrieve} instead.
    */
   public static PaymentIntent retrieve(
       String intent, Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -452,6 +501,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>When retrieved with a publishable key, only a subset of properties will be returned. Please
    * refer to the <a href="#payment_intent_object">payment intent</a> object reference for more
    * details.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#retrieve} instead.
    */
   public static PaymentIntent retrieve(
       String intent, PaymentIntentRetrieveParams params, RequestOptions options)
@@ -464,13 +516,23 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.GET, url, params, PaymentIntent.class, options);
   }
 
-  /** Updates a PaymentIntent object. */
+  /**
+   * Updates a PaymentIntent object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#update} instead.
+   */
   @Override
   public PaymentIntent update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates a PaymentIntent object. */
+  /**
+   * Updates a PaymentIntent object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#update} instead.
+   */
   @Override
   public PaymentIntent update(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -482,12 +544,22 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.POST, url, params, PaymentIntent.class, options);
   }
 
-  /** Updates a PaymentIntent object. */
+  /**
+   * Updates a PaymentIntent object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#update} instead.
+   */
   public PaymentIntent update(PaymentIntentUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates a PaymentIntent object. */
+  /**
+   * Updates a PaymentIntent object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#update} instead.
+   */
   public PaymentIntent update(PaymentIntentUpdateParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -522,6 +594,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * attempt. Read the <a
    * href="/docs/payments/payment-intents/quickstart#manual-confirmation-flow">expanded
    * documentation</a> to learn more about manual confirmation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#confirm} instead.
    */
   public PaymentIntent confirm() throws StripeException {
     return confirm((Map<String, Object>) null, (RequestOptions) null);
@@ -551,6 +626,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * attempt. Read the <a
    * href="/docs/payments/payment-intents/quickstart#manual-confirmation-flow">expanded
    * documentation</a> to learn more about manual confirmation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#confirm} instead.
    */
   public PaymentIntent confirm(RequestOptions options) throws StripeException {
     return confirm((Map<String, Object>) null, options);
@@ -580,6 +658,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * attempt. Read the <a
    * href="/docs/payments/payment-intents/quickstart#manual-confirmation-flow">expanded
    * documentation</a> to learn more about manual confirmation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#confirm} instead.
    */
   public PaymentIntent confirm(Map<String, Object> params) throws StripeException {
     return confirm(params, (RequestOptions) null);
@@ -609,6 +690,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * attempt. Read the <a
    * href="/docs/payments/payment-intents/quickstart#manual-confirmation-flow">expanded
    * documentation</a> to learn more about manual confirmation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#confirm} instead.
    */
   public PaymentIntent confirm(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -644,6 +728,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * attempt. Read the <a
    * href="/docs/payments/payment-intents/quickstart#manual-confirmation-flow">expanded
    * documentation</a> to learn more about manual confirmation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#confirm} instead.
    */
   public PaymentIntent confirm(PaymentIntentConfirmParams params) throws StripeException {
     return confirm(params, (RequestOptions) null);
@@ -673,6 +760,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * attempt. Read the <a
    * href="/docs/payments/payment-intents/quickstart#manual-confirmation-flow">expanded
    * documentation</a> to learn more about manual confirmation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#confirm} instead.
    */
   public PaymentIntent confirm(PaymentIntentConfirmParams params, RequestOptions options)
       throws StripeException {
@@ -693,6 +783,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * the PaymentIntent will fail with an error. For PaymentIntents with <code>
    * status='requires_capture'</code>, the remaining <code>amount_capturable</code> will
    * automatically be refunded.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#cancel} instead.
    */
   public PaymentIntent cancel() throws StripeException {
     return cancel((Map<String, Object>) null, (RequestOptions) null);
@@ -707,6 +800,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * the PaymentIntent will fail with an error. For PaymentIntents with <code>
    * status='requires_capture'</code>, the remaining <code>amount_capturable</code> will
    * automatically be refunded.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#cancel} instead.
    */
   public PaymentIntent cancel(RequestOptions options) throws StripeException {
     return cancel((Map<String, Object>) null, options);
@@ -721,6 +817,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * the PaymentIntent will fail with an error. For PaymentIntents with <code>
    * status='requires_capture'</code>, the remaining <code>amount_capturable</code> will
    * automatically be refunded.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#cancel} instead.
    */
   public PaymentIntent cancel(Map<String, Object> params) throws StripeException {
     return cancel(params, (RequestOptions) null);
@@ -735,6 +834,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * the PaymentIntent will fail with an error. For PaymentIntents with <code>
    * status='requires_capture'</code>, the remaining <code>amount_capturable</code> will
    * automatically be refunded.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#cancel} instead.
    */
   public PaymentIntent cancel(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -755,6 +857,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * the PaymentIntent will fail with an error. For PaymentIntents with <code>
    * status='requires_capture'</code>, the remaining <code>amount_capturable</code> will
    * automatically be refunded.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#cancel} instead.
    */
   public PaymentIntent cancel(PaymentIntentCancelParams params) throws StripeException {
     return cancel(params, (RequestOptions) null);
@@ -769,6 +874,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * the PaymentIntent will fail with an error. For PaymentIntents with <code>
    * status='requires_capture'</code>, the remaining <code>amount_capturable</code> will
    * automatically be refunded.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#cancel} instead.
    */
   public PaymentIntent cancel(PaymentIntentCancelParams params, RequestOptions options)
       throws StripeException {
@@ -789,6 +897,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>Read the <a
    * href="/docs/payments/payment-intents/creating-payment-intents#separate-auth-capture">expanded
    * documentation</a> to learn more about separate authorization and capture.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#capture} instead.
    */
   public PaymentIntent capture() throws StripeException {
     return capture((Map<String, Object>) null, (RequestOptions) null);
@@ -803,6 +914,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>Read the <a
    * href="/docs/payments/payment-intents/creating-payment-intents#separate-auth-capture">expanded
    * documentation</a> to learn more about separate authorization and capture.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#capture} instead.
    */
   public PaymentIntent capture(RequestOptions options) throws StripeException {
     return capture((Map<String, Object>) null, options);
@@ -817,6 +931,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>Read the <a
    * href="/docs/payments/payment-intents/creating-payment-intents#separate-auth-capture">expanded
    * documentation</a> to learn more about separate authorization and capture.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#capture} instead.
    */
   public PaymentIntent capture(Map<String, Object> params) throws StripeException {
     return capture(params, (RequestOptions) null);
@@ -831,6 +948,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>Read the <a
    * href="/docs/payments/payment-intents/creating-payment-intents#separate-auth-capture">expanded
    * documentation</a> to learn more about separate authorization and capture.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#capture} instead.
    */
   public PaymentIntent capture(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -851,6 +971,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>Read the <a
    * href="/docs/payments/payment-intents/creating-payment-intents#separate-auth-capture">expanded
    * documentation</a> to learn more about separate authorization and capture.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#capture} instead.
    */
   public PaymentIntent capture(PaymentIntentCaptureParams params) throws StripeException {
     return capture(params, (RequestOptions) null);
@@ -865,6 +988,9 @@ public class PaymentIntent extends ApiResource implements HasId, MetadataStore<P
    * <p>Read the <a
    * href="/docs/payments/payment-intents/creating-payment-intents#separate-auth-capture">expanded
    * documentation</a> to learn more about separate authorization and capture.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentIntentService#capture} instead.
    */
   public PaymentIntent capture(PaymentIntentCaptureParams params, RequestOptions options)
       throws StripeException {

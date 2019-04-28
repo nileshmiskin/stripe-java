@@ -12,13 +12,23 @@ import java.util.Map;
 
 public class SubscriptionScheduleRevisionCollection
     extends StripeCollection<SubscriptionScheduleRevision> {
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection list(Map<String, Object> params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection list(
       Map<String, Object> params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());
@@ -26,13 +36,23 @@ public class SubscriptionScheduleRevisionCollection
         url, params, SubscriptionScheduleRevisionCollection.class, options);
   }
 
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection list(
       SubscriptionScheduleRevisionCollectionListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection list(
       SubscriptionScheduleRevisionCollectionListParams params, RequestOptions options)
       throws StripeException {
@@ -45,6 +65,10 @@ public class SubscriptionScheduleRevisionCollection
    * Retrieves the details of an existing subscription schedule revision. You only need to supply
    * the unique subscription schedule revision identifier that was returned upon subscription
    * schedule creation or retrieval.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#retrieve}
+   * instead.
    */
   public SubscriptionScheduleRevision retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
@@ -54,6 +78,10 @@ public class SubscriptionScheduleRevisionCollection
    * Retrieves the details of an existing subscription schedule revision. You only need to supply
    * the unique subscription schedule revision identifier that was returned upon subscription
    * schedule creation or retrieval.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#retrieve}
+   * instead.
    */
   public SubscriptionScheduleRevision retrieve(String id, RequestOptions options)
       throws StripeException {
@@ -64,6 +92,10 @@ public class SubscriptionScheduleRevisionCollection
    * Retrieves the details of an existing subscription schedule revision. You only need to supply
    * the unique subscription schedule revision identifier that was returned upon subscription
    * schedule creation or retrieval.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#retrieve}
+   * instead.
    */
   public SubscriptionScheduleRevision retrieve(
       String id, Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -80,6 +112,10 @@ public class SubscriptionScheduleRevisionCollection
    * Retrieves the details of an existing subscription schedule revision. You only need to supply
    * the unique subscription schedule revision identifier that was returned upon subscription
    * schedule creation or retrieval.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#retrieve}
+   * instead.
    */
   public SubscriptionScheduleRevision retrieve(
       String id,

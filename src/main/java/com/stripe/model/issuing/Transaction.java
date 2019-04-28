@@ -194,6 +194,9 @@ public class Transaction extends ApiResource
   /**
    * Returns a list of Issuing <code>Transaction</code> objects. The objects are sorted in
    * descending order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#list} instead.
    */
   public static TransactionCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -202,6 +205,9 @@ public class Transaction extends ApiResource
   /**
    * Returns a list of Issuing <code>Transaction</code> objects. The objects are sorted in
    * descending order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#list} instead.
    */
   public static TransactionCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -212,6 +218,9 @@ public class Transaction extends ApiResource
   /**
    * Returns a list of Issuing <code>Transaction</code> objects. The objects are sorted in
    * descending order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#list} instead.
    */
   public static TransactionCollection list(TransactionListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -220,6 +229,9 @@ public class Transaction extends ApiResource
   /**
    * Returns a list of Issuing <code>Transaction</code> objects. The objects are sorted in
    * descending order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#list} instead.
    */
   public static TransactionCollection list(TransactionListParams params, RequestOptions options)
       throws StripeException {
@@ -227,18 +239,33 @@ public class Transaction extends ApiResource
     return requestCollection(url, params, TransactionCollection.class, options);
   }
 
-  /** Retrieves an Issuing <code>Transaction</code> object. */
+  /**
+   * Retrieves an Issuing <code>Transaction</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#retrieve} instead.
+   */
   public static Transaction retrieve(String transaction) throws StripeException {
     return retrieve(transaction, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves an Issuing <code>Transaction</code> object. */
+  /**
+   * Retrieves an Issuing <code>Transaction</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#retrieve} instead.
+   */
   public static Transaction retrieve(String transaction, RequestOptions options)
       throws StripeException {
     return retrieve(transaction, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves an Issuing <code>Transaction</code> object. */
+  /**
+   * Retrieves an Issuing <code>Transaction</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#retrieve} instead.
+   */
   public static Transaction retrieve(
       String transaction, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -250,7 +277,12 @@ public class Transaction extends ApiResource
     return request(ApiResource.RequestMethod.GET, url, params, Transaction.class, options);
   }
 
-  /** Retrieves an Issuing <code>Transaction</code> object. */
+  /**
+   * Retrieves an Issuing <code>Transaction</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#retrieve} instead.
+   */
   public static Transaction retrieve(
       String transaction, TransactionRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -265,6 +297,9 @@ public class Transaction extends ApiResource
   /**
    * Updates the specified Issuing <code>Transaction</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#update} instead.
    */
   @Override
   public Transaction update(Map<String, Object> params) throws StripeException {
@@ -274,6 +309,9 @@ public class Transaction extends ApiResource
   /**
    * Updates the specified Issuing <code>Transaction</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#update} instead.
    */
   @Override
   public Transaction update(Map<String, Object> params, RequestOptions options)
@@ -289,6 +327,9 @@ public class Transaction extends ApiResource
   /**
    * Updates the specified Issuing <code>Transaction</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#update} instead.
    */
   public Transaction update(TransactionUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -297,6 +338,9 @@ public class Transaction extends ApiResource
   /**
    * Updates the specified Issuing <code>Transaction</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.TransactionService#update} instead.
    */
   public Transaction update(TransactionUpdateParams params, RequestOptions options)
       throws StripeException {

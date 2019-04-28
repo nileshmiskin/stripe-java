@@ -89,26 +89,46 @@ public class IssuerFraudRecord extends ApiResource implements HasId {
     this.charge = new ExpandableField<Charge>(expandableObject.getId(), expandableObject);
   }
 
-  /** Returns a list of issuer fraud records. */
+  /**
+   * Returns a list of issuer fraud records.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.IssuerFraudRecordService#list} instead.
+   */
   public static IssuerFraudRecordCollection list(Map<String, Object> params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of issuer fraud records. */
+  /**
+   * Returns a list of issuer fraud records.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.IssuerFraudRecordService#list} instead.
+   */
   public static IssuerFraudRecordCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/issuer_fraud_records");
     return requestCollection(url, params, IssuerFraudRecordCollection.class, options);
   }
 
-  /** Returns a list of issuer fraud records. */
+  /**
+   * Returns a list of issuer fraud records.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.IssuerFraudRecordService#list} instead.
+   */
   public static IssuerFraudRecordCollection list(IssuerFraudRecordListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of issuer fraud records. */
+  /**
+   * Returns a list of issuer fraud records.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.IssuerFraudRecordService#list} instead.
+   */
   public static IssuerFraudRecordCollection list(
       IssuerFraudRecordListParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/issuer_fraud_records");
@@ -120,6 +140,9 @@ public class IssuerFraudRecord extends ApiResource implements HasId {
    *
    * <p>Please refer to the <a href="#issuer_fraud_record_object">issuer fraud record</a> object
    * reference for more details.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.IssuerFraudRecordService#retrieve} instead.
    */
   public static IssuerFraudRecord retrieve(String issuerFraudRecord) throws StripeException {
     return retrieve(issuerFraudRecord, (Map<String, Object>) null, (RequestOptions) null);
@@ -130,6 +153,9 @@ public class IssuerFraudRecord extends ApiResource implements HasId {
    *
    * <p>Please refer to the <a href="#issuer_fraud_record_object">issuer fraud record</a> object
    * reference for more details.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.IssuerFraudRecordService#retrieve} instead.
    */
   public static IssuerFraudRecord retrieve(String issuerFraudRecord, RequestOptions options)
       throws StripeException {
@@ -141,6 +167,9 @@ public class IssuerFraudRecord extends ApiResource implements HasId {
    *
    * <p>Please refer to the <a href="#issuer_fraud_record_object">issuer fraud record</a> object
    * reference for more details.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.IssuerFraudRecordService#retrieve} instead.
    */
   public static IssuerFraudRecord retrieve(
       String issuerFraudRecord, Map<String, Object> params, RequestOptions options)
@@ -159,6 +188,9 @@ public class IssuerFraudRecord extends ApiResource implements HasId {
    *
    * <p>Please refer to the <a href="#issuer_fraud_record_object">issuer fraud record</a> object
    * reference for more details.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.IssuerFraudRecordService#retrieve} instead.
    */
   public static IssuerFraudRecord retrieve(
       String issuerFraudRecord, IssuerFraudRecordRetrieveParams params, RequestOptions options)

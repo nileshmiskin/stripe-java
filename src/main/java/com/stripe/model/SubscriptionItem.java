@@ -77,43 +77,78 @@ public class SubscriptionItem extends ApiResource
   @SerializedName("tax_rates")
   List<TaxRate> taxRates;
 
-  /** Returns a list of your subscription items for a given subscription. */
+  /**
+   * Returns a list of your subscription items for a given subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#list} instead.
+   */
   public static SubscriptionItemCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your subscription items for a given subscription. */
+  /**
+   * Returns a list of your subscription items for a given subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#list} instead.
+   */
   public static SubscriptionItemCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscription_items");
     return requestCollection(url, params, SubscriptionItemCollection.class, options);
   }
 
-  /** Returns a list of your subscription items for a given subscription. */
+  /**
+   * Returns a list of your subscription items for a given subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#list} instead.
+   */
   public static SubscriptionItemCollection list(SubscriptionItemListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your subscription items for a given subscription. */
+  /**
+   * Returns a list of your subscription items for a given subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#list} instead.
+   */
   public static SubscriptionItemCollection list(
       SubscriptionItemListParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscription_items");
     return requestCollection(url, params, SubscriptionItemCollection.class, options);
   }
 
-  /** Retrieves the invoice item with the given ID. */
+  /**
+   * Retrieves the invoice item with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#retrieve} instead.
+   */
   public static SubscriptionItem retrieve(String item) throws StripeException {
     return retrieve(item, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the invoice item with the given ID. */
+  /**
+   * Retrieves the invoice item with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#retrieve} instead.
+   */
   public static SubscriptionItem retrieve(String item, RequestOptions options)
       throws StripeException {
     return retrieve(item, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the invoice item with the given ID. */
+  /**
+   * Retrieves the invoice item with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#retrieve} instead.
+   */
   public static SubscriptionItem retrieve(
       String item, Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -124,7 +159,12 @@ public class SubscriptionItem extends ApiResource
     return request(ApiResource.RequestMethod.GET, url, params, SubscriptionItem.class, options);
   }
 
-  /** Retrieves the invoice item with the given ID. */
+  /**
+   * Retrieves the invoice item with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#retrieve} instead.
+   */
   public static SubscriptionItem retrieve(
       String item, SubscriptionItemRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -136,38 +176,68 @@ public class SubscriptionItem extends ApiResource
     return request(ApiResource.RequestMethod.GET, url, params, SubscriptionItem.class, options);
   }
 
-  /** Adds a new item to an existing subscription. No existing items will be changed or replaced. */
+  /**
+   * Adds a new item to an existing subscription. No existing items will be changed or replaced.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#create} instead.
+   */
   public static SubscriptionItem create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Adds a new item to an existing subscription. No existing items will be changed or replaced. */
+  /**
+   * Adds a new item to an existing subscription. No existing items will be changed or replaced.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#create} instead.
+   */
   public static SubscriptionItem create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscription_items");
     return request(ApiResource.RequestMethod.POST, url, params, SubscriptionItem.class, options);
   }
 
-  /** Adds a new item to an existing subscription. No existing items will be changed or replaced. */
+  /**
+   * Adds a new item to an existing subscription. No existing items will be changed or replaced.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#create} instead.
+   */
   public static SubscriptionItem create(SubscriptionItemCreateParams params)
       throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Adds a new item to an existing subscription. No existing items will be changed or replaced. */
+  /**
+   * Adds a new item to an existing subscription. No existing items will be changed or replaced.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#create} instead.
+   */
   public static SubscriptionItem create(SubscriptionItemCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscription_items");
     return request(ApiResource.RequestMethod.POST, url, params, SubscriptionItem.class, options);
   }
 
-  /** Updates the plan or quantity of an item on a current subscription. */
+  /**
+   * Updates the plan or quantity of an item on a current subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#update} instead.
+   */
   @Override
   public SubscriptionItem update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates the plan or quantity of an item on a current subscription. */
+  /**
+   * Updates the plan or quantity of an item on a current subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#update} instead.
+   */
   @Override
   public SubscriptionItem update(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -179,12 +249,22 @@ public class SubscriptionItem extends ApiResource
     return request(ApiResource.RequestMethod.POST, url, params, SubscriptionItem.class, options);
   }
 
-  /** Updates the plan or quantity of an item on a current subscription. */
+  /**
+   * Updates the plan or quantity of an item on a current subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#update} instead.
+   */
   public SubscriptionItem update(SubscriptionItemUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates the plan or quantity of an item on a current subscription. */
+  /**
+   * Updates the plan or quantity of an item on a current subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#update} instead.
+   */
   public SubscriptionItem update(SubscriptionItemUpdateParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -198,6 +278,9 @@ public class SubscriptionItem extends ApiResource
   /**
    * Deletes an item from the subscription. Removing a subscription item from a subscription will
    * not cancel the subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#delete} instead.
    */
   public SubscriptionItem delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -206,6 +289,9 @@ public class SubscriptionItem extends ApiResource
   /**
    * Deletes an item from the subscription. Removing a subscription item from a subscription will
    * not cancel the subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#delete} instead.
    */
   public SubscriptionItem delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -214,6 +300,9 @@ public class SubscriptionItem extends ApiResource
   /**
    * Deletes an item from the subscription. Removing a subscription item from a subscription will
    * not cancel the subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#delete} instead.
    */
   public SubscriptionItem delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -222,6 +311,9 @@ public class SubscriptionItem extends ApiResource
   /**
    * Deletes an item from the subscription. Removing a subscription item from a subscription will
    * not cancel the subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#delete} instead.
    */
   public SubscriptionItem delete(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -236,6 +328,9 @@ public class SubscriptionItem extends ApiResource
   /**
    * Deletes an item from the subscription. Removing a subscription item from a subscription will
    * not cancel the subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#delete} instead.
    */
   public SubscriptionItem delete(SubscriptionItemDeleteParams params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -244,6 +339,9 @@ public class SubscriptionItem extends ApiResource
   /**
    * Deletes an item from the subscription. Removing a subscription item from a subscription will
    * not cancel the subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#delete} instead.
    */
   public SubscriptionItem delete(SubscriptionItemDeleteParams params, RequestOptions options)
       throws StripeException {
@@ -264,6 +362,10 @@ public class SubscriptionItem extends ApiResource
    * represents the most current usage period that hasn’t ended yet. Since new usage records can
    * still be added, the returned summary information for the subscription item’s ID should be seen
    * as unstable until the subscription billing period ends.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#usageRecordSummaries}
+   * instead.
    */
   public UsageRecordSummaryCollection usageRecordSummaries() throws StripeException {
     return usageRecordSummaries((Map<String, Object>) null, (RequestOptions) null);
@@ -278,6 +380,10 @@ public class SubscriptionItem extends ApiResource
    * represents the most current usage period that hasn’t ended yet. Since new usage records can
    * still be added, the returned summary information for the subscription item’s ID should be seen
    * as unstable until the subscription billing period ends.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#usageRecordSummaries}
+   * instead.
    */
   public UsageRecordSummaryCollection usageRecordSummaries(Map<String, Object> params)
       throws StripeException {
@@ -293,6 +399,10 @@ public class SubscriptionItem extends ApiResource
    * represents the most current usage period that hasn’t ended yet. Since new usage records can
    * still be added, the returned summary information for the subscription item’s ID should be seen
    * as unstable until the subscription billing period ends.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#usageRecordSummaries}
+   * instead.
    */
   public UsageRecordSummaryCollection usageRecordSummaries(
       Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -315,6 +425,10 @@ public class SubscriptionItem extends ApiResource
    * represents the most current usage period that hasn’t ended yet. Since new usage records can
    * still be added, the returned summary information for the subscription item’s ID should be seen
    * as unstable until the subscription billing period ends.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#usageRecordSummaries}
+   * instead.
    */
   public UsageRecordSummaryCollection usageRecordSummaries(
       SubscriptionItemUsageRecordSummariesParams params) throws StripeException {
@@ -330,6 +444,10 @@ public class SubscriptionItem extends ApiResource
    * represents the most current usage period that hasn’t ended yet. Since new usage records can
    * still be added, the returned summary information for the subscription item’s ID should be seen
    * as unstable until the subscription billing period ends.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionItemService#usageRecordSummaries}
+   * instead.
    */
   public UsageRecordSummaryCollection usageRecordSummaries(
       SubscriptionItemUsageRecordSummariesParams params, RequestOptions options)

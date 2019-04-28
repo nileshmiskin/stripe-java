@@ -34,6 +34,9 @@ public class LoginLink extends ApiResource {
    *
    * <p><strong>You may only create login links for <a href="/docs/connect/express-accounts">Express
    * accounts</a> connected to your platform</strong>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.LoginLinkService#create} instead.
    */
   public static LoginLink createOnAccount(
       String account, Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -50,6 +53,9 @@ public class LoginLink extends ApiResource {
    *
    * <p><strong>You may only create login links for <a href="/docs/connect/express-accounts">Express
    * accounts</a> connected to your platform</strong>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.LoginLinkService#create} instead.
    */
   public static LoginLink createOnAccount(
       String account, LoginLinkCreateOnAccountParams params, RequestOptions options)

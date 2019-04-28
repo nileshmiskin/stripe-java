@@ -188,6 +188,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Returns a list of your invoice items. Invoice items are returned sorted by creation date, with
    * the most recently created invoice items appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#list} instead.
    */
   public static InvoiceItemCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -196,6 +199,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Returns a list of your invoice items. Invoice items are returned sorted by creation date, with
    * the most recently created invoice items appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#list} instead.
    */
   public static InvoiceItemCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -206,6 +212,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Returns a list of your invoice items. Invoice items are returned sorted by creation date, with
    * the most recently created invoice items appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#list} instead.
    */
   public static InvoiceItemCollection list(InvoiceItemListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -214,6 +223,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Returns a list of your invoice items. Invoice items are returned sorted by creation date, with
    * the most recently created invoice items appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#list} instead.
    */
   public static InvoiceItemCollection list(InvoiceItemListParams params, RequestOptions options)
       throws StripeException {
@@ -224,6 +236,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Creates an item to be added to a draft invoice. If no invoice is specified, the item will be on
    * the next invoice created for the customer specified.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#create} instead.
    */
   public static InvoiceItem create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -232,6 +247,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Creates an item to be added to a draft invoice. If no invoice is specified, the item will be on
    * the next invoice created for the customer specified.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#create} instead.
    */
   public static InvoiceItem create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -242,6 +260,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Creates an item to be added to a draft invoice. If no invoice is specified, the item will be on
    * the next invoice created for the customer specified.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#create} instead.
    */
   public static InvoiceItem create(InvoiceItemCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -250,6 +271,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Creates an item to be added to a draft invoice. If no invoice is specified, the item will be on
    * the next invoice created for the customer specified.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#create} instead.
    */
   public static InvoiceItem create(InvoiceItemCreateParams params, RequestOptions options)
       throws StripeException {
@@ -257,18 +281,33 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
     return request(ApiResource.RequestMethod.POST, url, params, InvoiceItem.class, options);
   }
 
-  /** Retrieves the invoice item with the given ID. */
+  /**
+   * Retrieves the invoice item with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#retrieve} instead.
+   */
   public static InvoiceItem retrieve(String invoiceitem) throws StripeException {
     return retrieve(invoiceitem, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the invoice item with the given ID. */
+  /**
+   * Retrieves the invoice item with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#retrieve} instead.
+   */
   public static InvoiceItem retrieve(String invoiceitem, RequestOptions options)
       throws StripeException {
     return retrieve(invoiceitem, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the invoice item with the given ID. */
+  /**
+   * Retrieves the invoice item with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#retrieve} instead.
+   */
   public static InvoiceItem retrieve(
       String invoiceitem, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -280,7 +319,12 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
     return request(ApiResource.RequestMethod.GET, url, params, InvoiceItem.class, options);
   }
 
-  /** Retrieves the invoice item with the given ID. */
+  /**
+   * Retrieves the invoice item with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#retrieve} instead.
+   */
   public static InvoiceItem retrieve(
       String invoiceitem, InvoiceItemRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -295,6 +339,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Updates the amount or description of an invoice item on an upcoming invoice. Updating an
    * invoice item is only possible before the invoice it’s attached to is closed.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#update} instead.
    */
   @Override
   public InvoiceItem update(Map<String, Object> params) throws StripeException {
@@ -304,6 +351,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Updates the amount or description of an invoice item on an upcoming invoice. Updating an
    * invoice item is only possible before the invoice it’s attached to is closed.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#update} instead.
    */
   @Override
   public InvoiceItem update(Map<String, Object> params, RequestOptions options)
@@ -319,6 +369,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Updates the amount or description of an invoice item on an upcoming invoice. Updating an
    * invoice item is only possible before the invoice it’s attached to is closed.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#update} instead.
    */
   public InvoiceItem update(InvoiceItemUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -327,6 +380,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Updates the amount or description of an invoice item on an upcoming invoice. Updating an
    * invoice item is only possible before the invoice it’s attached to is closed.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#update} instead.
    */
   public InvoiceItem update(InvoiceItemUpdateParams params, RequestOptions options)
       throws StripeException {
@@ -341,6 +397,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Deletes an invoice item, removing it from an invoice. Deleting invoice items is only possible
    * when they’re not attached to invoices, or if it’s attached to a draft invoice.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#delete} instead.
    */
   public InvoiceItem delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -349,6 +408,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Deletes an invoice item, removing it from an invoice. Deleting invoice items is only possible
    * when they’re not attached to invoices, or if it’s attached to a draft invoice.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#delete} instead.
    */
   public InvoiceItem delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -357,6 +419,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Deletes an invoice item, removing it from an invoice. Deleting invoice items is only possible
    * when they’re not attached to invoices, or if it’s attached to a draft invoice.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#delete} instead.
    */
   public InvoiceItem delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -365,6 +430,9 @@ public class InvoiceItem extends ApiResource implements HasId, MetadataStore<Inv
   /**
    * Deletes an invoice item, removing it from an invoice. Deleting invoice items is only possible
    * when they’re not attached to invoices, or if it’s attached to a draft invoice.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.InvoiceItemService#delete} instead.
    */
   public InvoiceItem delete(Map<String, Object> params, RequestOptions options)
       throws StripeException {

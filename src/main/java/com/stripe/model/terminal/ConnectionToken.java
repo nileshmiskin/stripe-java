@@ -29,6 +29,9 @@ public class ConnectionToken extends ApiResource {
    * To connect to a reader the Stripe Terminal SDK needs to retrieve a short-lived connection token
    * from Stripe, proxied through your server. On your backend, add an endpoint that creates and
    * returns a connection token.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.ConnectionTokenService#create} instead.
    */
   public static ConnectionToken create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -38,6 +41,9 @@ public class ConnectionToken extends ApiResource {
    * To connect to a reader the Stripe Terminal SDK needs to retrieve a short-lived connection token
    * from Stripe, proxied through your server. On your backend, add an endpoint that creates and
    * returns a connection token.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.ConnectionTokenService#create} instead.
    */
   public static ConnectionToken create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -49,6 +55,9 @@ public class ConnectionToken extends ApiResource {
    * To connect to a reader the Stripe Terminal SDK needs to retrieve a short-lived connection token
    * from Stripe, proxied through your server. On your backend, add an endpoint that creates and
    * returns a connection token.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.ConnectionTokenService#create} instead.
    */
   public static ConnectionToken create(ConnectionTokenCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -58,6 +67,9 @@ public class ConnectionToken extends ApiResource {
    * To connect to a reader the Stripe Terminal SDK needs to retrieve a short-lived connection token
    * from Stripe, proxied through your server. On your backend, add an endpoint that creates and
    * returns a connection token.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.ConnectionTokenService#create} instead.
    */
   public static ConnectionToken create(ConnectionTokenCreateParams params, RequestOptions options)
       throws StripeException {

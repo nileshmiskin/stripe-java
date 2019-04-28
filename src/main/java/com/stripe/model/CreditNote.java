@@ -189,6 +189,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
    * invoice’s <code>pre_payment_credit_notes_amount</code> or <code>
    * post_payment_credit_notes_amount</code> depending on its <code>status</code> at the time of
    * credit note creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#create} instead.
    */
   public static CreditNote create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -214,6 +217,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
    * invoice’s <code>pre_payment_credit_notes_amount</code> or <code>
    * post_payment_credit_notes_amount</code> depending on its <code>status</code> at the time of
    * credit note creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#create} instead.
    */
   public static CreditNote create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -241,6 +247,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
    * invoice’s <code>pre_payment_credit_notes_amount</code> or <code>
    * post_payment_credit_notes_amount</code> depending on its <code>status</code> at the time of
    * credit note creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#create} instead.
    */
   public static CreditNote create(CreditNoteCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -266,6 +275,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
    * invoice’s <code>pre_payment_credit_notes_amount</code> or <code>
    * post_payment_credit_notes_amount</code> depending on its <code>status</code> at the time of
    * credit note creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#create} instead.
    */
   public static CreditNote create(CreditNoteCreateParams params, RequestOptions options)
       throws StripeException {
@@ -273,17 +285,32 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
     return request(ApiResource.RequestMethod.POST, url, params, CreditNote.class, options);
   }
 
-  /** Retrieves the credit note object with the given identifier. */
+  /**
+   * Retrieves the credit note object with the given identifier.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#retrieve} instead.
+   */
   public static CreditNote retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the credit note object with the given identifier. */
+  /**
+   * Retrieves the credit note object with the given identifier.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#retrieve} instead.
+   */
   public static CreditNote retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the credit note object with the given identifier. */
+  /**
+   * Retrieves the credit note object with the given identifier.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#retrieve} instead.
+   */
   public static CreditNote retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -293,7 +320,12 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
     return request(ApiResource.RequestMethod.GET, url, params, CreditNote.class, options);
   }
 
-  /** Retrieves the credit note object with the given identifier. */
+  /**
+   * Retrieves the credit note object with the given identifier.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#retrieve} instead.
+   */
   public static CreditNote retrieve(
       String id, CreditNoteRetrieveParams params, RequestOptions options) throws StripeException {
     String url =
@@ -303,37 +335,67 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
     return request(ApiResource.RequestMethod.GET, url, params, CreditNote.class, options);
   }
 
-  /** Returns a list of credit notes. */
+  /**
+   * Returns a list of credit notes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#list} instead.
+   */
   public static CreditNoteCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of credit notes. */
+  /**
+   * Returns a list of credit notes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#list} instead.
+   */
   public static CreditNoteCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/credit_notes");
     return requestCollection(url, params, CreditNoteCollection.class, options);
   }
 
-  /** Returns a list of credit notes. */
+  /**
+   * Returns a list of credit notes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#list} instead.
+   */
   public static CreditNoteCollection list(CreditNoteListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of credit notes. */
+  /**
+   * Returns a list of credit notes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#list} instead.
+   */
   public static CreditNoteCollection list(CreditNoteListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/credit_notes");
     return requestCollection(url, params, CreditNoteCollection.class, options);
   }
 
-  /** Updates an existing credit note. */
+  /**
+   * Updates an existing credit note.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#update} instead.
+   */
   @Override
   public CreditNote update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing credit note. */
+  /**
+   * Updates an existing credit note.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#update} instead.
+   */
   @Override
   public CreditNote update(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -345,12 +407,22 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
     return request(ApiResource.RequestMethod.POST, url, params, CreditNote.class, options);
   }
 
-  /** Updates an existing credit note. */
+  /**
+   * Updates an existing credit note.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#update} instead.
+   */
   public CreditNote update(CreditNoteUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing credit note. */
+  /**
+   * Updates an existing credit note.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#update} instead.
+   */
   public CreditNote update(CreditNoteUpdateParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -364,6 +436,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
   /**
    * Marks a credit note as void. Learn more about <a
    * href="/docs/billing/invoices/credit-notes#voiding">voiding credit notes</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#voidCreditNote} instead.
    */
   public CreditNote voidCreditNote() throws StripeException {
     return voidCreditNote((Map<String, Object>) null, (RequestOptions) null);
@@ -372,6 +447,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
   /**
    * Marks a credit note as void. Learn more about <a
    * href="/docs/billing/invoices/credit-notes#voiding">voiding credit notes</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#voidCreditNote} instead.
    */
   public CreditNote voidCreditNote(RequestOptions options) throws StripeException {
     return voidCreditNote((Map<String, Object>) null, options);
@@ -380,6 +458,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
   /**
    * Marks a credit note as void. Learn more about <a
    * href="/docs/billing/invoices/credit-notes#voiding">voiding credit notes</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#voidCreditNote} instead.
    */
   public CreditNote voidCreditNote(Map<String, Object> params) throws StripeException {
     return voidCreditNote(params, (RequestOptions) null);
@@ -388,6 +469,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
   /**
    * Marks a credit note as void. Learn more about <a
    * href="/docs/billing/invoices/credit-notes#voiding">voiding credit notes</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#voidCreditNote} instead.
    */
   public CreditNote voidCreditNote(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -402,6 +486,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
   /**
    * Marks a credit note as void. Learn more about <a
    * href="/docs/billing/invoices/credit-notes#voiding">voiding credit notes</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#voidCreditNote} instead.
    */
   public CreditNote voidCreditNote(CreditNoteVoidCreditNoteParams params) throws StripeException {
     return voidCreditNote(params, (RequestOptions) null);
@@ -410,6 +497,9 @@ public class CreditNote extends ApiResource implements HasId, MetadataStore<Cred
   /**
    * Marks a credit note as void. Learn more about <a
    * href="/docs/billing/invoices/credit-notes#voiding">voiding credit notes</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CreditNoteService#voidCreditNote} instead.
    */
   public CreditNote voidCreditNote(CreditNoteVoidCreditNoteParams params, RequestOptions options)
       throws StripeException {

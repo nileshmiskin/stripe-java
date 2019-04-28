@@ -98,6 +98,9 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
    * Creates a PaymentMethod object. Read the <a
    * href="/docs/stripe-js/reference#stripe-create-payment-method">Stripe.js reference</a> to learn
    * how to create PaymentMethods via Stripe.js.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#create} instead.
    */
   public static PaymentMethod create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -107,6 +110,9 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
    * Creates a PaymentMethod object. Read the <a
    * href="/docs/stripe-js/reference#stripe-create-payment-method">Stripe.js reference</a> to learn
    * how to create PaymentMethods via Stripe.js.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#create} instead.
    */
   public static PaymentMethod create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -118,6 +124,9 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
    * Creates a PaymentMethod object. Read the <a
    * href="/docs/stripe-js/reference#stripe-create-payment-method">Stripe.js reference</a> to learn
    * how to create PaymentMethods via Stripe.js.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#create} instead.
    */
   public static PaymentMethod create(PaymentMethodCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -127,6 +136,9 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
    * Creates a PaymentMethod object. Read the <a
    * href="/docs/stripe-js/reference#stripe-create-payment-method">Stripe.js reference</a> to learn
    * how to create PaymentMethods via Stripe.js.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#create} instead.
    */
   public static PaymentMethod create(PaymentMethodCreateParams params, RequestOptions options)
       throws StripeException {
@@ -134,18 +146,33 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.POST, url, params, PaymentMethod.class, options);
   }
 
-  /** Retrieves a PaymentMethod object. */
+  /**
+   * Retrieves a PaymentMethod object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#retrieve} instead.
+   */
   public static PaymentMethod retrieve(String paymentMethod) throws StripeException {
     return retrieve(paymentMethod, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves a PaymentMethod object. */
+  /**
+   * Retrieves a PaymentMethod object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#retrieve} instead.
+   */
   public static PaymentMethod retrieve(String paymentMethod, RequestOptions options)
       throws StripeException {
     return retrieve(paymentMethod, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves a PaymentMethod object. */
+  /**
+   * Retrieves a PaymentMethod object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#retrieve} instead.
+   */
   public static PaymentMethod retrieve(
       String paymentMethod, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -157,7 +184,12 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.GET, url, params, PaymentMethod.class, options);
   }
 
-  /** Retrieves a PaymentMethod object. */
+  /**
+   * Retrieves a PaymentMethod object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#retrieve} instead.
+   */
   public static PaymentMethod retrieve(
       String paymentMethod, PaymentMethodRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -169,13 +201,23 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.GET, url, params, PaymentMethod.class, options);
   }
 
-  /** Updates a PaymentMethod object. A PaymentMethod must be attached a customer to be updated. */
+  /**
+   * Updates a PaymentMethod object. A PaymentMethod must be attached a customer to be updated.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#update} instead.
+   */
   @Override
   public PaymentMethod update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates a PaymentMethod object. A PaymentMethod must be attached a customer to be updated. */
+  /**
+   * Updates a PaymentMethod object. A PaymentMethod must be attached a customer to be updated.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#update} instead.
+   */
   @Override
   public PaymentMethod update(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -187,12 +229,22 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.POST, url, params, PaymentMethod.class, options);
   }
 
-  /** Updates a PaymentMethod object. A PaymentMethod must be attached a customer to be updated. */
+  /**
+   * Updates a PaymentMethod object. A PaymentMethod must be attached a customer to be updated.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#update} instead.
+   */
   public PaymentMethod update(PaymentMethodUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates a PaymentMethod object. A PaymentMethod must be attached a customer to be updated. */
+  /**
+   * Updates a PaymentMethod object. A PaymentMethod must be attached a customer to be updated.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#update} instead.
+   */
   public PaymentMethod update(PaymentMethodUpdateParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -203,37 +255,67 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.POST, url, params, PaymentMethod.class, options);
   }
 
-  /** Returns a list of PaymentMethods for a given Customer. */
+  /**
+   * Returns a list of PaymentMethods for a given Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#list} instead.
+   */
   public static PaymentMethodCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of PaymentMethods for a given Customer. */
+  /**
+   * Returns a list of PaymentMethods for a given Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#list} instead.
+   */
   public static PaymentMethodCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/payment_methods");
     return requestCollection(url, params, PaymentMethodCollection.class, options);
   }
 
-  /** Returns a list of PaymentMethods for a given Customer. */
+  /**
+   * Returns a list of PaymentMethods for a given Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#list} instead.
+   */
   public static PaymentMethodCollection list(PaymentMethodListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of PaymentMethods for a given Customer. */
+  /**
+   * Returns a list of PaymentMethods for a given Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#list} instead.
+   */
   public static PaymentMethodCollection list(PaymentMethodListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/payment_methods");
     return requestCollection(url, params, PaymentMethodCollection.class, options);
   }
 
-  /** Attaches a PaymentMethod object to a Customer. */
+  /**
+   * Attaches a PaymentMethod object to a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#attach} instead.
+   */
   public PaymentMethod attach(Map<String, Object> params) throws StripeException {
     return attach(params, (RequestOptions) null);
   }
 
-  /** Attaches a PaymentMethod object to a Customer. */
+  /**
+   * Attaches a PaymentMethod object to a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#attach} instead.
+   */
   public PaymentMethod attach(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -244,12 +326,22 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.POST, url, params, PaymentMethod.class, options);
   }
 
-  /** Attaches a PaymentMethod object to a Customer. */
+  /**
+   * Attaches a PaymentMethod object to a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#attach} instead.
+   */
   public PaymentMethod attach(PaymentMethodAttachParams params) throws StripeException {
     return attach(params, (RequestOptions) null);
   }
 
-  /** Attaches a PaymentMethod object to a Customer. */
+  /**
+   * Attaches a PaymentMethod object to a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#attach} instead.
+   */
   public PaymentMethod attach(PaymentMethodAttachParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -260,22 +352,42 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.POST, url, params, PaymentMethod.class, options);
   }
 
-  /** Detaches a PaymentMethod object from a Customer. */
+  /**
+   * Detaches a PaymentMethod object from a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#detach} instead.
+   */
   public PaymentMethod detach() throws StripeException {
     return detach((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Detaches a PaymentMethod object from a Customer. */
+  /**
+   * Detaches a PaymentMethod object from a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#detach} instead.
+   */
   public PaymentMethod detach(RequestOptions options) throws StripeException {
     return detach((Map<String, Object>) null, options);
   }
 
-  /** Detaches a PaymentMethod object from a Customer. */
+  /**
+   * Detaches a PaymentMethod object from a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#detach} instead.
+   */
   public PaymentMethod detach(Map<String, Object> params) throws StripeException {
     return detach(params, (RequestOptions) null);
   }
 
-  /** Detaches a PaymentMethod object from a Customer. */
+  /**
+   * Detaches a PaymentMethod object from a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#detach} instead.
+   */
   public PaymentMethod detach(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -286,12 +398,22 @@ public class PaymentMethod extends ApiResource implements HasId, MetadataStore<P
     return request(ApiResource.RequestMethod.POST, url, params, PaymentMethod.class, options);
   }
 
-  /** Detaches a PaymentMethod object from a Customer. */
+  /**
+   * Detaches a PaymentMethod object from a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#detach} instead.
+   */
   public PaymentMethod detach(PaymentMethodDetachParams params) throws StripeException {
     return detach(params, (RequestOptions) null);
   }
 
-  /** Detaches a PaymentMethod object from a Customer. */
+  /**
+   * Detaches a PaymentMethod object from a Customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentMethodService#detach} instead.
+   */
   public PaymentMethod detach(PaymentMethodDetachParams params, RequestOptions options)
       throws StripeException {
     String url =

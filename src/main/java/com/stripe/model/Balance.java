@@ -57,6 +57,9 @@ public class Balance extends ApiResource {
    * request. For a sample request, see <a
    * href="/docs/connect/account-balances#accounting-for-negative-balances">Accounting for negative
    * balances</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceService#retrieve} instead.
    */
   public static Balance retrieve() throws StripeException {
     return retrieve((Map<String, Object>) null, (RequestOptions) null);
@@ -67,6 +70,9 @@ public class Balance extends ApiResource {
    * request. For a sample request, see <a
    * href="/docs/connect/account-balances#accounting-for-negative-balances">Accounting for negative
    * balances</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceService#retrieve} instead.
    */
   public static Balance retrieve(RequestOptions options) throws StripeException {
     return retrieve((Map<String, Object>) null, options);
@@ -77,6 +83,9 @@ public class Balance extends ApiResource {
    * request. For a sample request, see <a
    * href="/docs/connect/account-balances#accounting-for-negative-balances">Accounting for negative
    * balances</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceService#retrieve} instead.
    */
   public static Balance retrieve(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -89,6 +98,9 @@ public class Balance extends ApiResource {
    * request. For a sample request, see <a
    * href="/docs/connect/account-balances#accounting-for-negative-balances">Accounting for negative
    * balances</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceService#retrieve} instead.
    */
   public static Balance retrieve(BalanceRetrieveParams params, RequestOptions options)
       throws StripeException {

@@ -114,24 +114,44 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
   @SerializedName("valid")
   Boolean valid;
 
-  /** Returns a list of your coupons. */
+  /**
+   * Returns a list of your coupons.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#list} instead.
+   */
   public static CouponCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your coupons. */
+  /**
+   * Returns a list of your coupons.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#list} instead.
+   */
   public static CouponCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/coupons");
     return requestCollection(url, params, CouponCollection.class, options);
   }
 
-  /** Returns a list of your coupons. */
+  /**
+   * Returns a list of your coupons.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#list} instead.
+   */
   public static CouponCollection list(CouponListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your coupons. */
+  /**
+   * Returns a list of your coupons.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#list} instead.
+   */
   public static CouponCollection list(CouponListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/coupons");
@@ -149,6 +169,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
    * if a coupon with an <code>amount_off</code> of 200 is applied to it and an invoice with a
    * subtotal of 300 will have a final total of 100 if a coupon with an <code>amount_off</code> of
    * 200 is applied to it.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#create} instead.
    */
   public static Coupon create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -165,6 +188,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
    * if a coupon with an <code>amount_off</code> of 200 is applied to it and an invoice with a
    * subtotal of 300 will have a final total of 100 if a coupon with an <code>amount_off</code> of
    * 200 is applied to it.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#create} instead.
    */
   public static Coupon create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -183,6 +209,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
    * if a coupon with an <code>amount_off</code> of 200 is applied to it and an invoice with a
    * subtotal of 300 will have a final total of 100 if a coupon with an <code>amount_off</code> of
    * 200 is applied to it.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#create} instead.
    */
   public static Coupon create(CouponCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -199,6 +228,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
    * if a coupon with an <code>amount_off</code> of 200 is applied to it and an invoice with a
    * subtotal of 300 will have a final total of 100 if a coupon with an <code>amount_off</code> of
    * 200 is applied to it.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#create} instead.
    */
   public static Coupon create(CouponCreateParams params, RequestOptions options)
       throws StripeException {
@@ -206,17 +238,32 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
     return request(ApiResource.RequestMethod.POST, url, params, Coupon.class, options);
   }
 
-  /** Retrieves the coupon with the given ID. */
+  /**
+   * Retrieves the coupon with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#retrieve} instead.
+   */
   public static Coupon retrieve(String coupon) throws StripeException {
     return retrieve(coupon, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the coupon with the given ID. */
+  /**
+   * Retrieves the coupon with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#retrieve} instead.
+   */
   public static Coupon retrieve(String coupon, RequestOptions options) throws StripeException {
     return retrieve(coupon, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the coupon with the given ID. */
+  /**
+   * Retrieves the coupon with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#retrieve} instead.
+   */
   public static Coupon retrieve(String coupon, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -226,7 +273,12 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
     return request(ApiResource.RequestMethod.GET, url, params, Coupon.class, options);
   }
 
-  /** Retrieves the coupon with the given ID. */
+  /**
+   * Retrieves the coupon with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#retrieve} instead.
+   */
   public static Coupon retrieve(String coupon, CouponRetrieveParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -239,6 +291,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
   /**
    * Updates the metadata of a coupon. Other coupon details (currency, duration, amount_off) are, by
    * design, not editable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#update} instead.
    */
   @Override
   public Coupon update(Map<String, Object> params) throws StripeException {
@@ -248,6 +303,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
   /**
    * Updates the metadata of a coupon. Other coupon details (currency, duration, amount_off) are, by
    * design, not editable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#update} instead.
    */
   @Override
   public Coupon update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -262,6 +320,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
   /**
    * Updates the metadata of a coupon. Other coupon details (currency, duration, amount_off) are, by
    * design, not editable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#update} instead.
    */
   public Coupon update(CouponUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -270,6 +331,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
   /**
    * Updates the metadata of a coupon. Other coupon details (currency, duration, amount_off) are, by
    * design, not editable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#update} instead.
    */
   public Coupon update(CouponUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -285,6 +349,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
    * management</a> page of the Stripe dashboard. However, deleting a coupon does not affect any
    * customers who have already applied the coupon; it means that new customers can’t redeem the
    * coupon. You can also delete coupons via the API.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#delete} instead.
    */
   public Coupon delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -295,6 +362,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
    * management</a> page of the Stripe dashboard. However, deleting a coupon does not affect any
    * customers who have already applied the coupon; it means that new customers can’t redeem the
    * coupon. You can also delete coupons via the API.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#delete} instead.
    */
   public Coupon delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -305,6 +375,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
    * management</a> page of the Stripe dashboard. However, deleting a coupon does not affect any
    * customers who have already applied the coupon; it means that new customers can’t redeem the
    * coupon. You can also delete coupons via the API.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#delete} instead.
    */
   public Coupon delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -315,6 +388,9 @@ public class Coupon extends ApiResource implements HasId, MetadataStore<Coupon> 
    * management</a> page of the Stripe dashboard. However, deleting a coupon does not affect any
    * customers who have already applied the coupon; it means that new customers can’t redeem the
    * coupon. You can also delete coupons via the API.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CouponService#delete} instead.
    */
   public Coupon delete(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =

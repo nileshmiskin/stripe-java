@@ -159,6 +159,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Returns a list of your recipients. The recipients are returned sorted by creation date, with
    * the most recently created recipients appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#list} instead.
    */
   public static RecipientCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -167,6 +170,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Returns a list of your recipients. The recipients are returned sorted by creation date, with
    * the most recently created recipients appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#list} instead.
    */
   public static RecipientCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -177,6 +183,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Returns a list of your recipients. The recipients are returned sorted by creation date, with
    * the most recently created recipients appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#list} instead.
    */
   public static RecipientCollection list(RecipientListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -185,6 +194,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Returns a list of your recipients. The recipients are returned sorted by creation date, with
    * the most recently created recipients appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#list} instead.
    */
   public static RecipientCollection list(RecipientListParams params, RequestOptions options)
       throws StripeException {
@@ -195,6 +207,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Creates a new <code>Recipient</code> object and verifies the recipient’s identity. Also
    * verifies the recipient’s bank account information or debit card, if either is provided.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#create} instead.
    */
   public static Recipient create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -203,6 +218,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Creates a new <code>Recipient</code> object and verifies the recipient’s identity. Also
    * verifies the recipient’s bank account information or debit card, if either is provided.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#create} instead.
    */
   public static Recipient create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -213,6 +231,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Creates a new <code>Recipient</code> object and verifies the recipient’s identity. Also
    * verifies the recipient’s bank account information or debit card, if either is provided.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#create} instead.
    */
   public static Recipient create(RecipientCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -221,6 +242,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Creates a new <code>Recipient</code> object and verifies the recipient’s identity. Also
    * verifies the recipient’s bank account information or debit card, if either is provided.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#create} instead.
    */
   public static Recipient create(RecipientCreateParams params, RequestOptions options)
       throws StripeException {
@@ -231,6 +255,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Retrieves the details of an existing recipient. You need only supply the unique recipient
    * identifier that was returned upon recipient creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#retrieve} instead.
    */
   public static Recipient retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
@@ -239,6 +266,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Retrieves the details of an existing recipient. You need only supply the unique recipient
    * identifier that was returned upon recipient creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#retrieve} instead.
    */
   public static Recipient retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
@@ -247,6 +277,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Retrieves the details of an existing recipient. You need only supply the unique recipient
    * identifier that was returned upon recipient creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#retrieve} instead.
    */
   public static Recipient retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -260,6 +293,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
   /**
    * Retrieves the details of an existing recipient. You need only supply the unique recipient
    * identifier that was returned upon recipient creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#retrieve} instead.
    */
   public static Recipient retrieve(
       String id, RecipientRetrieveParams params, RequestOptions options) throws StripeException {
@@ -276,6 +312,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
    *
    * <p>If you update the name or tax ID, the identity verification will automatically be rerun. If
    * you update the bank account, the bank account validation will automatically be rerun.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#update} instead.
    */
   @Override
   public Recipient update(Map<String, Object> params) throws StripeException {
@@ -288,6 +327,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
    *
    * <p>If you update the name or tax ID, the identity verification will automatically be rerun. If
    * you update the bank account, the bank account validation will automatically be rerun.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#update} instead.
    */
   @Override
   public Recipient update(Map<String, Object> params, RequestOptions options)
@@ -306,6 +348,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
    *
    * <p>If you update the name or tax ID, the identity verification will automatically be rerun. If
    * you update the bank account, the bank account validation will automatically be rerun.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#update} instead.
    */
   public Recipient update(RecipientUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -317,6 +362,9 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
    *
    * <p>If you update the name or tax ID, the identity verification will automatically be rerun. If
    * you update the bank account, the bank account validation will automatically be rerun.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#update} instead.
    */
   public Recipient update(RecipientUpdateParams params, RequestOptions options)
       throws StripeException {
@@ -328,22 +376,42 @@ public class Recipient extends ApiResource implements HasId, MetadataStore<Recip
     return request(ApiResource.RequestMethod.POST, url, params, Recipient.class, options);
   }
 
-  /** Permanently deletes a recipient. It cannot be undone. */
+  /**
+   * Permanently deletes a recipient. It cannot be undone.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#delete} instead.
+   */
   public Recipient delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Permanently deletes a recipient. It cannot be undone. */
+  /**
+   * Permanently deletes a recipient. It cannot be undone.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#delete} instead.
+   */
   public Recipient delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
   }
 
-  /** Permanently deletes a recipient. It cannot be undone. */
+  /**
+   * Permanently deletes a recipient. It cannot be undone.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#delete} instead.
+   */
   public Recipient delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
   }
 
-  /** Permanently deletes a recipient. It cannot be undone. */
+  /**
+   * Permanently deletes a recipient. It cannot be undone.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RecipientService#delete} instead.
+   */
   public Recipient delete(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =

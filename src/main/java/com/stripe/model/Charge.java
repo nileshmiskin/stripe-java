@@ -524,6 +524,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Returns a list of charges you’ve previously created. The charges are returned in sorted order,
    * with the most recent charges appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#list} instead.
    */
   public static ChargeCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -532,6 +535,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Returns a list of charges you’ve previously created. The charges are returned in sorted order,
    * with the most recent charges appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#list} instead.
    */
   public static ChargeCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -542,6 +548,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Returns a list of charges you’ve previously created. The charges are returned in sorted order,
    * with the most recent charges appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#list} instead.
    */
   public static ChargeCollection list(ChargeListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -550,6 +559,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Returns a list of charges you’ve previously created. The charges are returned in sorted order,
    * with the most recent charges appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#list} instead.
    */
   public static ChargeCollection list(ChargeListParams params, RequestOptions options)
       throws StripeException {
@@ -562,6 +574,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * your API key is in test mode, the supplied payment source (e.g., card) won’t actually be
    * charged, although everything else will occur as if in live mode. (Stripe assumes that the
    * charge would have completed successfully).
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#create} instead.
    */
   public static Charge create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -572,6 +587,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * your API key is in test mode, the supplied payment source (e.g., card) won’t actually be
    * charged, although everything else will occur as if in live mode. (Stripe assumes that the
    * charge would have completed successfully).
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#create} instead.
    */
   public static Charge create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -584,6 +602,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * your API key is in test mode, the supplied payment source (e.g., card) won’t actually be
    * charged, although everything else will occur as if in live mode. (Stripe assumes that the
    * charge would have completed successfully).
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#create} instead.
    */
   public static Charge create(ChargeCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -594,6 +615,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * your API key is in test mode, the supplied payment source (e.g., card) won’t actually be
    * charged, although everything else will occur as if in live mode. (Stripe assumes that the
    * charge would have completed successfully).
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#create} instead.
    */
   public static Charge create(ChargeCreateParams params, RequestOptions options)
       throws StripeException {
@@ -605,6 +629,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * Retrieves the details of a charge that has previously been created. Supply the unique charge ID
    * that was returned from your previous request, and Stripe will return the corresponding charge
    * information. The same information is returned when creating or refunding the charge.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#retrieve} instead.
    */
   public static Charge retrieve(String charge) throws StripeException {
     return retrieve(charge, (Map<String, Object>) null, (RequestOptions) null);
@@ -614,6 +641,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * Retrieves the details of a charge that has previously been created. Supply the unique charge ID
    * that was returned from your previous request, and Stripe will return the corresponding charge
    * information. The same information is returned when creating or refunding the charge.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#retrieve} instead.
    */
   public static Charge retrieve(String charge, RequestOptions options) throws StripeException {
     return retrieve(charge, (Map<String, Object>) null, options);
@@ -623,6 +653,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * Retrieves the details of a charge that has previously been created. Supply the unique charge ID
    * that was returned from your previous request, and Stripe will return the corresponding charge
    * information. The same information is returned when creating or refunding the charge.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#retrieve} instead.
    */
   public static Charge retrieve(String charge, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -637,6 +670,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * Retrieves the details of a charge that has previously been created. Supply the unique charge ID
    * that was returned from your previous request, and Stripe will return the corresponding charge
    * information. The same information is returned when creating or refunding the charge.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#retrieve} instead.
    */
   public static Charge retrieve(String charge, ChargeRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -650,6 +686,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Updates the specified charge by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#update} instead.
    */
   @Override
   public Charge update(Map<String, Object> params) throws StripeException {
@@ -659,6 +698,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Updates the specified charge by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#update} instead.
    */
   @Override
   public Charge update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -673,6 +715,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Updates the specified charge by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#update} instead.
    */
   public Charge update(ChargeUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -681,6 +726,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
   /**
    * Updates the specified charge by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#update} instead.
    */
   public Charge update(ChargeUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -699,6 +747,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * <p>Uncaptured payments expire exactly seven days after they are created. If they are not
    * captured by that point in time, they will be marked as refunded and will no longer be
    * capturable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#capture} instead.
    */
   public Charge capture() throws StripeException {
     return capture((Map<String, Object>) null, (RequestOptions) null);
@@ -712,6 +763,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * <p>Uncaptured payments expire exactly seven days after they are created. If they are not
    * captured by that point in time, they will be marked as refunded and will no longer be
    * capturable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#capture} instead.
    */
   public Charge capture(RequestOptions options) throws StripeException {
     return capture((Map<String, Object>) null, options);
@@ -725,6 +779,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * <p>Uncaptured payments expire exactly seven days after they are created. If they are not
    * captured by that point in time, they will be marked as refunded and will no longer be
    * capturable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#capture} instead.
    */
   public Charge capture(Map<String, Object> params) throws StripeException {
     return capture(params, (RequestOptions) null);
@@ -738,6 +795,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * <p>Uncaptured payments expire exactly seven days after they are created. If they are not
    * captured by that point in time, they will be marked as refunded and will no longer be
    * capturable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#capture} instead.
    */
   public Charge capture(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -756,6 +816,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * <p>Uncaptured payments expire exactly seven days after they are created. If they are not
    * captured by that point in time, they will be marked as refunded and will no longer be
    * capturable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#capture} instead.
    */
   public Charge capture(ChargeCaptureParams params) throws StripeException {
     return capture(params, (RequestOptions) null);
@@ -769,6 +832,9 @@ public class Charge extends ApiResource implements BalanceTransactionSource, Met
    * <p>Uncaptured payments expire exactly seven days after they are created. If they are not
    * captured by that point in time, they will be marked as refunded and will no longer be
    * capturable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ChargeService#capture} instead.
    */
   public Charge capture(ChargeCaptureParams params, RequestOptions options) throws StripeException {
     String url =

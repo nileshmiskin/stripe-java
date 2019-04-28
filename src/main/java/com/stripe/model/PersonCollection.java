@@ -15,6 +15,9 @@ public class PersonCollection extends StripeCollection<Person> {
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -23,6 +26,9 @@ public class PersonCollection extends StripeCollection<Person> {
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -33,6 +39,9 @@ public class PersonCollection extends StripeCollection<Person> {
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection list(PersonCollectionListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -41,6 +50,9 @@ public class PersonCollection extends StripeCollection<Person> {
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection list(PersonCollectionListParams params, RequestOptions options)
       throws StripeException {
@@ -48,17 +60,32 @@ public class PersonCollection extends StripeCollection<Person> {
     return ApiResource.requestCollection(url, params, PersonCollection.class, options);
   }
 
-  /** Retrieves an existing person. */
+  /**
+   * Retrieves an existing person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#retrieve} instead.
+   */
   public Person retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves an existing person. */
+  /**
+   * Retrieves an existing person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#retrieve} instead.
+   */
   public Person retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves an existing person. */
+  /**
+   * Retrieves an existing person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#retrieve} instead.
+   */
   public Person retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -69,7 +96,12 @@ public class PersonCollection extends StripeCollection<Person> {
     return ApiResource.request(ApiResource.RequestMethod.GET, url, params, Person.class, options);
   }
 
-  /** Retrieves an existing person. */
+  /**
+   * Retrieves an existing person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#retrieve} instead.
+   */
   public Person retrieve(String id, PersonCollectionRetrieveParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -80,23 +112,43 @@ public class PersonCollection extends StripeCollection<Person> {
     return ApiResource.request(ApiResource.RequestMethod.GET, url, params, Person.class, options);
   }
 
-  /** Creates a new person. */
+  /**
+   * Creates a new person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#create} instead.
+   */
   public Person create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new person. */
+  /**
+   * Creates a new person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#create} instead.
+   */
   public Person create(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());
     return ApiResource.request(ApiResource.RequestMethod.POST, url, params, Person.class, options);
   }
 
-  /** Creates a new person. */
+  /**
+   * Creates a new person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#create} instead.
+   */
   public Person create(PersonCollectionCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new person. */
+  /**
+   * Creates a new person.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#create} instead.
+   */
   public Person create(PersonCollectionCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());

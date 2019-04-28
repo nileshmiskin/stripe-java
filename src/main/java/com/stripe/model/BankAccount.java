@@ -159,6 +159,9 @@ public class BankAccount extends ApiResource
    * <p>Updates the <code>account_holder_name</code>, <code>account_holder_type</code>, and <code>
    * metadata</code> of a bank account belonging to a customer. Other bank account details are not
    * editable, by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#update} instead.
    */
   @Override
   public BankAccount update(Map<String, Object> params) throws StripeException {
@@ -176,6 +179,9 @@ public class BankAccount extends ApiResource
    * <p>Updates the <code>account_holder_name</code>, <code>account_holder_type</code>, and <code>
    * metadata</code> of a bank account belonging to a customer. Other bank account details are not
    * editable, by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#update} instead.
    */
   @Override
   public BankAccount update(Map<String, Object> params, RequestOptions options)
@@ -222,6 +228,9 @@ public class BankAccount extends ApiResource
    * <p>Updates the <code>account_holder_name</code>, <code>account_holder_type</code>, and <code>
    * metadata</code> of a bank account belonging to a customer. Other bank account details are not
    * editable, by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#update} instead.
    */
   public BankAccount update(BankAccountUpdateOnAccountParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -238,6 +247,9 @@ public class BankAccount extends ApiResource
    * <p>Updates the <code>account_holder_name</code>, <code>account_holder_type</code>, and <code>
    * metadata</code> of a bank account belonging to a customer. Other bank account details are not
    * editable, by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#update} instead.
    */
   public BankAccount update(BankAccountUpdateOnAccountParams params, RequestOptions options)
       throws StripeException {
@@ -274,6 +286,9 @@ public class BankAccount extends ApiResource
    * <p>Updates the <code>account_holder_name</code>, <code>account_holder_type</code>, and <code>
    * metadata</code> of a bank account belonging to a customer. Other bank account details are not
    * editable, by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#update} instead.
    */
   public BankAccount update(BankAccountUpdateOnCustomerParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -290,6 +305,9 @@ public class BankAccount extends ApiResource
    * <p>Updates the <code>account_holder_name</code>, <code>account_holder_type</code>, and <code>
    * metadata</code> of a bank account belonging to a customer. Other bank account details are not
    * editable, by design.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#update} instead.
    */
   public BankAccount update(BankAccountUpdateOnCustomerParams params, RequestOptions options)
       throws StripeException {
@@ -319,6 +337,9 @@ public class BankAccount extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#delete} instead.
    */
   @Override
   public BankAccount delete() throws StripeException {
@@ -329,6 +350,9 @@ public class BankAccount extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#delete} instead.
    */
   @Override
   public BankAccount delete(RequestOptions options) throws StripeException {
@@ -339,6 +363,9 @@ public class BankAccount extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#delete} instead.
    */
   @Override
   public BankAccount delete(Map<String, Object> params) throws StripeException {
@@ -349,6 +376,9 @@ public class BankAccount extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#delete} instead.
    */
   @Override
   public BankAccount delete(Map<String, Object> params, RequestOptions options)
@@ -384,22 +414,42 @@ public class BankAccount extends ApiResource
     return request(ApiResource.RequestMethod.DELETE, url, params, BankAccount.class, options);
   }
 
-  /** Verify a specified bank account for a given customer. */
+  /**
+   * Verify a specified bank account for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#verify} instead.
+   */
   public BankAccount verify() throws StripeException {
     return verify((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Verify a specified bank account for a given customer. */
+  /**
+   * Verify a specified bank account for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#verify} instead.
+   */
   public BankAccount verify(RequestOptions options) throws StripeException {
     return verify((Map<String, Object>) null, options);
   }
 
-  /** Verify a specified bank account for a given customer. */
+  /**
+   * Verify a specified bank account for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#verify} instead.
+   */
   public BankAccount verify(Map<String, Object> params) throws StripeException {
     return verify(params, (RequestOptions) null);
   }
 
-  /** Verify a specified bank account for a given customer. */
+  /**
+   * Verify a specified bank account for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#verify} instead.
+   */
   public BankAccount verify(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url;
@@ -424,12 +474,22 @@ public class BankAccount extends ApiResource
     return request(ApiResource.RequestMethod.POST, url, params, BankAccount.class, options);
   }
 
-  /** Verify a specified bank account for a given customer. */
+  /**
+   * Verify a specified bank account for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#verify} instead.
+   */
   public BankAccount verify(BankAccountVerifyParams params) throws StripeException {
     return verify(params, (RequestOptions) null);
   }
 
-  /** Verify a specified bank account for a given customer. */
+  /**
+   * Verify a specified bank account for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BankAccountService#verify} instead.
+   */
   public BankAccount verify(BankAccountVerifyParams params, RequestOptions options)
       throws StripeException {
     String url;

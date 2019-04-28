@@ -203,6 +203,9 @@ public class Transfer extends ApiResource
    * To send funds from your Stripe account to a connected account, you create a new transfer
    * object. Your <a href="#balance">Stripe balance</a> must be able to cover the transfer amount,
    * or you’ll receive an “Insufficient Funds” error.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#create} instead.
    */
   public static Transfer create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -212,6 +215,9 @@ public class Transfer extends ApiResource
    * To send funds from your Stripe account to a connected account, you create a new transfer
    * object. Your <a href="#balance">Stripe balance</a> must be able to cover the transfer amount,
    * or you’ll receive an “Insufficient Funds” error.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#create} instead.
    */
   public static Transfer create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -223,6 +229,9 @@ public class Transfer extends ApiResource
    * To send funds from your Stripe account to a connected account, you create a new transfer
    * object. Your <a href="#balance">Stripe balance</a> must be able to cover the transfer amount,
    * or you’ll receive an “Insufficient Funds” error.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#create} instead.
    */
   public static Transfer create(TransferCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -232,6 +241,9 @@ public class Transfer extends ApiResource
    * To send funds from your Stripe account to a connected account, you create a new transfer
    * object. Your <a href="#balance">Stripe balance</a> must be able to cover the transfer amount,
    * or you’ll receive an “Insufficient Funds” error.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#create} instead.
    */
   public static Transfer create(TransferCreateParams params, RequestOptions options)
       throws StripeException {
@@ -242,6 +254,9 @@ public class Transfer extends ApiResource
   /**
    * Returns a list of existing transfers sent to connected accounts. The transfers are returned in
    * sorted order, with the most recently created transfers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#list} instead.
    */
   public static TransferCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -250,6 +265,9 @@ public class Transfer extends ApiResource
   /**
    * Returns a list of existing transfers sent to connected accounts. The transfers are returned in
    * sorted order, with the most recently created transfers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#list} instead.
    */
   public static TransferCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -260,6 +278,9 @@ public class Transfer extends ApiResource
   /**
    * Returns a list of existing transfers sent to connected accounts. The transfers are returned in
    * sorted order, with the most recently created transfers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#list} instead.
    */
   public static TransferCollection list(TransferListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -268,6 +289,9 @@ public class Transfer extends ApiResource
   /**
    * Returns a list of existing transfers sent to connected accounts. The transfers are returned in
    * sorted order, with the most recently created transfers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#list} instead.
    */
   public static TransferCollection list(TransferListParams params, RequestOptions options)
       throws StripeException {
@@ -279,6 +303,9 @@ public class Transfer extends ApiResource
    * Retrieves the details of an existing transfer. Supply the unique transfer ID from either a
    * transfer creation request or the transfer list, and Stripe will return the corresponding
    * transfer information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#retrieve} instead.
    */
   public static Transfer retrieve(String transfer) throws StripeException {
     return retrieve(transfer, (Map<String, Object>) null, (RequestOptions) null);
@@ -288,6 +315,9 @@ public class Transfer extends ApiResource
    * Retrieves the details of an existing transfer. Supply the unique transfer ID from either a
    * transfer creation request or the transfer list, and Stripe will return the corresponding
    * transfer information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#retrieve} instead.
    */
   public static Transfer retrieve(String transfer, RequestOptions options) throws StripeException {
     return retrieve(transfer, (Map<String, Object>) null, options);
@@ -297,6 +327,9 @@ public class Transfer extends ApiResource
    * Retrieves the details of an existing transfer. Supply the unique transfer ID from either a
    * transfer creation request or the transfer list, and Stripe will return the corresponding
    * transfer information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#retrieve} instead.
    */
   public static Transfer retrieve(
       String transfer, Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -312,6 +345,9 @@ public class Transfer extends ApiResource
    * Retrieves the details of an existing transfer. Supply the unique transfer ID from either a
    * transfer creation request or the transfer list, and Stripe will return the corresponding
    * transfer information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#retrieve} instead.
    */
   public static Transfer retrieve(
       String transfer, TransferRetrieveParams params, RequestOptions options)
@@ -329,6 +365,9 @@ public class Transfer extends ApiResource
    * not provided will be left unchanged.
    *
    * <p>This request accepts only metadata as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#update} instead.
    */
   @Override
   public Transfer update(Map<String, Object> params) throws StripeException {
@@ -340,6 +379,9 @@ public class Transfer extends ApiResource
    * not provided will be left unchanged.
    *
    * <p>This request accepts only metadata as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#update} instead.
    */
   @Override
   public Transfer update(Map<String, Object> params, RequestOptions options)
@@ -357,6 +399,9 @@ public class Transfer extends ApiResource
    * not provided will be left unchanged.
    *
    * <p>This request accepts only metadata as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#update} instead.
    */
   public Transfer update(TransferUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -367,6 +412,9 @@ public class Transfer extends ApiResource
    * not provided will be left unchanged.
    *
    * <p>This request accepts only metadata as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TransferService#update} instead.
    */
   public Transfer update(TransferUpdateParams params, RequestOptions options)
       throws StripeException {

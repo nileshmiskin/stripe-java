@@ -325,6 +325,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
   /**
    * By default, returns a list of subscriptions that have not been canceled. In order to list
    * canceled subscriptions, specify <code>status=canceled</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#list} instead.
    */
   public static SubscriptionCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -333,6 +336,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
   /**
    * By default, returns a list of subscriptions that have not been canceled. In order to list
    * canceled subscriptions, specify <code>status=canceled</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#list} instead.
    */
   public static SubscriptionCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -343,6 +349,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
   /**
    * By default, returns a list of subscriptions that have not been canceled. In order to list
    * canceled subscriptions, specify <code>status=canceled</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#list} instead.
    */
   public static SubscriptionCollection list(SubscriptionListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -351,6 +360,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
   /**
    * By default, returns a list of subscriptions that have not been canceled. In order to list
    * canceled subscriptions, specify <code>status=canceled</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#list} instead.
    */
   public static SubscriptionCollection list(SubscriptionListParams params, RequestOptions options)
       throws StripeException {
@@ -358,24 +370,44 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
     return requestCollection(url, params, SubscriptionCollection.class, options);
   }
 
-  /** Creates a new subscription on an existing customer. */
+  /**
+   * Creates a new subscription on an existing customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#create} instead.
+   */
   public static Subscription create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new subscription on an existing customer. */
+  /**
+   * Creates a new subscription on an existing customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#create} instead.
+   */
   public static Subscription create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscriptions");
     return request(ApiResource.RequestMethod.POST, url, params, Subscription.class, options);
   }
 
-  /** Creates a new subscription on an existing customer. */
+  /**
+   * Creates a new subscription on an existing customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#create} instead.
+   */
   public static Subscription create(SubscriptionCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new subscription on an existing customer. */
+  /**
+   * Creates a new subscription on an existing customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#create} instead.
+   */
   public static Subscription create(SubscriptionCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscriptions");
@@ -387,6 +419,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * plans or quantities, we will optionally prorate the price we charge next month to make up for
    * any price changes. To preview how the proration will be calculated, use the <a
    * href="#upcoming_invoice">upcoming invoice</a> endpoint.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#update} instead.
    */
   @Override
   public Subscription update(Map<String, Object> params) throws StripeException {
@@ -398,6 +433,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * plans or quantities, we will optionally prorate the price we charge next month to make up for
    * any price changes. To preview how the proration will be calculated, use the <a
    * href="#upcoming_invoice">upcoming invoice</a> endpoint.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#update} instead.
    */
   @Override
   public Subscription update(Map<String, Object> params, RequestOptions options)
@@ -415,6 +453,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * plans or quantities, we will optionally prorate the price we charge next month to make up for
    * any price changes. To preview how the proration will be calculated, use the <a
    * href="#upcoming_invoice">upcoming invoice</a> endpoint.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#update} instead.
    */
   public Subscription update(SubscriptionUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -425,6 +466,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * plans or quantities, we will optionally prorate the price we charge next month to make up for
    * any price changes. To preview how the proration will be calculated, use the <a
    * href="#upcoming_invoice">upcoming invoice</a> endpoint.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#update} instead.
    */
   public Subscription update(SubscriptionUpdateParams params, RequestOptions options)
       throws StripeException {
@@ -436,18 +480,33 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
     return request(ApiResource.RequestMethod.POST, url, params, Subscription.class, options);
   }
 
-  /** Retrieves the subscription with the given ID. */
+  /**
+   * Retrieves the subscription with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#retrieve} instead.
+   */
   public static Subscription retrieve(String subscriptionExposedId) throws StripeException {
     return retrieve(subscriptionExposedId, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the subscription with the given ID. */
+  /**
+   * Retrieves the subscription with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#retrieve} instead.
+   */
   public static Subscription retrieve(String subscriptionExposedId, RequestOptions options)
       throws StripeException {
     return retrieve(subscriptionExposedId, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the subscription with the given ID. */
+  /**
+   * Retrieves the subscription with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#retrieve} instead.
+   */
   public static Subscription retrieve(
       String subscriptionExposedId, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -459,7 +518,12 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
     return request(ApiResource.RequestMethod.GET, url, params, Subscription.class, options);
   }
 
-  /** Retrieves the subscription with the given ID. */
+  /**
+   * Retrieves the subscription with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#retrieve} instead.
+   */
   public static Subscription retrieve(
       String subscriptionExposedId, SubscriptionRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -486,6 +550,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * after the customer has canceled a subscription. However, you can resume automatic collection of
    * the invoices manually after subscription cancellation to have us proceed. Or, you could check
    * for unpaid invoices before allowing the customer to cancel the subscription at all.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#cancel} instead.
    */
   public Subscription cancel() throws StripeException {
     return cancel((Map<String, Object>) null, (RequestOptions) null);
@@ -506,6 +573,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * after the customer has canceled a subscription. However, you can resume automatic collection of
    * the invoices manually after subscription cancellation to have us proceed. Or, you could check
    * for unpaid invoices before allowing the customer to cancel the subscription at all.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#cancel} instead.
    */
   public Subscription cancel(Map<String, Object> params) throws StripeException {
     return cancel(params, (RequestOptions) null);
@@ -526,6 +596,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * after the customer has canceled a subscription. However, you can resume automatic collection of
    * the invoices manually after subscription cancellation to have us proceed. Or, you could check
    * for unpaid invoices before allowing the customer to cancel the subscription at all.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#cancel} instead.
    */
   public Subscription cancel(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -552,6 +625,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * after the customer has canceled a subscription. However, you can resume automatic collection of
    * the invoices manually after subscription cancellation to have us proceed. Or, you could check
    * for unpaid invoices before allowing the customer to cancel the subscription at all.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#cancel} instead.
    */
   public Subscription cancel(SubscriptionCancelParams params) throws StripeException {
     return cancel(params, (RequestOptions) null);
@@ -572,6 +648,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
    * after the customer has canceled a subscription. However, you can resume automatic collection of
    * the invoices manually after subscription cancellation to have us proceed. Or, you could check
    * for unpaid invoices before allowing the customer to cancel the subscription at all.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#cancel} instead.
    */
   public Subscription cancel(SubscriptionCancelParams params, RequestOptions options)
       throws StripeException {
@@ -583,17 +662,32 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
     return request(ApiResource.RequestMethod.DELETE, url, params, Subscription.class, options);
   }
 
-  /** Removes the currently applied discount on a subscription. */
+  /**
+   * Removes the currently applied discount on a subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#deleteDiscount} instead.
+   */
   public Discount deleteDiscount() throws StripeException {
     return deleteDiscount((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Removes the currently applied discount on a subscription. */
+  /**
+   * Removes the currently applied discount on a subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#deleteDiscount} instead.
+   */
   public Discount deleteDiscount(Map<String, Object> params) throws StripeException {
     return deleteDiscount(params, (RequestOptions) null);
   }
 
-  /** Removes the currently applied discount on a subscription. */
+  /**
+   * Removes the currently applied discount on a subscription.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionService#deleteDiscount} instead.
+   */
   public Discount deleteDiscount(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =

@@ -117,6 +117,9 @@ public class BalanceTransaction extends ApiResource implements HasId {
    * Returns a list of transactions that have contributed to the Stripe account balance (e.g.,
    * charges, transfers, and so forth). The transactions are returned in sorted order, with the most
    * recent transactions appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceTransactionService#list} instead.
    */
   public static BalanceTransactionCollection list(Map<String, Object> params)
       throws StripeException {
@@ -127,6 +130,9 @@ public class BalanceTransaction extends ApiResource implements HasId {
    * Returns a list of transactions that have contributed to the Stripe account balance (e.g.,
    * charges, transfers, and so forth). The transactions are returned in sorted order, with the most
    * recent transactions appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceTransactionService#list} instead.
    */
   public static BalanceTransactionCollection list(
       Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -138,6 +144,9 @@ public class BalanceTransaction extends ApiResource implements HasId {
    * Returns a list of transactions that have contributed to the Stripe account balance (e.g.,
    * charges, transfers, and so forth). The transactions are returned in sorted order, with the most
    * recent transactions appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceTransactionService#list} instead.
    */
   public static BalanceTransactionCollection list(BalanceTransactionListParams params)
       throws StripeException {
@@ -148,6 +157,9 @@ public class BalanceTransaction extends ApiResource implements HasId {
    * Returns a list of transactions that have contributed to the Stripe account balance (e.g.,
    * charges, transfers, and so forth). The transactions are returned in sorted order, with the most
    * recent transactions appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceTransactionService#list} instead.
    */
   public static BalanceTransactionCollection list(
       BalanceTransactionListParams params, RequestOptions options) throws StripeException {
@@ -155,18 +167,33 @@ public class BalanceTransaction extends ApiResource implements HasId {
     return requestCollection(url, params, BalanceTransactionCollection.class, options);
   }
 
-  /** Retrieves the balance transaction with the given ID. */
+  /**
+   * Retrieves the balance transaction with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceTransactionService#retrieve} instead.
+   */
   public static BalanceTransaction retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the balance transaction with the given ID. */
+  /**
+   * Retrieves the balance transaction with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceTransactionService#retrieve} instead.
+   */
   public static BalanceTransaction retrieve(String id, RequestOptions options)
       throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the balance transaction with the given ID. */
+  /**
+   * Retrieves the balance transaction with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceTransactionService#retrieve} instead.
+   */
   public static BalanceTransaction retrieve(
       String id, Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -177,7 +204,12 @@ public class BalanceTransaction extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, BalanceTransaction.class, options);
   }
 
-  /** Retrieves the balance transaction with the given ID. */
+  /**
+   * Retrieves the balance transaction with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.BalanceTransactionService#retrieve} instead.
+   */
   public static BalanceTransaction retrieve(
       String id, BalanceTransactionRetrieveParams params, RequestOptions options)
       throws StripeException {

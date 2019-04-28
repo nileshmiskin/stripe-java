@@ -58,42 +58,77 @@ public class CountrySpec extends ApiResource implements HasId {
   @SerializedName("verification_fields")
   VerificationFields verificationFields;
 
-  /** Lists all Country Spec objects available in the API. */
+  /**
+   * Lists all Country Spec objects available in the API.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CountrySpecService#list} instead.
+   */
   public static CountrySpecCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Lists all Country Spec objects available in the API. */
+  /**
+   * Lists all Country Spec objects available in the API.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CountrySpecService#list} instead.
+   */
   public static CountrySpecCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/country_specs");
     return requestCollection(url, params, CountrySpecCollection.class, options);
   }
 
-  /** Lists all Country Spec objects available in the API. */
+  /**
+   * Lists all Country Spec objects available in the API.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CountrySpecService#list} instead.
+   */
   public static CountrySpecCollection list(CountrySpecListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Lists all Country Spec objects available in the API. */
+  /**
+   * Lists all Country Spec objects available in the API.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CountrySpecService#list} instead.
+   */
   public static CountrySpecCollection list(CountrySpecListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/country_specs");
     return requestCollection(url, params, CountrySpecCollection.class, options);
   }
 
-  /** Returns a Country Spec for a given Country code. */
+  /**
+   * Returns a Country Spec for a given Country code.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CountrySpecService#retrieve} instead.
+   */
   public static CountrySpec retrieve(String country) throws StripeException {
     return retrieve(country, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Returns a Country Spec for a given Country code. */
+  /**
+   * Returns a Country Spec for a given Country code.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CountrySpecService#retrieve} instead.
+   */
   public static CountrySpec retrieve(String country, RequestOptions options)
       throws StripeException {
     return retrieve(country, (Map<String, Object>) null, options);
   }
 
-  /** Returns a Country Spec for a given Country code. */
+  /**
+   * Returns a Country Spec for a given Country code.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CountrySpecService#retrieve} instead.
+   */
   public static CountrySpec retrieve(
       String country, Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -104,7 +139,12 @@ public class CountrySpec extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, CountrySpec.class, options);
   }
 
-  /** Returns a Country Spec for a given Country code. */
+  /**
+   * Returns a Country Spec for a given Country code.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CountrySpecService#retrieve} instead.
+   */
   public static CountrySpec retrieve(
       String country, CountrySpecRetrieveParams params, RequestOptions options)
       throws StripeException {

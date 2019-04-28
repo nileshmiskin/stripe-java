@@ -176,38 +176,68 @@ public class SubscriptionSchedule extends ApiResource
         new ExpandableField<Subscription>(expandableObject.getId(), expandableObject);
   }
 
-  /** Retrieves the list of your subscription schedules. */
+  /**
+   * Retrieves the list of your subscription schedules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#list} instead.
+   */
   public static SubscriptionScheduleCollection list(Map<String, Object> params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Retrieves the list of your subscription schedules. */
+  /**
+   * Retrieves the list of your subscription schedules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#list} instead.
+   */
   public static SubscriptionScheduleCollection list(
       Map<String, Object> params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscription_schedules");
     return requestCollection(url, params, SubscriptionScheduleCollection.class, options);
   }
 
-  /** Retrieves the list of your subscription schedules. */
+  /**
+   * Retrieves the list of your subscription schedules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#list} instead.
+   */
   public static SubscriptionScheduleCollection list(SubscriptionScheduleListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Retrieves the list of your subscription schedules. */
+  /**
+   * Retrieves the list of your subscription schedules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#list} instead.
+   */
   public static SubscriptionScheduleCollection list(
       SubscriptionScheduleListParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscription_schedules");
     return requestCollection(url, params, SubscriptionScheduleCollection.class, options);
   }
 
-  /** Creates a new subscription schedule object. */
+  /**
+   * Creates a new subscription schedule object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#create} instead.
+   */
   public static SubscriptionSchedule create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new subscription schedule object. */
+  /**
+   * Creates a new subscription schedule object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#create} instead.
+   */
   public static SubscriptionSchedule create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscription_schedules");
@@ -215,13 +245,23 @@ public class SubscriptionSchedule extends ApiResource
         ApiResource.RequestMethod.POST, url, params, SubscriptionSchedule.class, options);
   }
 
-  /** Creates a new subscription schedule object. */
+  /**
+   * Creates a new subscription schedule object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#create} instead.
+   */
   public static SubscriptionSchedule create(SubscriptionScheduleCreateParams params)
       throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new subscription schedule object. */
+  /**
+   * Creates a new subscription schedule object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#create} instead.
+   */
   public static SubscriptionSchedule create(
       SubscriptionScheduleCreateParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/subscription_schedules");
@@ -232,6 +272,9 @@ public class SubscriptionSchedule extends ApiResource
   /**
    * Retrieves the details of an existing subscription schedule. You only need to supply the unique
    * subscription schedule identifier that was returned upon subscription schedule creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#retrieve} instead.
    */
   public static SubscriptionSchedule retrieve(String schedule) throws StripeException {
     return retrieve(schedule, (Map<String, Object>) null, (RequestOptions) null);
@@ -240,6 +283,9 @@ public class SubscriptionSchedule extends ApiResource
   /**
    * Retrieves the details of an existing subscription schedule. You only need to supply the unique
    * subscription schedule identifier that was returned upon subscription schedule creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#retrieve} instead.
    */
   public static SubscriptionSchedule retrieve(String schedule, RequestOptions options)
       throws StripeException {
@@ -249,6 +295,9 @@ public class SubscriptionSchedule extends ApiResource
   /**
    * Retrieves the details of an existing subscription schedule. You only need to supply the unique
    * subscription schedule identifier that was returned upon subscription schedule creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#retrieve} instead.
    */
   public static SubscriptionSchedule retrieve(
       String schedule, Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -263,6 +312,9 @@ public class SubscriptionSchedule extends ApiResource
   /**
    * Retrieves the details of an existing subscription schedule. You only need to supply the unique
    * subscription schedule identifier that was returned upon subscription schedule creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#retrieve} instead.
    */
   public static SubscriptionSchedule retrieve(
       String schedule, SubscriptionScheduleRetrieveParams params, RequestOptions options)
@@ -275,13 +327,23 @@ public class SubscriptionSchedule extends ApiResource
     return request(ApiResource.RequestMethod.GET, url, params, SubscriptionSchedule.class, options);
   }
 
-  /** Updates an existing subscription schedule. */
+  /**
+   * Updates an existing subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#update} instead.
+   */
   @Override
   public SubscriptionSchedule update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing subscription schedule. */
+  /**
+   * Updates an existing subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#update} instead.
+   */
   @Override
   public SubscriptionSchedule update(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -294,13 +356,23 @@ public class SubscriptionSchedule extends ApiResource
         ApiResource.RequestMethod.POST, url, params, SubscriptionSchedule.class, options);
   }
 
-  /** Updates an existing subscription schedule. */
+  /**
+   * Updates an existing subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#update} instead.
+   */
   public SubscriptionSchedule update(SubscriptionScheduleUpdateParams params)
       throws StripeException {
     return update(params, (RequestOptions) null);
   }
 
-  /** Updates an existing subscription schedule. */
+  /**
+   * Updates an existing subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#update} instead.
+   */
   public SubscriptionSchedule update(
       SubscriptionScheduleUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -316,6 +388,9 @@ public class SubscriptionSchedule extends ApiResource
    * Cancels a subscription schedule and its associated subscription immediately (if the
    * subscription schedule has an active subscription). A subscription schedule can only be canceled
    * if its status is <code>not_started</code> or <code>active</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#cancel} instead.
    */
   public SubscriptionSchedule cancel() throws StripeException {
     return cancel((Map<String, Object>) null, (RequestOptions) null);
@@ -325,6 +400,9 @@ public class SubscriptionSchedule extends ApiResource
    * Cancels a subscription schedule and its associated subscription immediately (if the
    * subscription schedule has an active subscription). A subscription schedule can only be canceled
    * if its status is <code>not_started</code> or <code>active</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#cancel} instead.
    */
   public SubscriptionSchedule cancel(RequestOptions options) throws StripeException {
     return cancel((Map<String, Object>) null, options);
@@ -334,6 +412,9 @@ public class SubscriptionSchedule extends ApiResource
    * Cancels a subscription schedule and its associated subscription immediately (if the
    * subscription schedule has an active subscription). A subscription schedule can only be canceled
    * if its status is <code>not_started</code> or <code>active</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#cancel} instead.
    */
   public SubscriptionSchedule cancel(Map<String, Object> params) throws StripeException {
     return cancel(params, (RequestOptions) null);
@@ -343,6 +424,9 @@ public class SubscriptionSchedule extends ApiResource
    * Cancels a subscription schedule and its associated subscription immediately (if the
    * subscription schedule has an active subscription). A subscription schedule can only be canceled
    * if its status is <code>not_started</code> or <code>active</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#cancel} instead.
    */
   public SubscriptionSchedule cancel(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -360,6 +444,9 @@ public class SubscriptionSchedule extends ApiResource
    * Cancels a subscription schedule and its associated subscription immediately (if the
    * subscription schedule has an active subscription). A subscription schedule can only be canceled
    * if its status is <code>not_started</code> or <code>active</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#cancel} instead.
    */
   public SubscriptionSchedule cancel(SubscriptionScheduleCancelParams params)
       throws StripeException {
@@ -370,6 +457,9 @@ public class SubscriptionSchedule extends ApiResource
    * Cancels a subscription schedule and its associated subscription immediately (if the
    * subscription schedule has an active subscription). A subscription schedule can only be canceled
    * if its status is <code>not_started</code> or <code>active</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#cancel} instead.
    */
   public SubscriptionSchedule cancel(
       SubscriptionScheduleCancelParams params, RequestOptions options) throws StripeException {
@@ -389,6 +479,9 @@ public class SubscriptionSchedule extends ApiResource
    * <code>not_started</code> or <code>active</code>. If the subscription schedule is currently
    * associated with a subscription, releasing it will remove its <code>subscription</code> property
    * and set the subscription’s ID to the <code>released_subscription</code> property.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#release} instead.
    */
   public SubscriptionSchedule release() throws StripeException {
     return release((Map<String, Object>) null, (RequestOptions) null);
@@ -400,6 +493,9 @@ public class SubscriptionSchedule extends ApiResource
    * <code>not_started</code> or <code>active</code>. If the subscription schedule is currently
    * associated with a subscription, releasing it will remove its <code>subscription</code> property
    * and set the subscription’s ID to the <code>released_subscription</code> property.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#release} instead.
    */
   public SubscriptionSchedule release(RequestOptions options) throws StripeException {
     return release((Map<String, Object>) null, options);
@@ -411,6 +507,9 @@ public class SubscriptionSchedule extends ApiResource
    * <code>not_started</code> or <code>active</code>. If the subscription schedule is currently
    * associated with a subscription, releasing it will remove its <code>subscription</code> property
    * and set the subscription’s ID to the <code>released_subscription</code> property.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#release} instead.
    */
   public SubscriptionSchedule release(Map<String, Object> params) throws StripeException {
     return release(params, (RequestOptions) null);
@@ -422,6 +521,9 @@ public class SubscriptionSchedule extends ApiResource
    * <code>not_started</code> or <code>active</code>. If the subscription schedule is currently
    * associated with a subscription, releasing it will remove its <code>subscription</code> property
    * and set the subscription’s ID to the <code>released_subscription</code> property.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#release} instead.
    */
   public SubscriptionSchedule release(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -441,6 +543,9 @@ public class SubscriptionSchedule extends ApiResource
    * <code>not_started</code> or <code>active</code>. If the subscription schedule is currently
    * associated with a subscription, releasing it will remove its <code>subscription</code> property
    * and set the subscription’s ID to the <code>released_subscription</code> property.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#release} instead.
    */
   public SubscriptionSchedule release(SubscriptionScheduleReleaseParams params)
       throws StripeException {
@@ -453,6 +558,9 @@ public class SubscriptionSchedule extends ApiResource
    * <code>not_started</code> or <code>active</code>. If the subscription schedule is currently
    * associated with a subscription, releasing it will remove its <code>subscription</code> property
    * and set the subscription’s ID to the <code>released_subscription</code> property.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleService#release} instead.
    */
   public SubscriptionSchedule release(
       SubscriptionScheduleReleaseParams params, RequestOptions options) throws StripeException {
@@ -466,18 +574,33 @@ public class SubscriptionSchedule extends ApiResource
         ApiResource.RequestMethod.POST, url, params, SubscriptionSchedule.class, options);
   }
 
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection revisions() throws StripeException {
     return revisions((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection revisions(Map<String, Object> params)
       throws StripeException {
     return revisions(params, (RequestOptions) null);
   }
 
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection revisions(
       Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -489,13 +612,23 @@ public class SubscriptionSchedule extends ApiResource
     return requestCollection(url, params, SubscriptionScheduleRevisionCollection.class, options);
   }
 
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection revisions(
       SubscriptionScheduleRevisionsParams params) throws StripeException {
     return revisions(params, (RequestOptions) null);
   }
 
-  /** Retrieves the list of subscription schedule revisions for a subscription schedule. */
+  /**
+   * Retrieves the list of subscription schedule revisions for a subscription schedule.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SubscriptionScheduleRevisionService#list} instead.
+   */
   public SubscriptionScheduleRevisionCollection revisions(
       SubscriptionScheduleRevisionsParams params, RequestOptions options) throws StripeException {
     String url =

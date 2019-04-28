@@ -41,6 +41,9 @@ public class ExchangeRate extends ApiResource implements HasId {
   /**
    * Returns a list of objects that contain the rates at which foreign currencies are converted to
    * one another. Only shows the currencies for which Stripe supports.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExchangeRateService#list} instead.
    */
   public static ExchangeRateCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -49,6 +52,9 @@ public class ExchangeRate extends ApiResource implements HasId {
   /**
    * Returns a list of objects that contain the rates at which foreign currencies are converted to
    * one another. Only shows the currencies for which Stripe supports.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExchangeRateService#list} instead.
    */
   public static ExchangeRateCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -59,6 +65,9 @@ public class ExchangeRate extends ApiResource implements HasId {
   /**
    * Returns a list of objects that contain the rates at which foreign currencies are converted to
    * one another. Only shows the currencies for which Stripe supports.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExchangeRateService#list} instead.
    */
   public static ExchangeRateCollection list(ExchangeRateListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -67,6 +76,9 @@ public class ExchangeRate extends ApiResource implements HasId {
   /**
    * Returns a list of objects that contain the rates at which foreign currencies are converted to
    * one another. Only shows the currencies for which Stripe supports.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExchangeRateService#list} instead.
    */
   public static ExchangeRateCollection list(ExchangeRateListParams params, RequestOptions options)
       throws StripeException {
@@ -74,18 +86,33 @@ public class ExchangeRate extends ApiResource implements HasId {
     return requestCollection(url, params, ExchangeRateCollection.class, options);
   }
 
-  /** Retrieves the exchange rates from the given currency to every supported currency. */
+  /**
+   * Retrieves the exchange rates from the given currency to every supported currency.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExchangeRateService#retrieve} instead.
+   */
   public static ExchangeRate retrieve(String currency) throws StripeException {
     return retrieve(currency, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the exchange rates from the given currency to every supported currency. */
+  /**
+   * Retrieves the exchange rates from the given currency to every supported currency.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExchangeRateService#retrieve} instead.
+   */
   public static ExchangeRate retrieve(String currency, RequestOptions options)
       throws StripeException {
     return retrieve(currency, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the exchange rates from the given currency to every supported currency. */
+  /**
+   * Retrieves the exchange rates from the given currency to every supported currency.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExchangeRateService#retrieve} instead.
+   */
   public static ExchangeRate retrieve(
       String currency, Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -96,7 +123,12 @@ public class ExchangeRate extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, ExchangeRate.class, options);
   }
 
-  /** Retrieves the exchange rates from the given currency to every supported currency. */
+  /**
+   * Retrieves the exchange rates from the given currency to every supported currency.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ExchangeRateService#retrieve} instead.
+   */
   public static ExchangeRate retrieve(
       String currency, ExchangeRateRetrieveParams params, RequestOptions options)
       throws StripeException {

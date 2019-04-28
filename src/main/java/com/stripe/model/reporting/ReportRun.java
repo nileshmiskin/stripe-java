@@ -82,6 +82,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Retrieves the details of an existing Report Run. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#retrieve} instead.
    */
   public static ReportRun retrieve(String reportRun) throws StripeException {
     return retrieve(reportRun, (Map<String, Object>) null, (RequestOptions) null);
@@ -90,6 +93,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Retrieves the details of an existing Report Run. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#retrieve} instead.
    */
   public static ReportRun retrieve(String reportRun, RequestOptions options)
       throws StripeException {
@@ -99,6 +105,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Retrieves the details of an existing Report Run. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#retrieve} instead.
    */
   public static ReportRun retrieve(
       String reportRun, Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -113,6 +122,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Retrieves the details of an existing Report Run. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#retrieve} instead.
    */
   public static ReportRun retrieve(
       String reportRun, ReportRunRetrieveParams params, RequestOptions options)
@@ -128,6 +140,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Creates a new object and begin running the report. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#create} instead.
    */
   public static ReportRun create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -136,6 +151,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Creates a new object and begin running the report. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#create} instead.
    */
   public static ReportRun create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -146,6 +164,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Creates a new object and begin running the report. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#create} instead.
    */
   public static ReportRun create(ReportRunCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -154,6 +175,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Creates a new object and begin running the report. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#create} instead.
    */
   public static ReportRun create(ReportRunCreateParams params, RequestOptions options)
       throws StripeException {
@@ -164,6 +188,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Returns a list of Report Runs, with the most recent appearing first. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#list} instead.
    */
   public static ReportRunCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -172,6 +199,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Returns a list of Report Runs, with the most recent appearing first. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#list} instead.
    */
   public static ReportRunCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -182,6 +212,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Returns a list of Report Runs, with the most recent appearing first. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#list} instead.
    */
   public static ReportRunCollection list(ReportRunListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -190,6 +223,9 @@ public class ReportRun extends ApiResource implements HasId {
   /**
    * Returns a list of Report Runs, with the most recent appearing first. (Requires a <a
    * href="https://stripe.com/docs/keys#test-live-modes">live-mode API key</a>.)
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.reporting.ReportRunService#list} instead.
    */
   public static ReportRunCollection list(ReportRunListParams params, RequestOptions options)
       throws StripeException {

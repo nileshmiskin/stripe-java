@@ -80,6 +80,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Returns a list of <code>ValueList</code> objects. The objects are sorted in descending order by
    * creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#list} instead.
    */
   public static ValueListCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -88,6 +91,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Returns a list of <code>ValueList</code> objects. The objects are sorted in descending order by
    * creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#list} instead.
    */
   public static ValueListCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -98,6 +104,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Returns a list of <code>ValueList</code> objects. The objects are sorted in descending order by
    * creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#list} instead.
    */
   public static ValueListCollection list(ValueListListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -106,6 +115,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Returns a list of <code>ValueList</code> objects. The objects are sorted in descending order by
    * creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#list} instead.
    */
   public static ValueListCollection list(ValueListListParams params, RequestOptions options)
       throws StripeException {
@@ -113,18 +125,33 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
     return requestCollection(url, params, ValueListCollection.class, options);
   }
 
-  /** Retrieves a <code>ValueList</code> object. */
+  /**
+   * Retrieves a <code>ValueList</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#retrieve} instead.
+   */
   public static ValueList retrieve(String valueList) throws StripeException {
     return retrieve(valueList, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves a <code>ValueList</code> object. */
+  /**
+   * Retrieves a <code>ValueList</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#retrieve} instead.
+   */
   public static ValueList retrieve(String valueList, RequestOptions options)
       throws StripeException {
     return retrieve(valueList, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves a <code>ValueList</code> object. */
+  /**
+   * Retrieves a <code>ValueList</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#retrieve} instead.
+   */
   public static ValueList retrieve(
       String valueList, Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -135,7 +162,12 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
     return request(ApiResource.RequestMethod.GET, url, params, ValueList.class, options);
   }
 
-  /** Retrieves a <code>ValueList</code> object. */
+  /**
+   * Retrieves a <code>ValueList</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#retrieve} instead.
+   */
   public static ValueList retrieve(
       String valueList, ValueListRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -147,24 +179,44 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
     return request(ApiResource.RequestMethod.GET, url, params, ValueList.class, options);
   }
 
-  /** Creates a new <code>ValueList</code> object, which can then be referenced in rules. */
+  /**
+   * Creates a new <code>ValueList</code> object, which can then be referenced in rules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#create} instead.
+   */
   public static ValueList create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new <code>ValueList</code> object, which can then be referenced in rules. */
+  /**
+   * Creates a new <code>ValueList</code> object, which can then be referenced in rules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#create} instead.
+   */
   public static ValueList create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/radar/value_lists");
     return request(ApiResource.RequestMethod.POST, url, params, ValueList.class, options);
   }
 
-  /** Creates a new <code>ValueList</code> object, which can then be referenced in rules. */
+  /**
+   * Creates a new <code>ValueList</code> object, which can then be referenced in rules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#create} instead.
+   */
   public static ValueList create(ValueListCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new <code>ValueList</code> object, which can then be referenced in rules. */
+  /**
+   * Creates a new <code>ValueList</code> object, which can then be referenced in rules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#create} instead.
+   */
   public static ValueList create(ValueListCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/radar/value_lists");
@@ -174,6 +226,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Updates a <code>ValueList</code> object by setting the values of the parameters passed. Any
    * parameters not provided will be left unchanged. Note that <code>item_type</code> is immutable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#update} instead.
    */
   @Override
   public ValueList update(Map<String, Object> params) throws StripeException {
@@ -183,6 +238,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Updates a <code>ValueList</code> object by setting the values of the parameters passed. Any
    * parameters not provided will be left unchanged. Note that <code>item_type</code> is immutable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#update} instead.
    */
   @Override
   public ValueList update(Map<String, Object> params, RequestOptions options)
@@ -198,6 +256,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Updates a <code>ValueList</code> object by setting the values of the parameters passed. Any
    * parameters not provided will be left unchanged. Note that <code>item_type</code> is immutable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#update} instead.
    */
   public ValueList update(ValueListUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -206,6 +267,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Updates a <code>ValueList</code> object by setting the values of the parameters passed. Any
    * parameters not provided will be left unchanged. Note that <code>item_type</code> is immutable.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#update} instead.
    */
   public ValueList update(ValueListUpdateParams params, RequestOptions options)
       throws StripeException {
@@ -220,6 +284,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Deletes a <code>ValueList</code> object, also deleting any items contained within the value
    * list. To be deleted, a value list must not be referenced in any rules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#delete} instead.
    */
   public ValueList delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -228,6 +295,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Deletes a <code>ValueList</code> object, also deleting any items contained within the value
    * list. To be deleted, a value list must not be referenced in any rules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#delete} instead.
    */
   public ValueList delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -236,6 +306,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Deletes a <code>ValueList</code> object, also deleting any items contained within the value
    * list. To be deleted, a value list must not be referenced in any rules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#delete} instead.
    */
   public ValueList delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -244,6 +317,9 @@ public class ValueList extends ApiResource implements HasId, MetadataStore<Value
   /**
    * Deletes a <code>ValueList</code> object, also deleting any items contained within the value
    * list. To be deleted, a value list must not be referenced in any rules.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.radar.ValueListService#delete} instead.
    */
   public ValueList delete(Map<String, Object> params, RequestOptions options)
       throws StripeException {

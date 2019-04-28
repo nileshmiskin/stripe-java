@@ -76,18 +76,33 @@ public class ThreeDSecure extends ApiResource implements HasId {
   @SerializedName("status")
   String status;
 
-  /** Retrieves a 3D Secure object. */
+  /**
+   * Retrieves a 3D Secure object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ThreeDSecureService#retrieve} instead.
+   */
   public static ThreeDSecure retrieve(String threeDSecure) throws StripeException {
     return retrieve(threeDSecure, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves a 3D Secure object. */
+  /**
+   * Retrieves a 3D Secure object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ThreeDSecureService#retrieve} instead.
+   */
   public static ThreeDSecure retrieve(String threeDSecure, RequestOptions options)
       throws StripeException {
     return retrieve(threeDSecure, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves a 3D Secure object. */
+  /**
+   * Retrieves a 3D Secure object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ThreeDSecureService#retrieve} instead.
+   */
   public static ThreeDSecure retrieve(
       String threeDSecure, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -99,7 +114,12 @@ public class ThreeDSecure extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, ThreeDSecure.class, options);
   }
 
-  /** Retrieves a 3D Secure object. */
+  /**
+   * Retrieves a 3D Secure object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ThreeDSecureService#retrieve} instead.
+   */
   public static ThreeDSecure retrieve(
       String threeDSecure, ThreeDSecureRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -111,24 +131,44 @@ public class ThreeDSecure extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, ThreeDSecure.class, options);
   }
 
-  /** Initiate 3D Secure authentication. */
+  /**
+   * Initiate 3D Secure authentication.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ThreeDSecureService#create} instead.
+   */
   public static ThreeDSecure create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Initiate 3D Secure authentication. */
+  /**
+   * Initiate 3D Secure authentication.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ThreeDSecureService#create} instead.
+   */
   public static ThreeDSecure create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/3d_secure");
     return request(ApiResource.RequestMethod.POST, url, params, ThreeDSecure.class, options);
   }
 
-  /** Initiate 3D Secure authentication. */
+  /**
+   * Initiate 3D Secure authentication.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ThreeDSecureService#create} instead.
+   */
   public static ThreeDSecure create(ThreeDSecureCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Initiate 3D Secure authentication. */
+  /**
+   * Initiate 3D Secure authentication.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.ThreeDSecureService#create} instead.
+   */
   public static ThreeDSecure create(ThreeDSecureCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/3d_secure");

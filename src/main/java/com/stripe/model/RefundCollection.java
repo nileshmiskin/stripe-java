@@ -16,6 +16,9 @@ public class RefundCollection extends StripeCollection<Refund> {
    * refunds are always available by default on the charge object. If you need more than those 10,
    * you can use this API method and the <code>limit</code> and <code>starting_after</code>
    * parameters to page through additional refunds.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#list} instead.
    */
   public RefundCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -26,6 +29,9 @@ public class RefundCollection extends StripeCollection<Refund> {
    * refunds are always available by default on the charge object. If you need more than those 10,
    * you can use this API method and the <code>limit</code> and <code>starting_after</code>
    * parameters to page through additional refunds.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#list} instead.
    */
   public RefundCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -38,6 +44,9 @@ public class RefundCollection extends StripeCollection<Refund> {
    * refunds are always available by default on the charge object. If you need more than those 10,
    * you can use this API method and the <code>limit</code> and <code>starting_after</code>
    * parameters to page through additional refunds.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#list} instead.
    */
   public RefundCollection list(RefundCollectionListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -48,6 +57,9 @@ public class RefundCollection extends StripeCollection<Refund> {
    * refunds are always available by default on the charge object. If you need more than those 10,
    * you can use this API method and the <code>limit</code> and <code>starting_after</code>
    * parameters to page through additional refunds.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#list} instead.
    */
   public RefundCollection list(RefundCollectionListParams params, RequestOptions options)
       throws StripeException {
@@ -55,17 +67,32 @@ public class RefundCollection extends StripeCollection<Refund> {
     return ApiResource.requestCollection(url, params, RefundCollection.class, options);
   }
 
-  /** Retrieves the details of an existing refund. */
+  /**
+   * Retrieves the details of an existing refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#retrieve} instead.
+   */
   public Refund retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the details of an existing refund. */
+  /**
+   * Retrieves the details of an existing refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#retrieve} instead.
+   */
   public Refund retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the details of an existing refund. */
+  /**
+   * Retrieves the details of an existing refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#retrieve} instead.
+   */
   public Refund retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -76,7 +103,12 @@ public class RefundCollection extends StripeCollection<Refund> {
     return ApiResource.request(ApiResource.RequestMethod.GET, url, params, Refund.class, options);
   }
 
-  /** Retrieves the details of an existing refund. */
+  /**
+   * Retrieves the details of an existing refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#retrieve} instead.
+   */
   public Refund retrieve(String id, RefundCollectionRetrieveParams params, RequestOptions options)
       throws StripeException {
     String url =

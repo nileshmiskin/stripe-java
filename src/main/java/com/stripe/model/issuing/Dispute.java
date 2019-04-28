@@ -104,6 +104,9 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
   /**
    * Returns a list of Issuing <code>Dispute</code> objects. The objects are sorted in descending
    * order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#list} instead.
    */
   public static DisputeCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -112,6 +115,9 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
   /**
    * Returns a list of Issuing <code>Dispute</code> objects. The objects are sorted in descending
    * order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#list} instead.
    */
   public static DisputeCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -122,6 +128,9 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
   /**
    * Returns a list of Issuing <code>Dispute</code> objects. The objects are sorted in descending
    * order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#list} instead.
    */
   public static DisputeCollection list(DisputeListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -130,6 +139,9 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
   /**
    * Returns a list of Issuing <code>Dispute</code> objects. The objects are sorted in descending
    * order by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#list} instead.
    */
   public static DisputeCollection list(DisputeListParams params, RequestOptions options)
       throws StripeException {
@@ -137,24 +149,44 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
     return requestCollection(url, params, DisputeCollection.class, options);
   }
 
-  /** Creates an Issuing <code>Dispute</code> object. */
+  /**
+   * Creates an Issuing <code>Dispute</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#create} instead.
+   */
   public static Dispute create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates an Issuing <code>Dispute</code> object. */
+  /**
+   * Creates an Issuing <code>Dispute</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#create} instead.
+   */
   public static Dispute create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/issuing/disputes");
     return request(ApiResource.RequestMethod.POST, url, params, Dispute.class, options);
   }
 
-  /** Creates an Issuing <code>Dispute</code> object. */
+  /**
+   * Creates an Issuing <code>Dispute</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#create} instead.
+   */
   public static Dispute create(DisputeCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates an Issuing <code>Dispute</code> object. */
+  /**
+   * Creates an Issuing <code>Dispute</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#create} instead.
+   */
   public static Dispute create(DisputeCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/issuing/disputes");
@@ -164,6 +196,9 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
   /**
    * Updates the specified Issuing <code>Dispute</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#update} instead.
    */
   @Override
   public Dispute update(Map<String, Object> params) throws StripeException {
@@ -173,6 +208,9 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
   /**
    * Updates the specified Issuing <code>Dispute</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#update} instead.
    */
   @Override
   public Dispute update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -187,6 +225,9 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
   /**
    * Updates the specified Issuing <code>Dispute</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#update} instead.
    */
   public Dispute update(DisputeUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -195,6 +236,9 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
   /**
    * Updates the specified Issuing <code>Dispute</code> object by setting the values of the
    * parameters passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#update} instead.
    */
   public Dispute update(DisputeUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -205,17 +249,32 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
     return request(ApiResource.RequestMethod.POST, url, params, Dispute.class, options);
   }
 
-  /** Retrieves an Issuing <code>Dispute</code> object. */
+  /**
+   * Retrieves an Issuing <code>Dispute</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#retrieve} instead.
+   */
   public static Dispute retrieve(String dispute) throws StripeException {
     return retrieve(dispute, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves an Issuing <code>Dispute</code> object. */
+  /**
+   * Retrieves an Issuing <code>Dispute</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#retrieve} instead.
+   */
   public static Dispute retrieve(String dispute, RequestOptions options) throws StripeException {
     return retrieve(dispute, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves an Issuing <code>Dispute</code> object. */
+  /**
+   * Retrieves an Issuing <code>Dispute</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#retrieve} instead.
+   */
   public static Dispute retrieve(String dispute, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -226,7 +285,12 @@ public class Dispute extends ApiResource implements HasId, MetadataStore<Dispute
     return request(ApiResource.RequestMethod.GET, url, params, Dispute.class, options);
   }
 
-  /** Retrieves an Issuing <code>Dispute</code> object. */
+  /**
+   * Retrieves an Issuing <code>Dispute</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.DisputeService#retrieve} instead.
+   */
   public static Dispute retrieve(
       String dispute, DisputeRetrieveParams params, RequestOptions options) throws StripeException {
     String url =

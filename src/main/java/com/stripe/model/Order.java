@@ -179,24 +179,44 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
     this.customer = new ExpandableField<Customer>(expandableObject.getId(), expandableObject);
   }
 
-  /** Creates a new order object. */
+  /**
+   * Creates a new order object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#create} instead.
+   */
   public static Order create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new order object. */
+  /**
+   * Creates a new order object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#create} instead.
+   */
   public static Order create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/orders");
     return request(ApiResource.RequestMethod.POST, url, params, Order.class, options);
   }
 
-  /** Creates a new order object. */
+  /**
+   * Creates a new order object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#create} instead.
+   */
   public static Order create(OrderCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new order object. */
+  /**
+   * Creates a new order object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#create} instead.
+   */
   public static Order create(OrderCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/orders");
@@ -206,6 +226,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Returns a list of your orders. The orders are returned sorted by creation date, with the most
    * recently created orders appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#list} instead.
    */
   public static OrderCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -214,6 +237,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Returns a list of your orders. The orders are returned sorted by creation date, with the most
    * recently created orders appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#list} instead.
    */
   public static OrderCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -224,6 +250,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Returns a list of your orders. The orders are returned sorted by creation date, with the most
    * recently created orders appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#list} instead.
    */
   public static OrderCollection list(OrderListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -232,6 +261,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Returns a list of your orders. The orders are returned sorted by creation date, with the most
    * recently created orders appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#list} instead.
    */
   public static OrderCollection list(OrderListParams params, RequestOptions options)
       throws StripeException {
@@ -242,6 +274,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Retrieves the details of an existing order. Supply the unique order ID from either an order
    * creation request or the order list, and Stripe will return the corresponding order information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#retrieve} instead.
    */
   public static Order retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
@@ -250,6 +285,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Retrieves the details of an existing order. Supply the unique order ID from either an order
    * creation request or the order list, and Stripe will return the corresponding order information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#retrieve} instead.
    */
   public static Order retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
@@ -258,6 +296,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Retrieves the details of an existing order. Supply the unique order ID from either an order
    * creation request or the order list, and Stripe will return the corresponding order information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#retrieve} instead.
    */
   public static Order retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -271,6 +312,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Retrieves the details of an existing order. Supply the unique order ID from either an order
    * creation request or the order list, and Stripe will return the corresponding order information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#retrieve} instead.
    */
   public static Order retrieve(String id, OrderRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -284,6 +328,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Updates the specific order by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#update} instead.
    */
   @Override
   public Order update(Map<String, Object> params) throws StripeException {
@@ -293,6 +340,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Updates the specific order by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#update} instead.
    */
   @Override
   public Order update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -307,6 +357,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Updates the specific order by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#update} instead.
    */
   public Order update(OrderUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -315,6 +368,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
   /**
    * Updates the specific order by setting the values of the parameters passed. Any parameters not
    * provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#update} instead.
    */
   public Order update(OrderUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -325,22 +381,42 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
     return request(ApiResource.RequestMethod.POST, url, params, Order.class, options);
   }
 
-  /** Pay an order by providing a <code>source</code> to create a payment. */
+  /**
+   * Pay an order by providing a <code>source</code> to create a payment.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#pay} instead.
+   */
   public Order pay() throws StripeException {
     return pay((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Pay an order by providing a <code>source</code> to create a payment. */
+  /**
+   * Pay an order by providing a <code>source</code> to create a payment.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#pay} instead.
+   */
   public Order pay(RequestOptions options) throws StripeException {
     return pay((Map<String, Object>) null, options);
   }
 
-  /** Pay an order by providing a <code>source</code> to create a payment. */
+  /**
+   * Pay an order by providing a <code>source</code> to create a payment.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#pay} instead.
+   */
   public Order pay(Map<String, Object> params) throws StripeException {
     return pay(params, (RequestOptions) null);
   }
 
-  /** Pay an order by providing a <code>source</code> to create a payment. */
+  /**
+   * Pay an order by providing a <code>source</code> to create a payment.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#pay} instead.
+   */
   public Order pay(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
         String.format(
@@ -350,12 +426,22 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
     return request(ApiResource.RequestMethod.POST, url, params, Order.class, options);
   }
 
-  /** Pay an order by providing a <code>source</code> to create a payment. */
+  /**
+   * Pay an order by providing a <code>source</code> to create a payment.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#pay} instead.
+   */
   public Order pay(OrderPayParams params) throws StripeException {
     return pay(params, (RequestOptions) null);
   }
 
-  /** Pay an order by providing a <code>source</code> to create a payment. */
+  /**
+   * Pay an order by providing a <code>source</code> to create a payment.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#pay} instead.
+   */
   public Order pay(OrderPayParams params, RequestOptions options) throws StripeException {
     String url =
         String.format(
@@ -370,6 +456,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
    * fulfilled</code> before it can be returned. Once all items have been returned, the order will
    * become <code>canceled</code> or <code>returned</code> depending on which status the order
    * started in.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#returnOrder} instead.
    */
   public OrderReturn returnOrder() throws StripeException {
     return returnOrder((Map<String, Object>) null, (RequestOptions) null);
@@ -380,6 +469,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
    * fulfilled</code> before it can be returned. Once all items have been returned, the order will
    * become <code>canceled</code> or <code>returned</code> depending on which status the order
    * started in.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#returnOrder} instead.
    */
   public OrderReturn returnOrder(RequestOptions options) throws StripeException {
     return returnOrder((Map<String, Object>) null, options);
@@ -390,6 +482,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
    * fulfilled</code> before it can be returned. Once all items have been returned, the order will
    * become <code>canceled</code> or <code>returned</code> depending on which status the order
    * started in.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#returnOrder} instead.
    */
   public OrderReturn returnOrder(Map<String, Object> params) throws StripeException {
     return returnOrder(params, (RequestOptions) null);
@@ -400,6 +495,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
    * fulfilled</code> before it can be returned. Once all items have been returned, the order will
    * become <code>canceled</code> or <code>returned</code> depending on which status the order
    * started in.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#returnOrder} instead.
    */
   public OrderReturn returnOrder(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -416,6 +514,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
    * fulfilled</code> before it can be returned. Once all items have been returned, the order will
    * become <code>canceled</code> or <code>returned</code> depending on which status the order
    * started in.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#returnOrder} instead.
    */
   public OrderReturn returnOrder(OrderReturnOrderParams params) throws StripeException {
     return returnOrder(params, (RequestOptions) null);
@@ -426,6 +527,9 @@ public class Order extends ApiResource implements HasId, MetadataStore<Order> {
    * fulfilled</code> before it can be returned. Once all items have been returned, the order will
    * become <code>canceled</code> or <code>returned</code> depending on which status the order
    * started in.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.OrderService#returnOrder} instead.
    */
   public OrderReturn returnOrder(OrderReturnOrderParams params, RequestOptions options)
       throws StripeException {

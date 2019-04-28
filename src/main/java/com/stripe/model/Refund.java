@@ -225,6 +225,9 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
    * Returns a list of all refunds you’ve previously created. The refunds are returned in sorted
    * order, with the most recent refunds appearing first. For convenience, the 10 most recent
    * refunds are always available by default on the charge object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#list} instead.
    */
   public static RefundCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -234,6 +237,9 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
    * Returns a list of all refunds you’ve previously created. The refunds are returned in sorted
    * order, with the most recent refunds appearing first. For convenience, the 10 most recent
    * refunds are always available by default on the charge object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#list} instead.
    */
   public static RefundCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -245,6 +251,9 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
    * Returns a list of all refunds you’ve previously created. The refunds are returned in sorted
    * order, with the most recent refunds appearing first. For convenience, the 10 most recent
    * refunds are always available by default on the charge object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#list} instead.
    */
   public static RefundCollection list(RefundListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -254,6 +263,9 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
    * Returns a list of all refunds you’ve previously created. The refunds are returned in sorted
    * order, with the most recent refunds appearing first. For convenience, the 10 most recent
    * refunds are always available by default on the charge object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#list} instead.
    */
   public static RefundCollection list(RefundListParams params, RequestOptions options)
       throws StripeException {
@@ -261,41 +273,76 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
     return requestCollection(url, params, RefundCollection.class, options);
   }
 
-  /** Create a refund. */
+  /**
+   * Create a refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#create} instead.
+   */
   public static Refund create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Create a refund. */
+  /**
+   * Create a refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#create} instead.
+   */
   public static Refund create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/refunds");
     return request(ApiResource.RequestMethod.POST, url, params, Refund.class, options);
   }
 
-  /** Create a refund. */
+  /**
+   * Create a refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#create} instead.
+   */
   public static Refund create(RefundCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Create a refund. */
+  /**
+   * Create a refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#create} instead.
+   */
   public static Refund create(RefundCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/refunds");
     return request(ApiResource.RequestMethod.POST, url, params, Refund.class, options);
   }
 
-  /** Retrieves the details of an existing refund. */
+  /**
+   * Retrieves the details of an existing refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#retrieve} instead.
+   */
   public static Refund retrieve(String refund) throws StripeException {
     return retrieve(refund, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the details of an existing refund. */
+  /**
+   * Retrieves the details of an existing refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#retrieve} instead.
+   */
   public static Refund retrieve(String refund, RequestOptions options) throws StripeException {
     return retrieve(refund, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the details of an existing refund. */
+  /**
+   * Retrieves the details of an existing refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#retrieve} instead.
+   */
   public static Refund retrieve(String refund, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -305,7 +352,12 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
     return request(ApiResource.RequestMethod.GET, url, params, Refund.class, options);
   }
 
-  /** Retrieves the details of an existing refund. */
+  /**
+   * Retrieves the details of an existing refund.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#retrieve} instead.
+   */
   public static Refund retrieve(String refund, RefundRetrieveParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -320,6 +372,9 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
    * provided will be left unchanged.
    *
    * <p>This request only accepts <code>metadata</code> as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#update} instead.
    */
   @Override
   public Refund update(Map<String, Object> params) throws StripeException {
@@ -331,6 +386,9 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
    * provided will be left unchanged.
    *
    * <p>This request only accepts <code>metadata</code> as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#update} instead.
    */
   @Override
   public Refund update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -347,6 +405,9 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
    * provided will be left unchanged.
    *
    * <p>This request only accepts <code>metadata</code> as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#update} instead.
    */
   public Refund update(RefundUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -357,6 +418,9 @@ public class Refund extends ApiResource implements BalanceTransactionSource, Met
    * provided will be left unchanged.
    *
    * <p>This request only accepts <code>metadata</code> as an argument.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.RefundService#update} instead.
    */
   public Refund update(RefundUpdateParams params, RequestOptions options) throws StripeException {
     String url =

@@ -131,41 +131,76 @@ public class Dispute extends ApiResource
     this.charge = new ExpandableField<Charge>(expandableObject.getId(), expandableObject);
   }
 
-  /** Returns a list of your disputes. */
+  /**
+   * Returns a list of your disputes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#list} instead.
+   */
   public static DisputeCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your disputes. */
+  /**
+   * Returns a list of your disputes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#list} instead.
+   */
   public static DisputeCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/disputes");
     return requestCollection(url, params, DisputeCollection.class, options);
   }
 
-  /** Returns a list of your disputes. */
+  /**
+   * Returns a list of your disputes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#list} instead.
+   */
   public static DisputeCollection list(DisputeListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your disputes. */
+  /**
+   * Returns a list of your disputes.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#list} instead.
+   */
   public static DisputeCollection list(DisputeListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/disputes");
     return requestCollection(url, params, DisputeCollection.class, options);
   }
 
-  /** Retrieves the dispute with the given ID. */
+  /**
+   * Retrieves the dispute with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#retrieve} instead.
+   */
   public static Dispute retrieve(String dispute) throws StripeException {
     return retrieve(dispute, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the dispute with the given ID. */
+  /**
+   * Retrieves the dispute with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#retrieve} instead.
+   */
   public static Dispute retrieve(String dispute, RequestOptions options) throws StripeException {
     return retrieve(dispute, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the dispute with the given ID. */
+  /**
+   * Retrieves the dispute with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#retrieve} instead.
+   */
   public static Dispute retrieve(String dispute, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -176,7 +211,12 @@ public class Dispute extends ApiResource
     return request(ApiResource.RequestMethod.GET, url, params, Dispute.class, options);
   }
 
-  /** Retrieves the dispute with the given ID. */
+  /**
+   * Retrieves the dispute with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#retrieve} instead.
+   */
   public static Dispute retrieve(
       String dispute, DisputeRetrieveParams params, RequestOptions options) throws StripeException {
     String url =
@@ -196,6 +236,9 @@ public class Dispute extends ApiResource
    * <p>Depending on your dispute type, different evidence fields will give you a better chance of
    * winning your dispute. To figure out which evidence fields to provide, see our <a
    * href="/docs/disputes/categories">guide to dispute types</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#update} instead.
    */
   @Override
   public Dispute update(Map<String, Object> params) throws StripeException {
@@ -211,6 +254,9 @@ public class Dispute extends ApiResource
    * <p>Depending on your dispute type, different evidence fields will give you a better chance of
    * winning your dispute. To figure out which evidence fields to provide, see our <a
    * href="/docs/disputes/categories">guide to dispute types</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#update} instead.
    */
   @Override
   public Dispute update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -231,6 +277,9 @@ public class Dispute extends ApiResource
    * <p>Depending on your dispute type, different evidence fields will give you a better chance of
    * winning your dispute. To figure out which evidence fields to provide, see our <a
    * href="/docs/disputes/categories">guide to dispute types</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#update} instead.
    */
   public Dispute update(DisputeUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -245,6 +294,9 @@ public class Dispute extends ApiResource
    * <p>Depending on your dispute type, different evidence fields will give you a better chance of
    * winning your dispute. To figure out which evidence fields to provide, see our <a
    * href="/docs/disputes/categories">guide to dispute types</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#update} instead.
    */
   public Dispute update(DisputeUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -261,6 +313,9 @@ public class Dispute extends ApiResource
    *
    * <p>The status of the dispute will change from <code>needs_response</code> to <code>lost</code>.
    * <em>Closing a dispute is irreversible</em>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#close} instead.
    */
   public Dispute close() throws StripeException {
     return close((Map<String, Object>) null, (RequestOptions) null);
@@ -272,6 +327,9 @@ public class Dispute extends ApiResource
    *
    * <p>The status of the dispute will change from <code>needs_response</code> to <code>lost</code>.
    * <em>Closing a dispute is irreversible</em>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#close} instead.
    */
   public Dispute close(RequestOptions options) throws StripeException {
     return close((Map<String, Object>) null, options);
@@ -283,6 +341,9 @@ public class Dispute extends ApiResource
    *
    * <p>The status of the dispute will change from <code>needs_response</code> to <code>lost</code>.
    * <em>Closing a dispute is irreversible</em>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#close} instead.
    */
   public Dispute close(Map<String, Object> params) throws StripeException {
     return close(params, (RequestOptions) null);
@@ -294,6 +355,9 @@ public class Dispute extends ApiResource
    *
    * <p>The status of the dispute will change from <code>needs_response</code> to <code>lost</code>.
    * <em>Closing a dispute is irreversible</em>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#close} instead.
    */
   public Dispute close(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -310,6 +374,9 @@ public class Dispute extends ApiResource
    *
    * <p>The status of the dispute will change from <code>needs_response</code> to <code>lost</code>.
    * <em>Closing a dispute is irreversible</em>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#close} instead.
    */
   public Dispute close(DisputeCloseParams params) throws StripeException {
     return close(params, (RequestOptions) null);
@@ -321,6 +388,9 @@ public class Dispute extends ApiResource
    *
    * <p>The status of the dispute will change from <code>needs_response</code> to <code>lost</code>.
    * <em>Closing a dispute is irreversible</em>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.DisputeService#close} instead.
    */
   public Dispute close(DisputeCloseParams params, RequestOptions options) throws StripeException {
     String url =

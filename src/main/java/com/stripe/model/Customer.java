@@ -134,7 +134,10 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   @SerializedName("subscriptions")
   SubscriptionCollection subscriptions;
 
-  /** Describes the customer's tax exemption status. One of `none`, `exempt`, or `reverse`. */
+  /**
+   * Describes the customer's tax exemption status. One of `none`, `exempt`, or `reverse`. When set
+   * to `reverse`, invoice and receipt PDFs include the text **"Reverse charge"**.
+   */
   @SerializedName("tax_exempt")
   String taxExempt;
 
@@ -182,6 +185,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Returns a list of your customers. The customers are returned sorted by creation date, with the
    * most recent customers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#list} instead.
    */
   public static CustomerCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -190,6 +196,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Returns a list of your customers. The customers are returned sorted by creation date, with the
    * most recent customers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#list} instead.
    */
   public static CustomerCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -200,6 +209,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Returns a list of your customers. The customers are returned sorted by creation date, with the
    * most recent customers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#list} instead.
    */
   public static CustomerCollection list(CustomerListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -208,6 +220,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Returns a list of your customers. The customers are returned sorted by creation date, with the
    * most recent customers appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#list} instead.
    */
   public static CustomerCollection list(CustomerListParams params, RequestOptions options)
       throws StripeException {
@@ -215,24 +230,44 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
     return requestCollection(url, params, CustomerCollection.class, options);
   }
 
-  /** Creates a new customer object. */
+  /**
+   * Creates a new customer object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#create} instead.
+   */
   public static Customer create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new customer object. */
+  /**
+   * Creates a new customer object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#create} instead.
+   */
   public static Customer create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/customers");
     return request(ApiResource.RequestMethod.POST, url, params, Customer.class, options);
   }
 
-  /** Creates a new customer object. */
+  /**
+   * Creates a new customer object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#create} instead.
+   */
   public static Customer create(CustomerCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new customer object. */
+  /**
+   * Creates a new customer object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#create} instead.
+   */
   public static Customer create(CustomerCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/customers");
@@ -242,6 +277,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Retrieves the details of an existing customer. You need only supply the unique customer
    * identifier that was returned upon customer creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#retrieve} instead.
    */
   public static Customer retrieve(String customer) throws StripeException {
     return retrieve(customer, (Map<String, Object>) null, (RequestOptions) null);
@@ -250,6 +288,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Retrieves the details of an existing customer. You need only supply the unique customer
    * identifier that was returned upon customer creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#retrieve} instead.
    */
   public static Customer retrieve(String customer, RequestOptions options) throws StripeException {
     return retrieve(customer, (Map<String, Object>) null, options);
@@ -258,6 +299,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Retrieves the details of an existing customer. You need only supply the unique customer
    * identifier that was returned upon customer creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#retrieve} instead.
    */
   public static Customer retrieve(
       String customer, Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -272,6 +316,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Retrieves the details of an existing customer. You need only supply the unique customer
    * identifier that was returned upon customer creation.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#retrieve} instead.
    */
   public static Customer retrieve(
       String customer, CustomerRetrieveParams params, RequestOptions options)
@@ -297,6 +344,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
    * this behavior.
    *
    * <p>This request accepts mostly the same arguments as the customer creation call.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#update} instead.
    */
   @Override
   public Customer update(Map<String, Object> params) throws StripeException {
@@ -316,6 +366,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
    * this behavior.
    *
    * <p>This request accepts mostly the same arguments as the customer creation call.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#update} instead.
    */
   @Override
   public Customer update(Map<String, Object> params, RequestOptions options)
@@ -341,6 +394,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
    * this behavior.
    *
    * <p>This request accepts mostly the same arguments as the customer creation call.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#update} instead.
    */
   public Customer update(CustomerUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -359,6 +415,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
    * this behavior.
    *
    * <p>This request accepts mostly the same arguments as the customer creation call.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#update} instead.
    */
   public Customer update(CustomerUpdateParams params, RequestOptions options)
       throws StripeException {
@@ -373,6 +432,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Permanently deletes a customer. It cannot be undone. Also immediately cancels any active
    * subscriptions on the customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#delete} instead.
    */
   public Customer delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -381,6 +443,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Permanently deletes a customer. It cannot be undone. Also immediately cancels any active
    * subscriptions on the customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#delete} instead.
    */
   public Customer delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -389,6 +454,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Permanently deletes a customer. It cannot be undone. Also immediately cancels any active
    * subscriptions on the customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#delete} instead.
    */
   public Customer delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -397,6 +465,9 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
   /**
    * Permanently deletes a customer. It cannot be undone. Also immediately cancels any active
    * subscriptions on the customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#delete} instead.
    */
   public Customer delete(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -408,17 +479,32 @@ public class Customer extends ApiResource implements HasId, MetadataStore<Custom
     return request(ApiResource.RequestMethod.DELETE, url, params, Customer.class, options);
   }
 
-  /** Removes the currently applied discount on a customer. */
+  /**
+   * Removes the currently applied discount on a customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#deleteDiscount} instead.
+   */
   public Discount deleteDiscount() throws StripeException {
     return deleteDiscount((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Removes the currently applied discount on a customer. */
+  /**
+   * Removes the currently applied discount on a customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#deleteDiscount} instead.
+   */
   public Discount deleteDiscount(Map<String, Object> params) throws StripeException {
     return deleteDiscount(params, (RequestOptions) null);
   }
 
-  /** Removes the currently applied discount on a customer. */
+  /**
+   * Removes the currently applied discount on a customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.CustomerService#deleteDiscount} instead.
+   */
   public Discount deleteDiscount(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =

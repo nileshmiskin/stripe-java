@@ -160,10 +160,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
   /**
    * The `type` of the source. The `type` is a payment method, one of `ach_credit_transfer`,
    * `ach_debit`, `alipay`, `bancontact`, `card`, `card_present`, `eps`, `giropay`, `ideal`,
-   * `multibanco`, `p24`, `paper_check`, `sepa_credit_transfer`, `sepa_debit`, `sofort`,
-   * `three_d_secure`, or `wechat`. An additional hash is included on the source with a name
-   * matching this value. It contains additional information specific to the [payment
-   * method](https://stripe.com/docs/sources) used.
+   * `multibanco`, `p24`, `sepa_debit`, `sofort`, `three_d_secure`, or `wechat`. An additional hash
+   * is included on the source with a name matching this value. It contains additional information
+   * specific to the [payment method](https://stripe.com/docs/sources) used.
    */
   @SerializedName("type")
   String type;
@@ -179,17 +178,32 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
   @SerializedName("wechat")
   Wechat wechat;
 
-  /** Delete a specified source for a given customer. */
+  /**
+   * Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#detach} instead.
+   */
   public Source detach() throws StripeException {
     return detach((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Delete a specified source for a given customer. */
+  /**
+   * Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#detach} instead.
+   */
   public Source detach(Map<String, Object> params) throws StripeException {
     return detach(params, (RequestOptions) null);
   }
 
-  /** Delete a specified source for a given customer. */
+  /**
+   * Delete a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#detach} instead.
+   */
   public Source detach(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url;
     if (this.getCustomer() != null) {
@@ -216,6 +230,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
   /**
    * Retrieves an existing source object. Supply the unique source ID from a source creation request
    * and Stripe will return the corresponding up-to-date source object information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#retrieve} instead.
    */
   public static Source retrieve(String source) throws StripeException {
     return retrieve(source, (Map<String, Object>) null, (RequestOptions) null);
@@ -224,6 +241,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
   /**
    * Retrieves an existing source object. Supply the unique source ID from a source creation request
    * and Stripe will return the corresponding up-to-date source object information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#retrieve} instead.
    */
   public static Source retrieve(String source, RequestOptions options) throws StripeException {
     return retrieve(source, (Map<String, Object>) null, options);
@@ -232,6 +252,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
   /**
    * Retrieves an existing source object. Supply the unique source ID from a source creation request
    * and Stripe will return the corresponding up-to-date source object information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#retrieve} instead.
    */
   public static Source retrieve(String source, Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -245,6 +268,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
   /**
    * Retrieves an existing source object. Supply the unique source ID from a source creation request
    * and Stripe will return the corresponding up-to-date source object information.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#retrieve} instead.
    */
   public static Source retrieve(String source, SourceRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -255,24 +281,44 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
     return request(ApiResource.RequestMethod.GET, url, params, Source.class, options);
   }
 
-  /** Creates a new source object. */
+  /**
+   * Creates a new source object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#create} instead.
+   */
   public static Source create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new source object. */
+  /**
+   * Creates a new source object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#create} instead.
+   */
   public static Source create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/sources");
     return request(ApiResource.RequestMethod.POST, url, params, Source.class, options);
   }
 
-  /** Creates a new source object. */
+  /**
+   * Creates a new source object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#create} instead.
+   */
   public static Source create(SourceCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new source object. */
+  /**
+   * Creates a new source object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#create} instead.
+   */
   public static Source create(SourceCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/sources");
@@ -286,6 +332,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
    * <p>This request accepts the <code>metadata</code> and <code>owner</code> as arguments. It is
    * also possible to update type specific information for selected payment methods. Please refer to
    * our <a href="/docs/sources">payment method guides</a> for more detail.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#update} instead.
    */
   @Override
   public Source update(Map<String, Object> params) throws StripeException {
@@ -299,6 +348,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
    * <p>This request accepts the <code>metadata</code> and <code>owner</code> as arguments. It is
    * also possible to update type specific information for selected payment methods. Please refer to
    * our <a href="/docs/sources">payment method guides</a> for more detail.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#update} instead.
    */
   @Override
   public Source update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -317,6 +369,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
    * <p>This request accepts the <code>metadata</code> and <code>owner</code> as arguments. It is
    * also possible to update type specific information for selected payment methods. Please refer to
    * our <a href="/docs/sources">payment method guides</a> for more detail.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#update} instead.
    */
   public Source update(SourceUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -329,6 +384,9 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
    * <p>This request accepts the <code>metadata</code> and <code>owner</code> as arguments. It is
    * also possible to update type specific information for selected payment methods. Please refer to
    * our <a href="/docs/sources">payment method guides</a> for more detail.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#update} instead.
    */
   public Source update(SourceUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -339,12 +397,22 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
     return request(ApiResource.RequestMethod.POST, url, params, Source.class, options);
   }
 
-  /** Verify a given source. */
+  /**
+   * Verify a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#verify} instead.
+   */
   public Source verify(Map<String, Object> params) throws StripeException {
     return verify(params, (RequestOptions) null);
   }
 
-  /** Verify a given source. */
+  /**
+   * Verify a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#verify} instead.
+   */
   public Source verify(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
         String.format(
@@ -354,12 +422,22 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
     return request(ApiResource.RequestMethod.POST, url, params, Source.class, options);
   }
 
-  /** Verify a given source. */
+  /**
+   * Verify a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#verify} instead.
+   */
   public Source verify(SourceVerifyParams params) throws StripeException {
     return verify(params, (RequestOptions) null);
   }
 
-  /** Verify a given source. */
+  /**
+   * Verify a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#verify} instead.
+   */
   public Source verify(SourceVerifyParams params, RequestOptions options) throws StripeException {
     String url =
         String.format(
@@ -369,18 +447,33 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
     return request(ApiResource.RequestMethod.POST, url, params, Source.class, options);
   }
 
-  /** List source transactions for a given source. */
+  /**
+   * List source transactions for a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#sourceTransactions} instead.
+   */
   public SourceTransactionCollection sourceTransactions() throws StripeException {
     return sourceTransactions((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** List source transactions for a given source. */
+  /**
+   * List source transactions for a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#sourceTransactions} instead.
+   */
   public SourceTransactionCollection sourceTransactions(Map<String, Object> params)
       throws StripeException {
     return sourceTransactions(params, (RequestOptions) null);
   }
 
-  /** List source transactions for a given source. */
+  /**
+   * List source transactions for a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#sourceTransactions} instead.
+   */
   public SourceTransactionCollection sourceTransactions(
       Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -392,13 +485,23 @@ public class Source extends ApiResource implements PaymentSource, MetadataStore<
     return requestCollection(url, params, SourceTransactionCollection.class, options);
   }
 
-  /** List source transactions for a given source. */
+  /**
+   * List source transactions for a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#sourceTransactions} instead.
+   */
   public SourceTransactionCollection sourceTransactions(SourceSourceTransactionsParams params)
       throws StripeException {
     return sourceTransactions(params, (RequestOptions) null);
   }
 
-  /** List source transactions for a given source. */
+  /**
+   * List source transactions for a given source.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.SourceService#sourceTransactions} instead.
+   */
   public SourceTransactionCollection sourceTransactions(
       SourceSourceTransactionsParams params, RequestOptions options) throws StripeException {
     String url =

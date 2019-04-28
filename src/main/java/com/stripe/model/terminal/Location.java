@@ -43,17 +43,32 @@ public class Location extends ApiResource implements HasId {
   @SerializedName("object")
   String object;
 
-  /** Retrieves a <code>Location</code> object. */
+  /**
+   * Retrieves a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#retrieve} instead.
+   */
   public static Location retrieve(String location) throws StripeException {
     return retrieve(location, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves a <code>Location</code> object. */
+  /**
+   * Retrieves a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#retrieve} instead.
+   */
   public static Location retrieve(String location, RequestOptions options) throws StripeException {
     return retrieve(location, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves a <code>Location</code> object. */
+  /**
+   * Retrieves a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#retrieve} instead.
+   */
   public static Location retrieve(
       String location, Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -64,7 +79,12 @@ public class Location extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, Location.class, options);
   }
 
-  /** Retrieves a <code>Location</code> object. */
+  /**
+   * Retrieves a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#retrieve} instead.
+   */
   public static Location retrieve(
       String location, LocationRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -76,24 +96,44 @@ public class Location extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, Location.class, options);
   }
 
-  /** Creates a new <code>Location</code> object. */
+  /**
+   * Creates a new <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#create} instead.
+   */
   public static Location create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new <code>Location</code> object. */
+  /**
+   * Creates a new <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#create} instead.
+   */
   public static Location create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/terminal/locations");
     return request(ApiResource.RequestMethod.POST, url, params, Location.class, options);
   }
 
-  /** Creates a new <code>Location</code> object. */
+  /**
+   * Creates a new <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#create} instead.
+   */
   public static Location create(LocationCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a new <code>Location</code> object. */
+  /**
+   * Creates a new <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#create} instead.
+   */
   public static Location create(LocationCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/terminal/locations");
@@ -103,6 +143,9 @@ public class Location extends ApiResource implements HasId {
   /**
    * Updates a <code>Location</code> object by setting the values of the parameters passed. Any
    * parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#update} instead.
    */
   public Location update(Map<String, Object> params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -111,6 +154,9 @@ public class Location extends ApiResource implements HasId {
   /**
    * Updates a <code>Location</code> object by setting the values of the parameters passed. Any
    * parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#update} instead.
    */
   public Location update(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -125,6 +171,9 @@ public class Location extends ApiResource implements HasId {
   /**
    * Updates a <code>Location</code> object by setting the values of the parameters passed. Any
    * parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#update} instead.
    */
   public Location update(LocationUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -133,6 +182,9 @@ public class Location extends ApiResource implements HasId {
   /**
    * Updates a <code>Location</code> object by setting the values of the parameters passed. Any
    * parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#update} instead.
    */
   public Location update(LocationUpdateParams params, RequestOptions options)
       throws StripeException {
@@ -144,46 +196,86 @@ public class Location extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.POST, url, params, Location.class, options);
   }
 
-  /** Returns a list of <code>Location</code> objects. */
+  /**
+   * Returns a list of <code>Location</code> objects.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#list} instead.
+   */
   public static LocationCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of <code>Location</code> objects. */
+  /**
+   * Returns a list of <code>Location</code> objects.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#list} instead.
+   */
   public static LocationCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/terminal/locations");
     return requestCollection(url, params, LocationCollection.class, options);
   }
 
-  /** Returns a list of <code>Location</code> objects. */
+  /**
+   * Returns a list of <code>Location</code> objects.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#list} instead.
+   */
   public static LocationCollection list(LocationListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of <code>Location</code> objects. */
+  /**
+   * Returns a list of <code>Location</code> objects.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#list} instead.
+   */
   public static LocationCollection list(LocationListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/terminal/locations");
     return requestCollection(url, params, LocationCollection.class, options);
   }
 
-  /** Deletes a <code>Location</code> object. */
+  /**
+   * Deletes a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#delete} instead.
+   */
   public Location delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Deletes a <code>Location</code> object. */
+  /**
+   * Deletes a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#delete} instead.
+   */
   public Location delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
   }
 
-  /** Deletes a <code>Location</code> object. */
+  /**
+   * Deletes a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#delete} instead.
+   */
   public Location delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
   }
 
-  /** Deletes a <code>Location</code> object. */
+  /**
+   * Deletes a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#delete} instead.
+   */
   public Location delete(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -194,12 +286,22 @@ public class Location extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.DELETE, url, params, Location.class, options);
   }
 
-  /** Deletes a <code>Location</code> object. */
+  /**
+   * Deletes a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#delete} instead.
+   */
   public Location delete(LocationDeleteParams params) throws StripeException {
     return delete(params, (RequestOptions) null);
   }
 
-  /** Deletes a <code>Location</code> object. */
+  /**
+   * Deletes a <code>Location</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.terminal.LocationService#delete} instead.
+   */
   public Location delete(LocationDeleteParams params, RequestOptions options)
       throws StripeException {
     String url =

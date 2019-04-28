@@ -173,17 +173,32 @@ public class Session extends ApiResource implements HasId {
         new ExpandableField<Subscription>(expandableObject.getId(), expandableObject);
   }
 
-  /** Retrieves a Session object. */
+  /**
+   * Retrieves a Session object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.checkout.SessionService#retrieve} instead.
+   */
   public static Session retrieve(String session) throws StripeException {
     return retrieve(session, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves a Session object. */
+  /**
+   * Retrieves a Session object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.checkout.SessionService#retrieve} instead.
+   */
   public static Session retrieve(String session, RequestOptions options) throws StripeException {
     return retrieve(session, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves a Session object. */
+  /**
+   * Retrieves a Session object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.checkout.SessionService#retrieve} instead.
+   */
   public static Session retrieve(String session, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -194,7 +209,12 @@ public class Session extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, Session.class, options);
   }
 
-  /** Retrieves a Session object. */
+  /**
+   * Retrieves a Session object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.checkout.SessionService#retrieve} instead.
+   */
   public static Session retrieve(
       String session, SessionRetrieveParams params, RequestOptions options) throws StripeException {
     String url =
@@ -205,24 +225,44 @@ public class Session extends ApiResource implements HasId {
     return request(ApiResource.RequestMethod.GET, url, params, Session.class, options);
   }
 
-  /** Creates a Session object. */
+  /**
+   * Creates a Session object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.checkout.SessionService#create} instead.
+   */
   public static Session create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a Session object. */
+  /**
+   * Creates a Session object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.checkout.SessionService#create} instead.
+   */
   public static Session create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/checkout/sessions");
     return request(ApiResource.RequestMethod.POST, url, params, Session.class, options);
   }
 
-  /** Creates a Session object. */
+  /**
+   * Creates a Session object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.checkout.SessionService#create} instead.
+   */
   public static Session create(SessionCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates a Session object. */
+  /**
+   * Creates a Session object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.checkout.SessionService#create} instead.
+   */
   public static Session create(SessionCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/checkout/sessions");

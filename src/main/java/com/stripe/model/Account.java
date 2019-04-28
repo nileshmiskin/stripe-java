@@ -113,41 +113,76 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   @SerializedName("type")
   String type;
 
-  /** Retrieves the details of an account. */
+  /**
+   * Retrieves the details of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#retrieve} instead.
+   */
   public static Account retrieve() throws StripeException {
     return retrieve((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the details of an account. */
+  /**
+   * Retrieves the details of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#retrieve} instead.
+   */
   public static Account retrieve(RequestOptions options) throws StripeException {
     return retrieve((Map<String, Object>) null, options);
   }
 
-  /** Retrieves the details of an account. */
+  /**
+   * Retrieves the details of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#retrieve} instead.
+   */
   public static Account retrieve(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/account");
     return request(ApiResource.RequestMethod.GET, url, params, Account.class, options);
   }
 
-  /** Retrieves the details of an account. */
+  /**
+   * Retrieves the details of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#retrieve} instead.
+   */
   public static Account retrieve(AccountRetrieveParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/account");
     return request(ApiResource.RequestMethod.GET, url, params, Account.class, options);
   }
 
-  /** Retrieves the details of an account. */
+  /**
+   * Retrieves the details of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#retrieve} instead.
+   */
   public static Account retrieve(String account) throws StripeException {
     return retrieve(account, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the details of an account. */
+  /**
+   * Retrieves the details of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#retrieve} instead.
+   */
   public static Account retrieve(String account, RequestOptions options) throws StripeException {
     return retrieve(account, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the details of an account. */
+  /**
+   * Retrieves the details of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#retrieve} instead.
+   */
   public static Account retrieve(String account, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -158,7 +193,12 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
     return request(ApiResource.RequestMethod.GET, url, params, Account.class, options);
   }
 
-  /** Retrieves the details of an account. */
+  /**
+   * Retrieves the details of an account.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#retrieve} instead.
+   */
   public static Account retrieve(
       String account, AccountRetrieveParams params, RequestOptions options) throws StripeException {
     String url =
@@ -180,6 +220,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    * href="https://dashboard.stripe.com/account">Dashboard</a>. Refer to our <a
    * href="/docs/connect/updating-accounts">Connect</a> documentation to learn more about updating
    * accounts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#update} instead.
    */
   @Override
   public Account update(Map<String, Object> params) throws StripeException {
@@ -197,6 +240,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    * href="https://dashboard.stripe.com/account">Dashboard</a>. Refer to our <a
    * href="/docs/connect/updating-accounts">Connect</a> documentation to learn more about updating
    * accounts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#update} instead.
    */
   @Override
   public Account update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -219,6 +265,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    * href="https://dashboard.stripe.com/account">Dashboard</a>. Refer to our <a
    * href="/docs/connect/updating-accounts">Connect</a> documentation to learn more about updating
    * accounts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#update} instead.
    */
   public Account update(AccountUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -235,6 +284,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    * href="https://dashboard.stripe.com/account">Dashboard</a>. Refer to our <a
    * href="/docs/connect/updating-accounts">Connect</a> documentation to learn more about updating
    * accounts.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#update} instead.
    */
   public Account update(AccountUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -248,6 +300,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of accounts connected to your platform via <a href="/docs/connect">Connect</a>.
    * If you’re not a platform, the list is empty.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#list} instead.
    */
   public static AccountCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -256,6 +311,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of accounts connected to your platform via <a href="/docs/connect">Connect</a>.
    * If you’re not a platform, the list is empty.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#list} instead.
    */
   public static AccountCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -266,6 +324,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of accounts connected to your platform via <a href="/docs/connect">Connect</a>.
    * If you’re not a platform, the list is empty.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#list} instead.
    */
   public static AccountCollection list(AccountListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -274,6 +335,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of accounts connected to your platform via <a href="/docs/connect">Connect</a>.
    * If you’re not a platform, the list is empty.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#list} instead.
    */
   public static AccountCollection list(AccountListParams params, RequestOptions options)
       throws StripeException {
@@ -289,6 +353,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    * <p>For Standard accounts, parameters other than <code>country</code>, <code>email</code>, and
    * <code>type</code> are used to prefill the account application that we ask the account holder to
    * complete.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#create} instead.
    */
   public static Account create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -302,6 +369,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    * <p>For Standard accounts, parameters other than <code>country</code>, <code>email</code>, and
    * <code>type</code> are used to prefill the account application that we ask the account holder to
    * complete.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#create} instead.
    */
   public static Account create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -317,6 +387,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    * <p>For Standard accounts, parameters other than <code>country</code>, <code>email</code>, and
    * <code>type</code> are used to prefill the account application that we ask the account holder to
    * complete.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#create} instead.
    */
   public static Account create(AccountCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -330,6 +403,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    * <p>For Standard accounts, parameters other than <code>country</code>, <code>email</code>, and
    * <code>type</code> are used to prefill the account application that we ask the account holder to
    * complete.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#create} instead.
    */
   public static Account create(AccountCreateParams params, RequestOptions options)
       throws StripeException {
@@ -345,6 +421,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    *
    * <p>If you are looking to close your own account, use the <a
    * href="https://dashboard.stripe.com/account/data">data tab in your account settings</a> instead.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#delete} instead.
    */
   public Account delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
@@ -358,6 +437,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    *
    * <p>If you are looking to close your own account, use the <a
    * href="https://dashboard.stripe.com/account/data">data tab in your account settings</a> instead.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#delete} instead.
    */
   public Account delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
@@ -371,6 +453,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    *
    * <p>If you are looking to close your own account, use the <a
    * href="https://dashboard.stripe.com/account/data">data tab in your account settings</a> instead.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#delete} instead.
    */
   public Account delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
@@ -384,6 +469,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    *
    * <p>If you are looking to close your own account, use the <a
    * href="https://dashboard.stripe.com/account/data">data tab in your account settings</a> instead.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#delete} instead.
    */
   public Account delete(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -399,6 +487,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    *
    * <p>Test-mode Custom and Express accounts can be rejected at any time. Accounts created using
    * live-mode keys may only be rejected once all balances are zero.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#reject} instead.
    */
   public Account reject(Map<String, Object> params) throws StripeException {
     return reject(params, (RequestOptions) null);
@@ -409,6 +500,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    *
    * <p>Test-mode Custom and Express accounts can be rejected at any time. Accounts created using
    * live-mode keys may only be rejected once all balances are zero.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#reject} instead.
    */
   public Account reject(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
@@ -424,6 +518,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    *
    * <p>Test-mode Custom and Express accounts can be rejected at any time. Accounts created using
    * live-mode keys may only be rejected once all balances are zero.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#reject} instead.
    */
   public Account reject(AccountRejectParams params) throws StripeException {
     return reject(params, (RequestOptions) null);
@@ -434,6 +531,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
    *
    * <p>Test-mode Custom and Express accounts can be rejected at any time. Accounts created using
    * live-mode keys may only be rejected once all balances are zero.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.AccountService#reject} instead.
    */
   public Account reject(AccountRejectParams params, RequestOptions options) throws StripeException {
     String url =
@@ -447,6 +547,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection persons() throws StripeException {
     return persons((Map<String, Object>) null, (RequestOptions) null);
@@ -455,6 +558,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection persons(Map<String, Object> params) throws StripeException {
     return persons(params, (RequestOptions) null);
@@ -463,6 +569,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection persons(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -477,6 +586,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection persons(AccountPersonsParams params) throws StripeException {
     return persons(params, (RequestOptions) null);
@@ -485,6 +597,9 @@ public class Account extends ApiResource implements PaymentSource, MetadataStore
   /**
    * Returns a list of people associated with the account’s legal entity. The people are returned
    * sorted by creation date, with the most recent people appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PersonService#list} instead.
    */
   public PersonCollection persons(AccountPersonsParams params, RequestOptions options)
       throws StripeException {

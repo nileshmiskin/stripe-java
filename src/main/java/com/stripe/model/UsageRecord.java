@@ -66,6 +66,9 @@ public class UsageRecord extends ApiResource implements HasId {
    * href="https://stripe.com/docs/api/plans/object#plan_object-billing_scheme">per-unit
    * pricing</a>. For finer granularity, you can configure metered billing to have a <a
    * href="https://stripe.com/docs/billing/subscriptions/tiers">tiered pricing</a> model.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.UsageRecordService#create} instead.
    */
   public static UsageRecord createOnSubscriptionItem(
       String subscriptionItem, Map<String, Object> params, RequestOptions options)
@@ -101,6 +104,9 @@ public class UsageRecord extends ApiResource implements HasId {
    * href="https://stripe.com/docs/api/plans/object#plan_object-billing_scheme">per-unit
    * pricing</a>. For finer granularity, you can configure metered billing to have a <a
    * href="https://stripe.com/docs/billing/subscriptions/tiers">tiered pricing</a> model.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.UsageRecordService#create} instead.
    */
   public static UsageRecord createOnSubscriptionItem(
       String subscriptionItem,

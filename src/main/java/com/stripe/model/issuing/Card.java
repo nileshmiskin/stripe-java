@@ -106,6 +106,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   /**
    * Returns a list of Issuing <code>Card</code> objects. The objects are sorted in descending order
    * by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#list} instead.
    */
   public static CardCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -114,6 +117,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   /**
    * Returns a list of Issuing <code>Card</code> objects. The objects are sorted in descending order
    * by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#list} instead.
    */
   public static CardCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -124,6 +130,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   /**
    * Returns a list of Issuing <code>Card</code> objects. The objects are sorted in descending order
    * by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#list} instead.
    */
   public static CardCollection list(CardListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
@@ -132,6 +141,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   /**
    * Returns a list of Issuing <code>Card</code> objects. The objects are sorted in descending order
    * by creation date, with the most recently created object appearing first.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#list} instead.
    */
   public static CardCollection list(CardListParams params, RequestOptions options)
       throws StripeException {
@@ -139,41 +151,76 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
     return requestCollection(url, params, CardCollection.class, options);
   }
 
-  /** Creates an Issuing <code>Card</code> object. */
+  /**
+   * Creates an Issuing <code>Card</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#create} instead.
+   */
   public static Card create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates an Issuing <code>Card</code> object. */
+  /**
+   * Creates an Issuing <code>Card</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#create} instead.
+   */
   public static Card create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/issuing/cards");
     return request(ApiResource.RequestMethod.POST, url, params, Card.class, options);
   }
 
-  /** Creates an Issuing <code>Card</code> object. */
+  /**
+   * Creates an Issuing <code>Card</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#create} instead.
+   */
   public static Card create(CardCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
   }
 
-  /** Creates an Issuing <code>Card</code> object. */
+  /**
+   * Creates an Issuing <code>Card</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#create} instead.
+   */
   public static Card create(CardCreateParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/issuing/cards");
     return request(ApiResource.RequestMethod.POST, url, params, Card.class, options);
   }
 
-  /** Retrieves an Issuing <code>Card</code> object. */
+  /**
+   * Retrieves an Issuing <code>Card</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#retrieve} instead.
+   */
   public static Card retrieve(String card) throws StripeException {
     return retrieve(card, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves an Issuing <code>Card</code> object. */
+  /**
+   * Retrieves an Issuing <code>Card</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#retrieve} instead.
+   */
   public static Card retrieve(String card, RequestOptions options) throws StripeException {
     return retrieve(card, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves an Issuing <code>Card</code> object. */
+  /**
+   * Retrieves an Issuing <code>Card</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#retrieve} instead.
+   */
   public static Card retrieve(String card, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -184,7 +231,12 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
     return request(ApiResource.RequestMethod.GET, url, params, Card.class, options);
   }
 
-  /** Retrieves an Issuing <code>Card</code> object. */
+  /**
+   * Retrieves an Issuing <code>Card</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#retrieve} instead.
+   */
   public static Card retrieve(String card, CardRetrieveParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -198,6 +250,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   /**
    * Updates the specified Issuing <code>Card</code> object by setting the values of the parameters
    * passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#update} instead.
    */
   @Override
   public Card update(Map<String, Object> params) throws StripeException {
@@ -207,6 +262,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   /**
    * Updates the specified Issuing <code>Card</code> object by setting the values of the parameters
    * passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#update} instead.
    */
   @Override
   public Card update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -221,6 +279,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   /**
    * Updates the specified Issuing <code>Card</code> object by setting the values of the parameters
    * passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#update} instead.
    */
   public Card update(CardUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -229,6 +290,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   /**
    * Updates the specified Issuing <code>Card</code> object by setting the values of the parameters
    * passed. Any parameters not provided will be left unchanged.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#update} instead.
    */
   public Card update(CardUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -243,6 +307,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
    * For virtual cards only. Retrieves an Issuing <code>Card_details</code> object that contains <a
    * href="/docs/issuing/cards/management#virtual-card-info">the sensitive details</a> of a virtual
    * card.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#details} instead.
    */
   public CardDetails details() throws StripeException {
     return details((Map<String, Object>) null, (RequestOptions) null);
@@ -252,6 +319,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
    * For virtual cards only. Retrieves an Issuing <code>Card_details</code> object that contains <a
    * href="/docs/issuing/cards/management#virtual-card-info">the sensitive details</a> of a virtual
    * card.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#details} instead.
    */
   public CardDetails details(Map<String, Object> params) throws StripeException {
     return details(params, (RequestOptions) null);
@@ -261,6 +331,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
    * For virtual cards only. Retrieves an Issuing <code>Card_details</code> object that contains <a
    * href="/docs/issuing/cards/management#virtual-card-info">the sensitive details</a> of a virtual
    * card.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#details} instead.
    */
   public CardDetails details(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -276,6 +349,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
    * For virtual cards only. Retrieves an Issuing <code>Card_details</code> object that contains <a
    * href="/docs/issuing/cards/management#virtual-card-info">the sensitive details</a> of a virtual
    * card.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#details} instead.
    */
   public CardDetails details(CardDetailsParams params) throws StripeException {
     return details(params, (RequestOptions) null);
@@ -285,6 +361,9 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
    * For virtual cards only. Retrieves an Issuing <code>Card_details</code> object that contains <a
    * href="/docs/issuing/cards/management#virtual-card-info">the sensitive details</a> of a virtual
    * card.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.issuing.CardService#details} instead.
    */
   public CardDetails details(CardDetailsParams params, RequestOptions options)
       throws StripeException {

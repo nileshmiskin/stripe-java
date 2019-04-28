@@ -168,24 +168,44 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
     this.product = new ExpandableField<Product>(expandableObject.getId(), expandableObject);
   }
 
-  /** Returns a list of your plans. */
+  /**
+   * Returns a list of your plans.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#list} instead.
+   */
   public static PlanCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your plans. */
+  /**
+   * Returns a list of your plans.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#list} instead.
+   */
   public static PlanCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/plans");
     return requestCollection(url, params, PlanCollection.class, options);
   }
 
-  /** Returns a list of your plans. */
+  /**
+   * Returns a list of your plans.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#list} instead.
+   */
   public static PlanCollection list(PlanListParams params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** Returns a list of your plans. */
+  /**
+   * Returns a list of your plans.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#list} instead.
+   */
   public static PlanCollection list(PlanListParams params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), "/v1/plans");
@@ -195,6 +215,9 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
   /**
    * You can create plans using the API, or in the Stripe <a
    * href="https://dashboard.stripe.com/subscriptions/products">Dashboard</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#create} instead.
    */
   public static Plan create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -203,6 +226,9 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
   /**
    * You can create plans using the API, or in the Stripe <a
    * href="https://dashboard.stripe.com/subscriptions/products">Dashboard</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#create} instead.
    */
   public static Plan create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -213,6 +239,9 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
   /**
    * You can create plans using the API, or in the Stripe <a
    * href="https://dashboard.stripe.com/subscriptions/products">Dashboard</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#create} instead.
    */
   public static Plan create(PlanCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -221,6 +250,9 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
   /**
    * You can create plans using the API, or in the Stripe <a
    * href="https://dashboard.stripe.com/subscriptions/products">Dashboard</a>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#create} instead.
    */
   public static Plan create(PlanCreateParams params, RequestOptions options)
       throws StripeException {
@@ -228,17 +260,32 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
     return request(ApiResource.RequestMethod.POST, url, params, Plan.class, options);
   }
 
-  /** Retrieves the plan with the given ID. */
+  /**
+   * Retrieves the plan with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#retrieve} instead.
+   */
   public static Plan retrieve(String plan) throws StripeException {
     return retrieve(plan, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieves the plan with the given ID. */
+  /**
+   * Retrieves the plan with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#retrieve} instead.
+   */
   public static Plan retrieve(String plan, RequestOptions options) throws StripeException {
     return retrieve(plan, (Map<String, Object>) null, options);
   }
 
-  /** Retrieves the plan with the given ID. */
+  /**
+   * Retrieves the plan with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#retrieve} instead.
+   */
   public static Plan retrieve(String plan, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -248,7 +295,12 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
     return request(ApiResource.RequestMethod.GET, url, params, Plan.class, options);
   }
 
-  /** Retrieves the plan with the given ID. */
+  /**
+   * Retrieves the plan with the given ID.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#retrieve} instead.
+   */
   public static Plan retrieve(String plan, PlanRetrieveParams params, RequestOptions options)
       throws StripeException {
     String url =
@@ -262,6 +314,9 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
    * Updates the specified plan by setting the values of the parameters passed. Any parameters not
    * provided are left unchanged. By design, you cannot change a plan’s ID, amount, currency, or
    * billing cycle.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#update} instead.
    */
   @Override
   public Plan update(Map<String, Object> params) throws StripeException {
@@ -272,6 +327,9 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
    * Updates the specified plan by setting the values of the parameters passed. Any parameters not
    * provided are left unchanged. By design, you cannot change a plan’s ID, amount, currency, or
    * billing cycle.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#update} instead.
    */
   @Override
   public Plan update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -287,6 +345,9 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
    * Updates the specified plan by setting the values of the parameters passed. Any parameters not
    * provided are left unchanged. By design, you cannot change a plan’s ID, amount, currency, or
    * billing cycle.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#update} instead.
    */
   public Plan update(PlanUpdateParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -296,6 +357,9 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
    * Updates the specified plan by setting the values of the parameters passed. Any parameters not
    * provided are left unchanged. By design, you cannot change a plan’s ID, amount, currency, or
    * billing cycle.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#update} instead.
    */
   public Plan update(PlanUpdateParams params, RequestOptions options) throws StripeException {
     String url =
@@ -306,22 +370,42 @@ public class Plan extends ApiResource implements HasId, MetadataStore<Plan> {
     return request(ApiResource.RequestMethod.POST, url, params, Plan.class, options);
   }
 
-  /** Deleting plans means new subscribers can’t be added. Existing subscribers aren’t affected. */
+  /**
+   * Deleting plans means new subscribers can’t be added. Existing subscribers aren’t affected.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#delete} instead.
+   */
   public Plan delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Deleting plans means new subscribers can’t be added. Existing subscribers aren’t affected. */
+  /**
+   * Deleting plans means new subscribers can’t be added. Existing subscribers aren’t affected.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#delete} instead.
+   */
   public Plan delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
   }
 
-  /** Deleting plans means new subscribers can’t be added. Existing subscribers aren’t affected. */
+  /**
+   * Deleting plans means new subscribers can’t be added. Existing subscribers aren’t affected.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#delete} instead.
+   */
   public Plan delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
   }
 
-  /** Deleting plans means new subscribers can’t be added. Existing subscribers aren’t affected. */
+  /**
+   * Deleting plans means new subscribers can’t be added. Existing subscribers aren’t affected.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PlanService#delete} instead.
+   */
   public Plan delete(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url =
         String.format(

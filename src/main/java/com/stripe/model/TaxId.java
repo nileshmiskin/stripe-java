@@ -80,22 +80,42 @@ public class TaxId extends ApiResource implements HasId {
     this.customer = new ExpandableField<Customer>(expandableObject.getId(), expandableObject);
   }
 
-  /** Deletes an existing <code>TaxID</code> object. */
+  /**
+   * Deletes an existing <code>TaxID</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxIdService#delete} instead.
+   */
   public TaxId delete() throws StripeException {
     return delete((Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Deletes an existing <code>TaxID</code> object. */
+  /**
+   * Deletes an existing <code>TaxID</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxIdService#delete} instead.
+   */
   public TaxId delete(RequestOptions options) throws StripeException {
     return delete((Map<String, Object>) null, options);
   }
 
-  /** Deletes an existing <code>TaxID</code> object. */
+  /**
+   * Deletes an existing <code>TaxID</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxIdService#delete} instead.
+   */
   public TaxId delete(Map<String, Object> params) throws StripeException {
     return delete(params, (RequestOptions) null);
   }
 
-  /** Deletes an existing <code>TaxID</code> object. */
+  /**
+   * Deletes an existing <code>TaxID</code> object.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.TaxIdService#delete} instead.
+   */
   public TaxId delete(Map<String, Object> params, RequestOptions options) throws StripeException {
     String url;
     if (this.getCustomer() != null) {

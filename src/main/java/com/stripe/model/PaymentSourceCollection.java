@@ -12,42 +12,77 @@ import com.stripe.param.PaymentSourceCollectionRetrieveParams;
 import java.util.Map;
 
 public class PaymentSourceCollection extends StripeCollection<PaymentSource> {
-  /** List sources for a specified customer. */
+  /**
+   * List sources for a specified customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#list} instead.
+   */
   public PaymentSourceCollection list(Map<String, Object> params) throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** List sources for a specified customer. */
+  /**
+   * List sources for a specified customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#list} instead.
+   */
   public PaymentSourceCollection list(Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());
     return ApiResource.requestCollection(url, params, PaymentSourceCollection.class, options);
   }
 
-  /** List sources for a specified customer. */
+  /**
+   * List sources for a specified customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#list} instead.
+   */
   public PaymentSourceCollection list(PaymentSourceCollectionListParams params)
       throws StripeException {
     return list(params, (RequestOptions) null);
   }
 
-  /** List sources for a specified customer. */
+  /**
+   * List sources for a specified customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#list} instead.
+   */
   public PaymentSourceCollection list(
       PaymentSourceCollectionListParams params, RequestOptions options) throws StripeException {
     String url = String.format("%s%s", Stripe.getApiBase(), this.getUrl());
     return ApiResource.requestCollection(url, params, PaymentSourceCollection.class, options);
   }
 
-  /** Retrieve a specified source for a given customer. */
+  /**
+   * Retrieve a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#retrieve} instead.
+   */
   public PaymentSource retrieve(String id) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, (RequestOptions) null);
   }
 
-  /** Retrieve a specified source for a given customer. */
+  /**
+   * Retrieve a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#retrieve} instead.
+   */
   public PaymentSource retrieve(String id, RequestOptions options) throws StripeException {
     return retrieve(id, (Map<String, Object>) null, options);
   }
 
-  /** Retrieve a specified source for a given customer. */
+  /**
+   * Retrieve a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#retrieve} instead.
+   */
   public PaymentSource retrieve(String id, Map<String, Object> params, RequestOptions options)
       throws StripeException {
     String url =
@@ -59,7 +94,12 @@ public class PaymentSourceCollection extends StripeCollection<PaymentSource> {
         ApiResource.RequestMethod.GET, url, params, PaymentSource.class, options);
   }
 
-  /** Retrieve a specified source for a given customer. */
+  /**
+   * Retrieve a specified source for a given customer.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#retrieve} instead.
+   */
   public PaymentSource retrieve(
       String id, PaymentSourceCollectionRetrieveParams params, RequestOptions options)
       throws StripeException {
@@ -81,6 +121,9 @@ public class PaymentSourceCollection extends StripeCollection<PaymentSource> {
    * either <a href="/docs/api#update_customer">update the customer</a> to have a new <code>
    * default_source</code>, or <a href="/docs/api#update_recipient">update the recipient</a> to have
    * a new <code>default_card</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#create} instead.
    */
   public PaymentSource create(Map<String, Object> params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -95,6 +138,9 @@ public class PaymentSourceCollection extends StripeCollection<PaymentSource> {
    * either <a href="/docs/api#update_customer">update the customer</a> to have a new <code>
    * default_source</code>, or <a href="/docs/api#update_recipient">update the recipient</a> to have
    * a new <code>default_card</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#create} instead.
    */
   public PaymentSource create(Map<String, Object> params, RequestOptions options)
       throws StripeException {
@@ -112,6 +158,9 @@ public class PaymentSourceCollection extends StripeCollection<PaymentSource> {
    * either <a href="/docs/api#update_customer">update the customer</a> to have a new <code>
    * default_source</code>, or <a href="/docs/api#update_recipient">update the recipient</a> to have
    * a new <code>default_card</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#create} instead.
    */
   public PaymentSource create(PaymentSourceCollectionCreateParams params) throws StripeException {
     return create(params, (RequestOptions) null);
@@ -126,6 +175,9 @@ public class PaymentSourceCollection extends StripeCollection<PaymentSource> {
    * either <a href="/docs/api#update_customer">update the customer</a> to have a new <code>
    * default_source</code>, or <a href="/docs/api#update_recipient">update the recipient</a> to have
    * a new <code>default_card</code>.
+   *
+   * <p>API call on resource will be marked as deprecated in the next major version. Please use a
+   * method on service {@link com.stripe.service.PaymentSourceService#create} instead.
    */
   public PaymentSource create(PaymentSourceCollectionCreateParams params, RequestOptions options)
       throws StripeException {
