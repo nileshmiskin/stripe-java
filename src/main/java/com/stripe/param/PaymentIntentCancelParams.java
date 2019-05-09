@@ -127,7 +127,10 @@ public class PaymentIntentCancelParams extends ApiRequestParams {
     FRAUDULENT("fraudulent"),
 
     @SerializedName("requested_by_customer")
-    REQUESTED_BY_CUSTOMER("requested_by_customer");
+    REQUESTED_BY_CUSTOMER("requested_by_customer"),
+
+    @SerializedName("void_invoice")
+    VOID_INVOICE("void_invoice");
 
     @Getter(onMethod_ = {@Override})
     private final String value;

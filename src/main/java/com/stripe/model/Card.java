@@ -10,6 +10,7 @@ import com.stripe.net.ApiResource;
 import com.stripe.net.RequestOptions;
 import com.stripe.param.CardUpdateOnAccountParams;
 import com.stripe.param.CardUpdateOnCustomerParams;
+import com.stripe.param.CardUpdateOnRecipientParams;
 import java.util.List;
 import java.util.Map;
 import lombok.EqualsAndHashCode;
@@ -265,6 +266,8 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>Updates a specified card for a given recipient.
    */
   @Override
   public Card update(Map<String, Object> params) throws StripeException {
@@ -279,6 +282,8 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>Updates a specified card for a given recipient.
    */
   @Override
   public Card update(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -301,9 +306,18 @@ public class Card extends ApiResource
                   "/v1/customers/%s/sources/%s",
                   ApiResource.urlEncodeId(this.getCustomer()),
                   ApiResource.urlEncodeId(this.getId())));
+    } else if (this.getRecipient() != null) {
+      url =
+          String.format(
+              "%s%s",
+              Stripe.getApiBase(),
+              String.format(
+                  "/v1/recipients/%s/cards/%s",
+                  ApiResource.urlEncodeId(this.getRecipient()),
+                  ApiResource.urlEncodeId(this.getId())));
     } else {
       throw new InvalidRequestException(
-          "Unable to construct url because [account, customer] field(s) are all null",
+          "Unable to construct url because [account, customer, recipient] field(s) are all null",
           null,
           null,
           null,
@@ -321,6 +335,8 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>Updates a specified card for a given recipient.
    */
   public Card update(CardUpdateOnAccountParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -334,6 +350,8 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>Updates a specified card for a given recipient.
    */
   public Card update(CardUpdateOnAccountParams params, RequestOptions options)
       throws StripeException {
@@ -367,6 +385,8 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>Updates a specified card for a given recipient.
    */
   public Card update(CardUpdateOnCustomerParams params) throws StripeException {
     return update(params, (RequestOptions) null);
@@ -380,6 +400,8 @@ public class Card extends ApiResource
    * service</a> without interruption.
    *
    * <p>Updates a specified card for a given customer.
+   *
+   * <p>Updates a specified card for a given recipient.
    */
   public Card update(CardUpdateOnCustomerParams params, RequestOptions options)
       throws StripeException {
@@ -406,9 +428,61 @@ public class Card extends ApiResource
   }
 
   /**
+   * If you need to update only some card details, like the billing address or expiration date, you
+   * can do so without having to re-enter the full card details. Stripe also works directly with
+   * card networks so that your customers can <a
+   * href="https://stripe.com/docs/saving-cards#automatic-card-updates">continue using your
+   * service</a> without interruption.
+   *
+   * <p>Updates a specified card for a given customer.
+   *
+   * <p>Updates a specified card for a given recipient.
+   */
+  public Card update(CardUpdateOnRecipientParams params) throws StripeException {
+    return update(params, (RequestOptions) null);
+  }
+
+  /**
+   * If you need to update only some card details, like the billing address or expiration date, you
+   * can do so without having to re-enter the full card details. Stripe also works directly with
+   * card networks so that your customers can <a
+   * href="https://stripe.com/docs/saving-cards#automatic-card-updates">continue using your
+   * service</a> without interruption.
+   *
+   * <p>Updates a specified card for a given customer.
+   *
+   * <p>Updates a specified card for a given recipient.
+   */
+  public Card update(CardUpdateOnRecipientParams params, RequestOptions options)
+      throws StripeException {
+    String url;
+    if (this.getRecipient() != null) {
+      url =
+          String.format(
+              "%s%s",
+              Stripe.getApiBase(),
+              String.format(
+                  "/v1/recipients/%s/cards/%s",
+                  ApiResource.urlEncodeId(this.getRecipient()),
+                  ApiResource.urlEncodeId(this.getId())));
+    } else {
+      throw new InvalidRequestException(
+          "Unable to construct url because [recipient] field(s) are all null",
+          null,
+          null,
+          null,
+          0,
+          null);
+    }
+    return request(ApiResource.RequestMethod.POST, url, params, Card.class, options);
+  }
+
+  /**
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>Delete a specified card for a given recipient.
    */
   @Override
   public Card delete() throws StripeException {
@@ -419,6 +493,8 @@ public class Card extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>Delete a specified card for a given recipient.
    */
   @Override
   public Card delete(RequestOptions options) throws StripeException {
@@ -429,6 +505,8 @@ public class Card extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>Delete a specified card for a given recipient.
    */
   @Override
   public Card delete(Map<String, Object> params) throws StripeException {
@@ -439,6 +517,8 @@ public class Card extends ApiResource
    * Delete a specified external account for a given account.
    *
    * <p>Delete a specified source for a given customer.
+   *
+   * <p>Delete a specified card for a given recipient.
    */
   @Override
   public Card delete(Map<String, Object> params, RequestOptions options) throws StripeException {
@@ -461,9 +541,18 @@ public class Card extends ApiResource
                   "/v1/customers/%s/sources/%s",
                   ApiResource.urlEncodeId(this.getCustomer()),
                   ApiResource.urlEncodeId(this.getId())));
+    } else if (this.getRecipient() != null) {
+      url =
+          String.format(
+              "%s%s",
+              Stripe.getApiBase(),
+              String.format(
+                  "/v1/recipients/%s/cards/%s",
+                  ApiResource.urlEncodeId(this.getRecipient()),
+                  ApiResource.urlEncodeId(this.getId())));
     } else {
       throw new InvalidRequestException(
-          "Unable to construct url because [account, customer] field(s) are all null",
+          "Unable to construct url because [account, customer, recipient] field(s) are all null",
           null,
           null,
           null,
