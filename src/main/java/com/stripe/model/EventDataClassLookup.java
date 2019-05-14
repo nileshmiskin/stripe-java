@@ -7,6 +7,7 @@ import com.stripe.model.issuing.Authorization;
 import com.stripe.model.issuing.CardDetails;
 import com.stripe.model.issuing.Cardholder;
 import com.stripe.model.issuing.Transaction;
+import com.stripe.model.radar.EarlyFraudWarning;
 import com.stripe.model.radar.ValueList;
 import com.stripe.model.radar.ValueListItem;
 import com.stripe.model.reporting.ReportRun;
@@ -37,6 +38,7 @@ final class EventDataClassLookup {
     classLookup.put("bank_account", BankAccount.class);
     classLookup.put("bitcoin_receiver", BitcoinReceiver.class);
     classLookup.put("bitcoin_transaction", BitcoinTransaction.class);
+    classLookup.put("capability", Capability.class);
     classLookup.put("card", Card.class);
     classLookup.put("charge", Charge.class);
     classLookup.put("checkout.session", Session.class);
@@ -47,6 +49,7 @@ final class EventDataClassLookup {
     classLookup.put("customer", Customer.class);
     classLookup.put("discount", Discount.class);
     classLookup.put("dispute", Dispute.class);
+    classLookup.put("early_fraud_warning", EarlyFraudWarning.class);
     classLookup.put("ephemeral_key", EphemeralKey.class);
     classLookup.put("event", Event.class);
     classLookup.put("exchange_rate", ExchangeRate.class);

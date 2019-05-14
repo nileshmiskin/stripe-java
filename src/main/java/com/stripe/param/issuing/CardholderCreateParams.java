@@ -3260,13 +3260,9 @@ public class CardholderCreateParams extends ApiRequestParams {
     @SerializedName(ApiRequestParams.EXTRA_PARAMS_KEY)
     Map<String, Object> extraParams;
 
-    @SerializedName("name")
-    String name;
-
-    private Billing(Address address, Map<String, Object> extraParams, String name) {
+    private Billing(Address address, Map<String, Object> extraParams) {
       this.address = address;
       this.extraParams = extraParams;
-      this.name = name;
     }
 
     public static Builder builder() {
@@ -3278,11 +3274,9 @@ public class CardholderCreateParams extends ApiRequestParams {
 
       private Map<String, Object> extraParams;
 
-      private String name;
-
       /** Finalize and obtain parameter instance from this builder. */
       public Billing build() {
-        return new Billing(this.address, this.extraParams, this.name);
+        return new Billing(this.address, this.extraParams);
       }
 
       public Builder setAddress(Address address) {
@@ -3313,11 +3307,6 @@ public class CardholderCreateParams extends ApiRequestParams {
           this.extraParams = new HashMap<>();
         }
         this.extraParams.putAll(map);
-        return this;
-      }
-
-      public Builder setName(String name) {
-        this.name = name;
         return this;
       }
     }

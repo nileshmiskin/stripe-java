@@ -98,7 +98,10 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
   @Setter(lombok.AccessLevel.NONE)
   ExpandableField<Card> replacementFor;
 
-  /** Why the card that this card replaces (if any) needed to be replaced. */
+  /**
+   * Why the card that this card replaces (if any) needed to be replaced. One of `damage`,
+   * `expiration`, `loss`, or `theft`.
+   */
   @SerializedName("replacement_reason")
   String replacementReason;
 
@@ -391,10 +394,6 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
     @SerializedName("name")
     String name;
 
-    /** Recipient phone (including extension). */
-    @SerializedName("phone")
-    String phone;
-
     /**
      * The delivery status of the card. One of `pending`, `shipped`, `delivered`, `returned`,
      * `failure`, or `canceled`.
@@ -402,10 +401,7 @@ public class Card extends ApiResource implements HasId, MetadataStore<Card> {
     @SerializedName("status")
     String status;
 
-    /**
-     * The tracking number for a physical product, obtained from the delivery service. If multiple
-     * tracking numbers were generated for this purchase, please separate them with commas.
-     */
+    /** A tracking number for a card shipment. */
     @SerializedName("tracking_number")
     String trackingNumber;
 
