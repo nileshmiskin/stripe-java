@@ -24,6 +24,9 @@ public class CustomerCreateParams extends ApiRequestParams {
   @SerializedName("address")
   Object address;
 
+  @SerializedName("collection_method")
+  CollectionMethod collectionMethod;
+
   @SerializedName("coupon")
   String coupon;
 
@@ -114,6 +117,7 @@ public class CustomerCreateParams extends ApiRequestParams {
   private CustomerCreateParams(
       Long accountBalance,
       Object address,
+      CollectionMethod collectionMethod,
       String coupon,
       String description,
       String email,
@@ -133,6 +137,7 @@ public class CustomerCreateParams extends ApiRequestParams {
       TaxInfo taxInfo) {
     this.accountBalance = accountBalance;
     this.address = address;
+    this.collectionMethod = collectionMethod;
     this.coupon = coupon;
     this.description = description;
     this.email = email;
@@ -160,6 +165,8 @@ public class CustomerCreateParams extends ApiRequestParams {
     private Long accountBalance;
 
     private Object address;
+
+    private CollectionMethod collectionMethod;
 
     private String coupon;
 
@@ -200,6 +207,7 @@ public class CustomerCreateParams extends ApiRequestParams {
       return new CustomerCreateParams(
           this.accountBalance,
           this.address,
+          this.collectionMethod,
           this.coupon,
           this.description,
           this.email,
@@ -238,6 +246,11 @@ public class CustomerCreateParams extends ApiRequestParams {
     /** The customer's address. */
     public Builder setAddress(EmptyParam address) {
       this.address = address;
+      return this;
+    }
+
+    public Builder setCollectionMethod(CollectionMethod collectionMethod) {
+      this.collectionMethod = collectionMethod;
       return this;
     }
 
@@ -1026,7 +1039,7 @@ public class CustomerCreateParams extends ApiRequestParams {
     @SerializedName(ApiRequestParams.EXTRA_PARAMS_KEY)
     Map<String, Object> extraParams;
 
-    /** Type of the tax ID, one of `eu_vat`, `nz_gst`, or `au_abn`. */
+    /** Type of the tax ID, one of `au_abn`, `eu_vat`, `in_gst`, `no_vat`, or `nz_gst`. */
     @SerializedName("type")
     Type type;
 
@@ -1082,7 +1095,7 @@ public class CustomerCreateParams extends ApiRequestParams {
         return this;
       }
 
-      /** Type of the tax ID, one of `eu_vat`, `nz_gst`, or `au_abn`. */
+      /** Type of the tax ID, one of `au_abn`, `eu_vat`, `in_gst`, `no_vat`, or `nz_gst`. */
       public Builder setType(Type type) {
         this.type = type;
         return this;
@@ -1101,6 +1114,12 @@ public class CustomerCreateParams extends ApiRequestParams {
 
       @SerializedName("eu_vat")
       EU_VAT("eu_vat"),
+
+      @SerializedName("in_gst")
+      IN_GST("in_gst"),
+
+      @SerializedName("no_vat")
+      NO_VAT("no_vat"),
 
       @SerializedName("nz_gst")
       NZ_GST("nz_gst");
@@ -1203,6 +1222,21 @@ public class CustomerCreateParams extends ApiRequestParams {
       Type(String value) {
         this.value = value;
       }
+    }
+  }
+
+  public enum CollectionMethod implements ApiRequestParams.EnumParam {
+    @SerializedName("charge_automatically")
+    CHARGE_AUTOMATICALLY("charge_automatically"),
+
+    @SerializedName("send_invoice")
+    SEND_INVOICE("send_invoice");
+
+    @Getter(onMethod_ = {@Override})
+    private final String value;
+
+    CollectionMethod(String value) {
+      this.value = value;
     }
   }
 

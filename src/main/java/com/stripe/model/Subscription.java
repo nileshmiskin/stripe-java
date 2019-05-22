@@ -76,6 +76,9 @@ public class Subscription extends ApiResource implements HasId, MetadataStore<Su
   @SerializedName("canceled_at")
   Long canceledAt;
 
+  @SerializedName("collection_method")
+  String collectionMethod;
+
   /** Time at which the object was created. Measured in seconds since the Unix epoch. */
   @SerializedName("created")
   Long created;

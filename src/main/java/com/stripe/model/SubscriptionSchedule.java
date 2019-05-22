@@ -48,6 +48,9 @@ public class SubscriptionSchedule extends ApiResource
   @SerializedName("canceled_at")
   Long canceledAt;
 
+  @SerializedName("collection_method")
+  String collectionMethod;
+
   /**
    * Time at which the subscription schedule was completed. Measured in seconds since the Unix
    * epoch.

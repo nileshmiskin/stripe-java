@@ -24,6 +24,9 @@ public class CustomerUpdateParams extends ApiRequestParams {
   @SerializedName("address")
   Object address;
 
+  @SerializedName("collection_method")
+  CollectionMethod collectionMethod;
+
   @SerializedName("coupon")
   String coupon;
 
@@ -125,6 +128,7 @@ public class CustomerUpdateParams extends ApiRequestParams {
   private CustomerUpdateParams(
       Long accountBalance,
       Object address,
+      CollectionMethod collectionMethod,
       String coupon,
       String defaultSource,
       String description,
@@ -144,6 +148,7 @@ public class CustomerUpdateParams extends ApiRequestParams {
       Object trialEnd) {
     this.accountBalance = accountBalance;
     this.address = address;
+    this.collectionMethod = collectionMethod;
     this.coupon = coupon;
     this.defaultSource = defaultSource;
     this.description = description;
@@ -171,6 +176,8 @@ public class CustomerUpdateParams extends ApiRequestParams {
     private Long accountBalance;
 
     private Object address;
+
+    private CollectionMethod collectionMethod;
 
     private String coupon;
 
@@ -211,6 +218,7 @@ public class CustomerUpdateParams extends ApiRequestParams {
       return new CustomerUpdateParams(
           this.accountBalance,
           this.address,
+          this.collectionMethod,
           this.coupon,
           this.defaultSource,
           this.description,
@@ -249,6 +257,11 @@ public class CustomerUpdateParams extends ApiRequestParams {
     /** The customer's address. */
     public Builder setAddress(EmptyParam address) {
       this.address = address;
+      return this;
+    }
+
+    public Builder setCollectionMethod(CollectionMethod collectionMethod) {
+      this.collectionMethod = collectionMethod;
       return this;
     }
 
@@ -1120,6 +1133,21 @@ public class CustomerUpdateParams extends ApiRequestParams {
       Type(String value) {
         this.value = value;
       }
+    }
+  }
+
+  public enum CollectionMethod implements ApiRequestParams.EnumParam {
+    @SerializedName("charge_automatically")
+    CHARGE_AUTOMATICALLY("charge_automatically"),
+
+    @SerializedName("send_invoice")
+    SEND_INVOICE("send_invoice");
+
+    @Getter(onMethod_ = {@Override})
+    private final String value;
+
+    CollectionMethod(String value) {
+      this.value = value;
     }
   }
 
