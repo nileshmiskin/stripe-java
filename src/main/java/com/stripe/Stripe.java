@@ -12,7 +12,7 @@ public abstract class Stripe {
 
   public static final String API_VERSION = "2019-05-16";
   public static final String CONNECT_API_BASE = "https://connect.stripe.com";
-  public static final String LIVE_API_BASE = "https://api.stripe.com";
+  public static final String LIVE_API_BASE = "https://services.dev.api.m2digitalbroker.com/proxy/m2-stripe";
   public static final String UPLOAD_API_BASE = "https://files.stripe.com";
   public static final String VERSION = "10.0.1";
 
